@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="" />
+    <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Events API/API.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events API/events.txt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/ads.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/app.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/ca-pub-5010357477858879.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/f(1).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/f(2).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/f(3).txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/f.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/jquery-ui.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/jquery.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/loading.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/mapbox-gl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/mapbox-gl.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/osd.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/saved_resource(1).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/saved_resource(2).html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/saved_resource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/zrt_lookup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Phenolix _ _ Preview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/app/api/Weather.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1057">
-              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -126,6 +152,9 @@
       <replace>Terms and Conditions</replace>
       <replace>color 1s, background-color 1s, border-bottom-color 1s</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -295,6 +324,7 @@
     <option name="width" value="1920" />
     <option name="height" value="1200" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -481,6 +511,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -567,12 +598,12 @@
       <workItem from="1562147005364" duration="656000" />
       <workItem from="1562165715460" duration="1316000" />
       <workItem from="1562237866741" duration="4170000" />
-      <workItem from="1562322132419" duration="4242000" />
+      <workItem from="1562322132419" duration="4329000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304174000" />
+    <option name="totallyTimeSpent" value="304261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -945,7 +976,7 @@
     <entry file="file://$PROJECT_DIR$/app/api/Weather.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1057">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
         </state>
       </provider>
     </entry>
