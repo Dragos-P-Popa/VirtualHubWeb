@@ -83,7 +83,7 @@ def writeJSON():
           'created_at': '' + time[i-1]
                                })
 
-    with open('events.txt', 'w') as outfile:
+    with open('community_events.json', 'w') as outfile:
         json.dump(data, outfile)
 
 

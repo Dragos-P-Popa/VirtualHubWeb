@@ -92,30 +92,31 @@ class APIController extends Controller {
 		if ( $this->icaoValidator( $icao ) ) {
 			$info = $this->airportinfo( $icao );
 
-			switch ( $section ) {
-				case "all":
-					return JsonResponse::create( $info );
-					break;
-				case "charts":
-					return JsonResponse::create( $info["charts"] );
-					break;
-				case "runways":
-					return JsonResponse::create( $info["runways"] );
-					break;
-				case "gates":
-					return JsonResponse::create( $info["gates"] );
-					break;
-				case "weather":
-					return JsonResponse::create( $info["weather"] );
-					break;
-				case "frequencies":
-					return JsonResponse::create( $info["frequencies"] );
-					break;
 
-				default:
-					$error = [ "error" => $section . "is not available." ];
+			if ( $section != "all" ) {
+				if ( isset( $info[ $section ] ) ) {
+					return JsonResponse::create( $info[ $section ] );
+				} else {
+					$keys = [];
 
-					return JsonResponse::create( $error );
+					foreach ( $info as $key => $val ) {
+						array_push( $keys, $key );
+
+					}
+
+					$total_keys = count( $keys );
+
+					if ( $total_keys == 1 ) {
+						$sentence = $keys[0] . '.';
+					} else {
+						$partial  = array_slice( $keys, 0, $total_keys - 1 );
+						$sentence = implode( ', ', $partial ) . ' and ' . $keys[ $total_keys - 1 ];
+					}
+					
+					return JsonResponse::create( [ "error" => $section . " is not available. Available keys: " . $sentence ] );
+				}
+			} else {
+				return JsonResponse::create( $info );
 			}
 		} else {
 			$error = [ "error" => "Invalid ICAO" ];
