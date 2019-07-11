@@ -1,5 +1,6 @@
-@extends('layouts.general.general')
-@section('app_section', 'Terms & Conditions')
+@extends('layouts.main_page')
+@section('title', 'Terms & Conditions')
+@section('app_section', 'VirtualHub')
 
 
 @php

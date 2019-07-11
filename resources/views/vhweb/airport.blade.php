@@ -1,5 +1,6 @@
-@extends('layouts.vhw')
+@extends('layouts.main_page')
 @section('app_section', env('APP_VHW'))
+@section('logo', 'vhw')
 
 {{--{{dd(Auth::user()->role)}}--}}
 
@@ -25,25 +26,35 @@
     @endif
 @endsection
 
+@php
+    if (!isset($info["error"])) {
+        $sm = ["title" => "VirtualHub Web — " . $info["airport"]["name"],
+               "description" => "View details like charts, gates and more for this airport. Download VirtualHub now from the stores, available on iOS and Android!",
+               "url" => url("view/" .  $info["airport"]["icao"]),
+               "keywords" => "airport, information, " . $info["airport"]["icao"]];
+    }
+
+@endphp
+
+@section('meta_keyword', $sm["keywords"])
+
 @section('meta_social')
     @if(!isset($info["error"]))
-        <meta name="title" content="VirtualHub Web —  {{$info["airport"]["name"]}}">
+        <meta name="title" content="{{$sm["title"]}}">
         <meta name="description"
-              content="View full details for this airport and more in the app or on your desktop. Download VirtualHub now from the stores, available on iOS and Android!">
+              content="{{$sm["description"]}}">
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
-        <meta property="og:url" content="{{asset('vhw/' . $info["airport"]["icao"])}}">
-        <meta property="og:title" content="VirtualHub Web —  {{$info["airport"]["name"]}}">
-        <meta property="og:description"
-              content="View full details for this airport and more in the app or on your desktop. Download VirtualHub now from the stores, available on iOS and Android!">
+        <meta property="og:url" content="{{$sm["url"]}}">
+        <meta property="og:title" content="{{$sm["title"]}}">
+        <meta property="og:description" content="{{$sm["description"]}}">
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="{{asset('vhw/' . $info["airport"]["icao"])}}">
-        <meta property="twitter:title" content="VirtualHub Web —  {{$info["airport"]["name"]}}">
-        <meta property="twitter:description"
-              content="View full details for this airport and more in the app or on your desktop. Download VirtualHub now from the stores, available on iOS and Android!">
+        <meta property="twitter:url" content="{{$sm["url"]}}">
+        <meta property="twitter:title" content="{{$sm["title"]}}">
+        <meta property="twitter:description" content="{{$sm["description"]}}">
     @endif
 @endsection
 
@@ -113,7 +124,8 @@ if( !function_exists('mobile_user_agent_switch') ){
     <div class="searchbar">
         <div class="input_bar">
             <label for="search_bar"><i class="fas fa-search"></i></label>
-            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" onkeyup="updateSearchSuggestions(this.value)" id="search_bar" type="text"
+            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                   onkeyup="updateSearchSuggestions(this.value)" id="search_bar" type="text"
                    placeholder="Search for an airport">
         </div>
         <div class="hidden search_suggestions" shadow>
@@ -659,7 +671,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 gate_map.resize();
             }
 
-            window.onpopstate = function(event) {
+            window.onpopstate = function (event) {
                 if (currentWindow !== "") {
                     closeWindow(false);
                 } else {

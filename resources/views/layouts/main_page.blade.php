@@ -1,8 +1,6 @@
+
 @php
     $current_year = date('Y');
-
-
-
 @endphp
 
         <!doctype html>
@@ -12,6 +10,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="description" content="@yield('meta_description', 'View details like charts, gates and more for this airport. Download VirtualHub now from the stores, available on iOS and Android!')" />
+    <meta name="keywords" content="@yield('meta_keyword', 'airport, information, details')" />
+    <meta name="author" content="Phenolix">
+    <meta name="robots" content="@yield('meta_robot', 'index, follow')" />
+    <meta name="revisit-after" content="1 days" />
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
@@ -44,17 +48,21 @@
     <meta name="msapplication-config" content="{{asset("storage/app/images")}}/browserconfig.xml">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="color-scheme" value="light dark">
-    <title>{{ config('app.name', 'Laravel') }} | @yield('app_section') | @yield('title')</title>
+    <title>{{ config('app.name', 'Phenolix') }} | @yield('app_section') | @yield('title')</title>
 </head>
 <body>
-@include('cookieConsent::index')
 
-<nav transparant_nav="@yield('transparant_nav', "false")">
+<div class="cookieDiv">
+    <div shadow>
+        @include('cookieConsent::index')
+    </div>
+</div>
+
+<nav s="@yield('header_style', '')" class="@yield('header_style', "normal_style")">
     <div class="container">
         <div class="nav_left">
             <a href="{{ url('/') }}">
-                <div class="logo vhw"></div>
-                <p>VirtualHub Net</p>
+                <div class="logo @yield('logo', "px")"></div>
             </a>
         </div>
         <div class="nav_right">

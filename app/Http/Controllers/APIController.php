@@ -69,7 +69,7 @@ class APIController extends Controller {
 					],
 					[
 						"Contact",
-						"Contact @sudafly, @dragos or @dylan on the community, or visit this link https://community.infiniteflight.com/t/oneworld-virtual-around-the-world-with-oneworld-vol-2-lgav-222100zjun19/331764"
+						$this->stringToURLHTML("Contact @sudafly, @dragos or @dylan on the community, or visit this link https://community.infiniteflight.com/t/oneworld-virtual-around-the-world-with-oneworld-vol-2-lgav-222100zjun19/331764 and this one http://www.community.infiniteflight.com/t/oneworld-virtual-around-the-world-with-oneworld-vol-2-lgav-222100zjun19/331764 and www.google.sr")
 					],
 				],
 			]
@@ -83,9 +83,24 @@ class APIController extends Controller {
 			$index ++;
 		}
 
+		$ap_id = $info["airport"]["id"];
+
 		DB::update( "UPDATE realtime_data SET total = total + 1 WHERE name = 'total_vh_airportinfo_api_used'" );
+		DB::update( "UPDATE vh_airports SET populairity = populairity + 1  WHERE id = " . $ap_id );
 
 		return $info;
+	}
+
+	private function stringToURLHTML($str) {
+		preg_match_all( '/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/', $str, $match );
+
+		$full_str = $str;
+
+		foreach ($match[0] as $url) {
+			$full_str = str_replace($url, "<a href='" . $url . "' target='_blank'>" . $url . "</a>", $full_str);
+		}
+
+		return $full_str;
 	}
 
 	public function airportinfoWebAPI( $icao, $section = "all" ) {
@@ -112,7 +127,7 @@ class APIController extends Controller {
 						$partial  = array_slice( $keys, 0, $total_keys - 1 );
 						$sentence = implode( ', ', $partial ) . ' and ' . $keys[ $total_keys - 1 ];
 					}
-					
+
 					return JsonResponse::create( [ "error" => $section . " is not available. Available keys: " . $sentence ] );
 				}
 			} else {
@@ -138,7 +153,7 @@ class APIController extends Controller {
 	}
 
 	public function searchAirport( $query ) {
-		$airport = DB::select( "SELECT name, icao, concat_ws(' | ', icao, nullif(trim(iata), '')) as 'app_string' FROM vh_airports WHERE search_string LIKE '%" . $query . "%' ORDER BY CASE WHEN icao LIKE '" . $query . "%' THEN 1 WHEN iata LIKE '%" . $query . "' THEN 3 ELSE 4 END LIMIT 25" );
+		$airport = DB::select( "SELECT name, icao, concat_ws(' | ', icao, nullif(trim(iata), '')) as 'app_string' FROM vh_airports WHERE search_string LIKE '%" . $query . "%' ORDER BY populairity DESC, CASE WHEN icao LIKE '" . $query . "%' THEN 1 WHEN iata LIKE '%" . $query . "' THEN 3 ELSE 4 END LIMIT 30" );
 		$json    = json_encode( $airport );
 		$json    = json_decode( $json, true );
 

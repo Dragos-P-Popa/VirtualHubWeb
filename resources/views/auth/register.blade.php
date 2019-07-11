@@ -1,4 +1,4 @@
-@extends('layouts.general.general')
+@extends('layouts.general')
 
 @section('content')
     <div class="gradient_section" shadow>

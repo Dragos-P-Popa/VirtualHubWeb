@@ -1,33 +1,60 @@
-$(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    var nav = $("nav");
-    var ts = nav.attr("transparant_nav");
+var header_style_changed = false;
 
-    if (ts === "false") {
-        if (scroll > 1) {
-            if (!nav.hasClass("shadow")) {
-                nav.addClass("shadow");
-            }
-        } else {
-            if (nav.hasClass("shadow")) {
-                nav.removeClass("shadow");
-            }
-        }
-    }
-
-    if (scroll > 50) {
-        if (ts === "true") {
-            if (nav.attr("ts_changed") === "false") {
-                nav.attr("transparant_nav", "false");
-                nav.attr("ts_changed", "true")
-            }
-        }
-    } else {
-        if (ts === "false") {
-            if (nav.attr("ts_changed") === "true") {
-                nav.attr("transparant_nav", "true");
-                nav.attr("ts_changed", "false")
-            }
-        }
-    }
+$(document).scroll(function () {
+    navigationScrollingStyle();
 });
+
+
+$(document).resize(function () {
+    navigationScrollingStyle();
+});
+
+$(document).ready(function() {
+    var w = $(document);
+    w.scroll();
+    w.resize();
+
+    checkCookie();
+});
+
+$(".cookie-consent__agree").click(function () {
+    checkCookie();
+});
+
+function checkCookie() {
+    var cookieDiv = $(".cookieDiv");
+    if (document.cookie.indexOf("laravel_cookie_consent") >= 0) {
+        cookieDiv.remove();
+    }
+    else {
+        cookieDiv.css('display', 'flex');
+    }
+}
+
+
+function navigationScrollingStyle() {
+    var $nav = $("nav");
+    var $s = $nav.attr("s");
+    var w = $(document);
+
+    if ($s === "header_style") {
+        $nav.toggleClass('header_style', w.scrollTop() < $nav.height() * 2);
+        $nav.toggleClass('shadow', w.scrollTop() > $nav.height() * 2);
+    } else {
+        $nav.toggleClass('shadow', w.scrollTop() > 1);
+    }
+
+}
+
+
+function addShadowToElement(el) {
+    if (!el.hasClass("shadow")) {
+        el.addClass("shadow");
+    }
+}
+
+function removeShadowFromElement(el) {
+    if (el.hasClass("shadow")) {
+        el.removeClass("shadow");
+    }
+}

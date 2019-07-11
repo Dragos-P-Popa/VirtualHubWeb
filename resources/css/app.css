@@ -38,21 +38,11 @@ nav {
     background-color: white;
     width: 100%;
 
-    -webkit-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s;
 
-    -o-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s;
 
-    transition: all 0.5s ease-in-out;
-}
-
-nav:before {
-    content: '';
-    width: 100%;
-    height: 10px;
-    background-color: #ffffff;
-    position: absolute;
-    top: -10px;
-    z-index: 2;
+    transition: all 0.5s;
 }
 
 .shadow, [shadow] {
@@ -93,7 +83,7 @@ a {
     font-weight: bold;
 }
 
-.nav_right, .nav_left > a {
+.nav_right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -143,38 +133,61 @@ a:visited {
     color: rgba(47, 47, 47, 0.93);
 }
 
-[transparant_nav="true"] {
+.normal_style {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.header_style {
     background-color: rgba(255, 255, 255, 0);
     position: fixed;
 }
 
-[transparant_nav="true"] > div > .nav_left > a > p {
+.header_style > div > .nav_left > a > p {
     color: white;
 }
 
-[transparant_nav="true"] > div > .nav_left > a:visited {
+.header_style > div > .nav_left > a:visited {
     color: white;
 }
 
-[transparant_nav="true"] > div > .nav_right > .nav_links > div > p > a {
+.header_style > div > .nav_right > .nav_links > div > p > a {
     color: white;
 }
 
-[transparant_nav="true"] > div > .nav_right > .nav_links > div > p > a:visited {
-    color: white;
+.header_style > div > .nav_right > .nav_links > div > p > a:visited {
+    transition: color 0.5s ease-in-out;
+}
+
+.header_style > div > .nav_left > a > p {
+    transition: color 0.5s ease-in-out;
+}
+
+.header_style > div > .nav_left > a:visited {
+    transition: color 0.5s ease-in-out;
+}
+
+.header_style > div > .nav_right > .nav_links > div > p > a {
+    transition: color 0.5s ease-in-out;
+}
+
+.header_style > div > .nav_right > .nav_links > div > p > a:visited {
+    transition: color 0.5s ease-in-out;
 }
 
 
 .logo {
-    background-image: url("../../storage/app/images/px_logo_tr_small.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 
     margin-right: 15px;
-
-    width: 100px;
     height: 50px;
+}
+
+.logo.px {
+    background-image: url("../../storage/app/images/px_logo_tr_small.png");
+    width: 100px;
 }
 
 .logo.vhw {
@@ -321,9 +334,13 @@ a:visited {
 
 .collection_item {
     width: 100%;
-    padding: 5px;
+    padding: 5px 10px;
     margin: 5px 0;
     border-right: solid #dedede 1px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .collection_item:last-of-type {
@@ -338,6 +355,10 @@ a:visited {
 .collection_item > p:first-of-type {
     font-weight: bold;
     font-size: 20px;
+}
+
+.collection_item.small > p:first-of-type {
+    font-size: 17px;
 }
 
 .block_content {
@@ -412,7 +433,7 @@ a:visited {
     font-weight: bold;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
     .collection_item {
         width: 50%;
     }
@@ -1326,35 +1347,34 @@ h3 {
     border-radius: 5px;
 }
 
-.cookie-consent {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.cookieDiv {
+    position: fixed;
+    top: 0;
+    padding: 15px;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.cookieDiv > div {
     display: flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -moz-flex;
-
     background-color: white;
-
-    position: relative;
     margin: 0 auto;
     padding: 15px;
-    padding-top: 0;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
 
-    width: 92%;
-    max-width: 1000px;
-
-    -webkit-box-pack: justify;
-
-    -ms-flex-pack: justify;
-
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-    border-bottom: solid #f5f5f5 1px;
-
-    z-index: 909;
+.cookie-consent > button {
+    width: 100%;
 }
 
 .cookie-consent > span {
