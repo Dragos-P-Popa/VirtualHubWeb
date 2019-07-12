@@ -4,3 +4,5 @@ Disallow: /storage
 Disallow: /api
 Disallow: /dashboard
 Disallow: /view/chart
+
+Sitemap: https://www.vh-net.com/sitemap.xml
