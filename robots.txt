@@ -3,3 +3,4 @@ Disallow: /password
 Disallow: /storage
 Disallow: /api
 Disallow: /dashboard
+Disallow: /view/chart
