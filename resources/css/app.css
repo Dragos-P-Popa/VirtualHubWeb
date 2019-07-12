@@ -613,7 +613,7 @@ form {
     width: 100%;
 }
 
-input, button, textarea, select {
+input, button, textarea, select, [type="submit"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -738,12 +738,13 @@ input:-webkit-autofill:active  {
     border-bottom: solid red 2px;
 }
 
-button {
+button, [type="submit"] {
     border: none;
     color: white;
     padding: 5px 25px;
     background-color: #00c6ff;
-
+    font-size: 12px;
+    font-weight: normal;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -1490,6 +1491,79 @@ input.input_center {
 
 [bold] {
     font-weight: bold;
+}
+
+.cmp-dp-btn-group {
+    display: flex;
+}
+
+.cmp-dp-time-group > input {
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.J-dtp-second-input {
+    display: none;
+}
+
+#event_route {
+    text-transform: uppercase;
+}
+
+.flex_fields, .flex_buttons, .flex_costum_section  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex_fields > div, .flex_costum_section > div {
+    width: 48%;
+    padding: 7.5px 0;
+}
+
+.flex_costum_section > div > div {
+    padding: 7.5px 0;
+}
+
+.flex_costum_section > div > div > h2 {
+    margin-bottom: 10px;
+}
+
+.flex_fields > div > textarea, .flex_costum_section > div > div > textarea {
+    max-width: 100%;
+}
+
+.flex_buttons > * {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.flex_buttons > :nth-child(1) {
+    margin-right: 15px;
+    background-color: #0072ff;
+}
+
+@media all and (max-width: 680px) {
+    .flex_fields > div, .flex_costum_section > div {
+        width: 100%;
+        padding: 7.5px 0;
+    }
+}
+
+@media all and (max-width: 414px) {
+    .flex_buttons > * {
+        width: 100%;
+    }
+
+    .flex_buttons > :nth-child(1) {
+        margin-right: 0;
+    }
+
+}
+
+
+.page_title {
+    margin-bottom: 50px;
 }
 
 @media (prefers-color-scheme: dark) {

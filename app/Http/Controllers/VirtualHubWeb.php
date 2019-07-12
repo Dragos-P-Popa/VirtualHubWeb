@@ -33,17 +33,15 @@ class VirtualHubWeb extends Controller {
 		) );
 	}
 
-	/**
-	 * Show the application dashboard.
-	 *
-	 * @return \Illuminate\Contracts\Support\Renderable
-	 */
-	public function index() {
+	public function newEventPage($icao) {
+		include "app/api/Airport.php";
 
-		$airports = file_get_contents( asset( "storage/app/vhw/airports.json" ) );
+		$info = new \Airport();
+		$info = $info->getAirportInformation($icao);
 
-		return view( 'vhweb.home', array(
-			"geo_airports" => str_replace("", "", $airports)
+		return view( 'vhweb.newEvent', array(
+			"info" => $info
 		) );
 	}
+
 }
