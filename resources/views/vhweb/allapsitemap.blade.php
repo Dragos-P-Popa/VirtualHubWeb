@@ -2,7 +2,7 @@
 @section('app_section', env('APP_VHW'))
 @section('logo', 'vhw')
 
-@section('meta_robot', 'no-index, follow')
+@section('meta_robot', 'noindex, follow')
 
 {{--{{dd(Auth::user()->role)}}--}}
 
