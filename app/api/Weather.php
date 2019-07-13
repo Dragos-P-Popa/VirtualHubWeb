@@ -30,7 +30,7 @@ class Weather {
 			if (isset($array["data"]["METAR"][0])) {
 				return $this->parseWeather( $array["data"]["METAR"][0] );
 			} else {
-				return $this->parseWeather( $array["data"]["METAR"] );
+				return $this->parseWeather( $array["data"]["METAR"]);
 			}
 		}
 	}
