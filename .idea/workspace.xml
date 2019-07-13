@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/Events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/AirportInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/AirportInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/date-time-picker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/date-time-picker.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Weather.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/Weather.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,17 +48,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/vhweb/airport.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="599" selection-start-line="599" selection-end-line="599" />
+            <state relative-caret-position="15">
+              <caret line="1" column="16" selection-start-line="1" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="56" lean-forward="true" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/api/Weather.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="421">
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -191,14 +199,12 @@
         <option value="$PROJECT_DIR$/app/api/Frequencies.php" />
         <option value="$PROJECT_DIR$/app/api/Gates.php" />
         <option value="$PROJECT_DIR$/app/api/Charts.php" />
-        <option value="$PROJECT_DIR$/app/api/Weather.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/resources/views/layouts/cookie.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/vhw.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/general/general.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" />
         <option value="$PROJECT_DIR$/resources/views/general/terms.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/api/SitemapGenerator.php" />
         <option value="$PROJECT_DIR$/app/api/Sitemap.php" />
         <option value="$PROJECT_DIR$/resources/views/vhweb/all_ap_sitemap.blade.php" />
@@ -218,7 +224,9 @@
         <option value="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" />
         <option value="$PROJECT_DIR$/app/api/Events.php" />
         <option value="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/api/Weather.php" />
       </list>
     </option>
   </component>
@@ -613,7 +621,7 @@
       <workItem from="1562756860522" duration="16080000" />
       <workItem from="1562849312004" duration="1239000" />
       <workItem from="1562913572219" duration="9565000" />
-      <workItem from="1563016934233" duration="10674000" />
+      <workItem from="1563016934233" duration="11189000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -685,11 +693,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562966106816</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added Create Event Page&#10;Fixed View Not Found">
+      <created>1563036405404</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563036405405</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added Create Event Page&#10;Fixed View Not Found">
+      <created>1563037370013</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563037370013</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344951000" />
+    <option name="totallyTimeSpent" value="345466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -716,7 +738,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.015974442" />
-      <window_info anchor="right" id="Remote Host" order="4" weight="0.14802982" />
+      <window_info anchor="right" id="Remote Host" order="4" visible="true" weight="0.14802982" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,7 +752,8 @@
     <MESSAGE value="Changed: Disallow Certain Urls in Sitemap." />
     <MESSAGE value="Added Sitemap URL" />
     <MESSAGE value="Added Create Event Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Create Event Page" />
+    <MESSAGE value="Added Create Event Page&#10;Fixed View Not Found" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Create Event Page&#10;Fixed View Not Found" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php">
@@ -857,13 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/Weather.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1056,22 +1072,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vhweb/airport.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="599" selection-start-line="599" selection-end-line="599" />
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" lean-forward="true" selection-end-line="1" />
+        <state relative-caret-position="30">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="525">
+          <caret line="35" column="56" lean-forward="true" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/Weather.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
         </state>
       </provider>
     </entry>

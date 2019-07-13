@@ -27,8 +27,11 @@ class Weather {
 		if ( $array["data"]["@attributes"]["num_results"] == 0 ) {
 			return array();
 		} else {
-			dd($array);
-			return $this->parseWeather( $array["data"]["METAR"][0] );
+			if (isset($array["data"]["METAR"][0])) {
+				return $this->parseWeather( $array["data"]["METAR"][0] );
+			} else {
+				return $this->parseWeather( $array["data"]["METAR"] );
+			}
 		}
 	}
 
