@@ -5,6 +5,7 @@ include "Weather.php";
 include "Gates.php";
 include "Runways.php";
 include "Frequencies.php";
+include "Events.php";
 
 class AirportInfo {
 	public function getInfoFor( $icao ) {
@@ -22,6 +23,9 @@ class AirportInfo {
 
 		$frequencies = new \Frequencies();
 		$frequencies = $frequencies->getFrequenciesInformation( $icao );
+
+		$events = new \Events();
+		$events = $events->getAirportEvents($icao);
 
 		$weather       = new \Weather();
 		$weatherresult = [];
@@ -41,7 +45,7 @@ class AirportInfo {
 			$result["runways"]     = $runways;
 			$result["gates"]       = $gates;
 			$result["frequencies"] = $frequencies;
-
+			$result["events"] = $events;
 		} else {
 			$result["error"] = "Not found";
 		}

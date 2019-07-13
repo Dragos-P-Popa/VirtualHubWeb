@@ -1,4 +1,7 @@
-@extends('layouts.general')
+@extends('layouts.main_page')
+@section('app_section', env('APP_VHW'))
+@section('title', 'Register')
+
 
 @section('content')
     <div class="gradient_section" shadow>

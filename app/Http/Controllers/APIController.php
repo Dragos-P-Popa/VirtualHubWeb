@@ -48,59 +48,12 @@ class APIController extends Controller {
 		$info = new \AirportInfo();
 		$info = $info->getInfoFor( $icao );
 
-		$info["events"] = [
-			[
-				"name"           => "Delta Anniversary",
-				"description"    => "Delta is turning 2! Join us now!",
-				"header_image"   => asset( "storage/app/images/events" ) . "/rh9iugh4i5d" . ".jpg",
-				"icao"           => "klax",
-				"date_time"      => "2019-06-04 21:00 UTC",
-				"gates"          => true,
-				"calendar_links" => [],
-				"occupied"       => [ 5434, 3456, 8965 ],
-				"custom_info"    => [
-					[
-						"Route",
-						"KLAX KKFR FKJIORH JIORTEOI DJKE FERIOH KJFK"
-					],
-					[
-						"Aircraft",
-						"All Delta Aircrafts"
-					],
-					[
-						"Contact",
-						$this->stringToURLHTML("Contact @sudafly, @dragos or @dylan on the community, or visit this link https://community.infiniteflight.com/t/oneworld-virtual-around-the-world-with-oneworld-vol-2-lgav-222100zjun19/331764 and this one http://www.community.infiniteflight.com/t/oneworld-virtual-around-the-world-with-oneworld-vol-2-lgav-222100zjun19/331764 and www.google.sr")
-					],
-				],
-			]
-		];
-
-		$index = 0;
-
-		foreach ( $info["events"] as $event ) {
-			$info["events"][ $index ]["date_time"] = $this->isoformat( $event["date_time"] );
-
-			$index ++;
-		}
-
 		$ap_id = $info["airport"]["id"];
 
 		DB::update( "UPDATE realtime_data SET total = total + 1 WHERE name = 'total_vh_airportinfo_api_used'" );
 		DB::update( "UPDATE vh_airports SET populairity = populairity + 1  WHERE id = " . $ap_id );
 
 		return $info;
-	}
-
-	private function stringToURLHTML($str) {
-		preg_match_all( '/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/', $str, $match );
-
-		$full_str = $str;
-
-		foreach ($match[0] as $url) {
-			$full_str = str_replace($url, "<a href='" . $url . "' target='_blank'>" . $url . "</a>", $full_str);
-		}
-
-		return $full_str;
 	}
 
 	public function airportinfoWebAPI( $icao, $section = "all" ) {

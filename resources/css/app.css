@@ -81,6 +81,16 @@ a {
     color: #0072ff;
     text-decoration: none;
     font-weight: bold;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-all;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 .nav_right {

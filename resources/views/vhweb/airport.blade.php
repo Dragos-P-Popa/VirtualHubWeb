@@ -225,10 +225,12 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 @if(count($info["events"]) == 0)
                                     <p>No events for this airport</p>
                                 @else
-                                    <p>{{count($info["events"])}} Events Coming Up Soon</p>
-                                    <p>Next event: <br> {{$info["events"][0]["name"]}}
-                                        | {{$info["events"][0]["date_time"]}}</p>
+                                    <p>{{count($info["events"])}} @if(count($info["events"]) == 1) Event @else Events @endif Coming Up Soon</p>
+                                    <p id="ev_list_str">Next event: <br> {{$info["events"][0]["title"]}}
+                                        | </p>
                                 @endif
+                                <br>
+                                <p><a href="{{url("events/" . $info["airport"]["icao"] . "/new")}}">New event</a></p>
                             </div>
                             <div class="custom_table_row_right">
                                 <p><i class="fas fa-arrow-right"></i></p>
@@ -357,8 +359,8 @@ if( !function_exists('mobile_user_agent_switch') ){
                         @foreach($info["events"] as $event)
                             <div class="custom_table_row" json='{{json_encode($event)}}' onclick="">
                                 <div class="custom_table_row_left">
-                                    <p>{{$event["name"]}}</p>
-                                    <p isoformat="{{$event["date_time"]}}"></p>
+                                    <p>{{$event["title"]}}</p>
+                                    <p isoformat="{{$event["start"]}}"></p>
                                 </div>
 
                                 <div class="custom_table_row_right">
@@ -527,25 +529,26 @@ if( !function_exists('mobile_user_agent_switch') ){
                 var e = $(this);
                 var table = $("#events_viewer").children(".custom_table");
                 var json = JSON.parse(e.attr("json"));
-                var options = {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    hour: 'numeric',
-                    minute: 'numeric'
-                };
-                var date = new Date(json.date_time);
+
+                var v = convert_utc_to_local(json.start);
+                var v2 = convert_utc_to_local(json.start, "ev_list_str");
 
                 table.empty();
 
-                table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>" + json.name + "</p><p>" + json.description + "</p></div></div>");
+                table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>" + json.title + "</p><p>" + json.description + "</p></div></div>");
 
-                table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>When</p><p>" + date.toLocaleString("en-US", options) + " (Your Timezone)</p></div></div>");
+                table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>When (Your Timezone)</p><p>From: " + convert_utc_to_local(json.start) + "<br>To: " + convert_utc_to_local(json.end) + "</p></div></div>");
 
-                for (var section in json.custom_info) {
-                    table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>" + json.custom_info[section][0] + "</p><p>" + json.custom_info[section][1] + "</p></div></div>");
+                table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Route</p><p>" + json.route + "</p></div></div>");
+
+                var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\r\n/g,"\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
+
+                for (var section in json.sections) {
+                    table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>" + json.sections[section].title + "</p><p>" + Base64.decode(json.sections[section].content) + "</p></div></div>");
                 }
+
+                table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Manager</p><p>" + json.event_manager + "</p></div></div>");
+
 
 
                 @auth
@@ -557,6 +560,25 @@ if( !function_exists('mobile_user_agent_switch') ){
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Join</p><p>The event manager has the rights to remove or change your gate at anytime.</p><br><button onclick='login()'>Login To Join</button></div></div>");
                 @endguest
             });
+
+            function convert_utc_to_local(time, id = "") {
+                var options = {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: 'numeric'
+                };
+                var date = new Date(time);
+
+                var v = date.toLocaleString("en-US", options);
+                if (id !== "") {
+                    $('#' + id).append(v)
+                } else {
+                    return v
+                }
+            }
 
             window.onload = function () {
                 document.cookie = "vhw_redirect=null; path=/";
@@ -609,6 +631,7 @@ if( !function_exists('mobile_user_agent_switch') ){
 
                 $('.preview').css("display", "none");
                 $('.searchbar').css("display", "none");
+                $('.nav_links').css("display", "none");
                 $('.' + this.currentWindow).css("display", "block");
                 $('.close').css("display", "block");
 
@@ -707,6 +730,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 $('.' + currentWindow).css("display", "none");
                 $('.preview').css("display", "block");
                 $('.searchbar').css("display", "block");
+                $('.nav_links').css("display", "flex");
                 $('.close').css("display", "none");
 
                 if (getPathLastSegment() !== "{{$info["airport"]["icao"]}}") {

@@ -84,6 +84,8 @@ Route::get('/api/sitemap/generate', 'SitemapController@generate');
 
 Route::get('/api/sitemap/allairports', 'SitemapController@all_ap_page');
 
+Route::post('/api/events/new', 'VirtualHubWeb@addNewEvent')->middleware('auth');
+
 //----------------------------------------------------|
 
 

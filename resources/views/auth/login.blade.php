@@ -1,5 +1,5 @@
 @extends('layouts.main_page')
-
+@section('app_section', env('APP_VHW'))
 @section('title', 'Login')
 
 @section('content')
