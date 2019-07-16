@@ -660,7 +660,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 urlWindow = "";
 
                 $('.preview').css("display", "none");
-                $('.searchbar').css("display", "none");
+                $('.top_airport_info').css("display", "none");
                 $('.nav_links').css("display", "none");
                 $('.' + this.currentWindow).css("display", "block");
                 $('.close').css("display", "block");
@@ -759,7 +759,7 @@ if( !function_exists('mobile_user_agent_switch') ){
             function closeWindow(allow) {
                 $('.' + currentWindow).css("display", "none");
                 $('.preview').css("display", "block");
-                $('.searchbar').css("display", "block");
+                $('.top_airport_info').css("display", "block");
                 $('.nav_links').css("display", "flex");
                 $('.close').css("display", "none");
 
