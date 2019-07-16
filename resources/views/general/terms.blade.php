@@ -1,6 +1,7 @@
 @extends('layouts.main_page')
 @section('title', 'Terms & Conditions')
 @section('app_section', 'VirtualHub')
+@section('logo', 'vhw')
 
 
 @php

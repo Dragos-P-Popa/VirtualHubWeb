@@ -50,6 +50,10 @@ Route::get('/account', function () {
 	return view( 'general.terms' );
 });
 
+Route::get('/unsupported/', function () {
+	return view( 'general.unsupported' );
+});
+
 
 //----------------------------------------------------|
 //Dashboard

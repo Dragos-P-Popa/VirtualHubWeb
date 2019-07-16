@@ -5,7 +5,7 @@
 {{--{{dd(Auth::user()->role)}}--}}
 
 @if(!isset($info["error"]))
-    @section('title', $info["airport"]["icao"])
+    @section('title', $info["airport"]["name"])
 @else
     @section('title', "Not found")
 @endif
@@ -29,20 +29,24 @@
 @php
     if (!isset($info["error"])) {
         $sm = ["title" => "VirtualHub Web — " . $info["airport"]["name"],
-               "description" => "View details like charts, gates and more for this airport. Download VirtualHub now from the stores, available on iOS and Android!",
+               "description" => "View the weather, charts gates and more for {$info["airport"]["name"]}.",
                "url" => url("view/" .  $info["airport"]["icao"]),
-               "keywords" => "airport, information, " . $info["airport"]["icao"]];
+               "keywords" => "airport, " . $info["airport"]["name"] . ", " . $info["airport"]["icao"]];
+
+               $sharing_text = $sm["description"] . " - " . $sm["url"];
     }
 
 @endphp
 
+
+
 @section('meta_keyword', $sm["keywords"])
+
+@section('meta_description', $sm["description"])
 
 @section('meta_social')
     @if(!isset($info["error"]))
         <meta name="title" content="{{$sm["title"]}}">
-        <meta name="description"
-              content="{{$sm["description"]}}">
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
@@ -121,19 +125,39 @@ if( !function_exists('mobile_user_agent_switch') ){
 @endsection
 
 @section('content')
-    <div class="searchbar">
-        <div class="input_bar">
-            <label for="search_bar"><i class="fas fa-search"></i></label>
-            <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-                   onkeyup="updateSearchSuggestions(this.value)" id="search_bar" type="text"
-                   placeholder="Search for an airport">
-        </div>
-        <div class="hidden search_suggestions" shadow>
-            <div class="custom_table" id="search_suggestions">
+    <div class="top_airport_info">
+        <div class="searchbar">
+            <div class="input_bar">
+                <label for="search_bar"><i class="fas fa-search"></i></label>
+                <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                       onkeyup="updateSearchSuggestions(this.value)" id="search_bar" type="text"
+                       placeholder="Search for an airport">
+            </div>
+            <div class="hidden search_suggestions" shadow>
+                <div class="custom_table" id="search_suggestions">
 
+                </div>
+            </div>
+            <div class="fillUp"></div>
+        </div>
+
+        <div class="sharing">
+            <div>
+                <a onclick="copy_text('{{$sm["url"]}}')"><i class="fas fa-link"></i></a>
+            </div>
+            <div>
+                <a href="https://community.infiniteflight.com/new-topic?title=&body=[{{$sm["title"]}}]({{$sm["url"]}})" class="ifc_share" target="_blank">{!! file_get_contents(url("storage/app/images/ifc.svg")) !!}</a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{$sm["url"]}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div>
+                <a href="https://twitter.com/intent/tweet?url={{$sm["url"]}}" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div>
+                <a href="https://wa.me/?text={{$sm["url"]}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
-        <div class="fillUp"></div>
     </div>
 
     @if(isset($info["error"]))
@@ -232,9 +256,11 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 <br>
                                 <p><a href="{{url("events/" . $info["airport"]["icao"] . "/new")}}">New event</a></p>
                             </div>
-                            <div class="custom_table_row_right">
-                                <p><i class="fas fa-arrow-right"></i></p>
-                            </div>
+                            @if(count($info["events"]) != 0)
+                                <div class="custom_table_row_right">
+                                    <p><i class="fas fa-arrow-right"></i></p>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -387,6 +413,10 @@ if( !function_exists('mobile_user_agent_switch') ){
     @if(!isset($info["error"]))
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
+            if (!mapboxgl.supported()) {
+                window.open("{{url("/unsupported/")}}","_self")
+            }
+
             mapboxgl.accessToken = 'pk.eyJ1Ijoic3VkYWZseSIsImEiOiJjajBwb3pkMGYwMDBvMnFvNTd6czFobHBtIn0.yOmnz0zEI7QvEpaEVFmz2Q';
             var light_style = "mapbox://styles/sudafly/cjm89d4011nu02smk5a7e0d8h";
             var dark_style = "mapbox://styles/sudafly/cjt5olcru0ony1fojxep1jayk";
@@ -877,6 +907,19 @@ if( !function_exists('mobile_user_agent_switch') ){
                 var re = new RegExp(name + "=([^;]+)");
                 var value = re.exec(document.cookie);
                 return (value != null) ? unescape(value[1]) : null;
+            }
+
+            function copy_text(str) {
+                var el = document.createElement('textarea');
+                el.value = str;
+                el.setAttribute('readonly', '');
+                el.style = {position: 'absolute', left: '-9999px'};
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+
+                alert("Page link has been copied!")
             }
 
         </script>

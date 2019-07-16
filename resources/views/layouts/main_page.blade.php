@@ -1,4 +1,3 @@
-
 @php
     $current_year = date('Y');
 @endphp
@@ -11,11 +10,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="@yield('meta_description', 'View details like charts, gates and more for this airport. Download VirtualHub now from the stores, available on iOS and Android!')" />
-    <meta name="keywords" content="@yield('meta_keyword', 'airport, information, details')" />
+    <meta name="description"
+          content="@yield('meta_description', 'View details like charts, gates and more for this airport. Download VirtualHub now from the stores, available on iOS and Android!')"/>
+    <meta name="keywords" content="@yield('meta_keyword', 'airport, information, details')"/>
     <meta name="author" content="Phenolix">
-    <meta name="robots" content="@yield('meta_robot', 'index, follow')" />
-    <meta name="revisit-after" content="1 days" />
+    <meta name="robots" content="@yield('meta_robot', 'index, follow')"/>
+    <meta name="revisit-after" content="1 days"/>
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
@@ -85,7 +85,9 @@
                     </div>
 
                     <div>
-                        <p><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></p>
+                        <p><a href="{{ route('logout') }}"
+                              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                        </p>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
                               style="display: none;">
                             @csrf
@@ -118,8 +120,8 @@
 <footer>
     <div class="container">
         <div class="footer_left">
-            <a href="https://www.instagram.com/virtualflight__/" target="_blank"><i class="fab fa-instagram"></i>
-                VirtualFlight__</a>&nbsp;&nbsp;&nbsp;
+            <a href="https://www.instagram.com/phenolix_ltd/" target="_blank"><i class="fab fa-instagram"></i>
+                Phenolix_ltd</a>&nbsp;&nbsp;&nbsp;
             <a href="https://twitter.com/virtual_flight" target="_blank"><i class="fab fa-twitter"></i>
                 Virtual_Flight</a>
         </div>
@@ -156,6 +158,24 @@
     }
 </script>
 @yield('javascript')
+
+@if(url("") == "http://vh-net.com" || url("") != "https://vh-net.com")
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96063635-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-96063635-2');
+    </script>
+@endif
+
+
 </body>
 </html>
 
