@@ -1,0 +1,299 @@
+{
+    "Aircrafts": [
+        {
+            "name": "A318",
+            "maxFuel": 134822,
+            "fuelBurn": 5449
+        },
+        {
+            "name": "A319",
+            "maxFuel": 140983,
+            "fuelBurn": 5388
+        },
+        {
+            "name": "A320",
+            "maxFuel": 156934,
+            "fuelBurn": 5582
+        },
+        {
+            "name": "A321",
+            "maxFuel": 195982,
+            "fuelBurn": 5692
+        },
+        {
+            "name": "A330-200F",
+            "maxFuel": 188275,
+            "fuelBurn": 15185
+        },
+        {
+            "name": "A330-300",
+            "maxFuel": 517462,
+            "fuelBurn": 15352
+        },
+        {
+            "name": "A340-600",
+            "maxFuel": 814359,
+            "fuelBurn": 21649
+        },
+        {
+            "name": "A380-800",
+            "maxFuel": 1283428,
+            "fuelBurn": 25238
+        },
+        {
+            "name": "B717-200",
+            "maxFuel": 110859,
+            "fuelBurn": 7932
+        },
+        {
+            "name": "B737-700",
+            "maxFuel": 148153,
+            "fuelBurn": 5480
+        },
+        {
+            "name": "B737-700 BBJ",
+            "maxFuel": 139184,
+            "fuelBurn": 7932
+        },
+        {
+            "name": "B737-800",
+            "maxFuel": 154346,
+            "fuelBurn": 5806
+        },
+        {
+            "name": "B737-900",
+            "maxFuel": 154346,
+            "fuelBurn": 6150
+        },
+        {
+            "name": "B747-200",
+            "maxFuel": 842210,
+            "fuelBurn": 18880
+        },
+        {
+            "name": "B747-400",
+            "maxFuel": 850868,
+            "fuelBurn": 18880
+        },
+        {
+            "name": "B747-8",
+            "maxFuel": 1070631,
+            "fuelBurn": 18271
+        },
+        {
+            "name": "B747-SCA",
+            "maxFuel": 807035,
+            "fuelBurn": 34242
+        },
+        {
+            "name": "B747-SOFIA",
+            "maxFuel": 689743,
+            "fuelBurn": 34242
+        },
+        {
+            "name": "B757-200",
+            "maxFuel": 258957,
+            "fuelBurn": 9356
+        },
+        {
+            "name": "B767-300",
+            "maxFuel": 426176,
+            "fuelBurn": 9356
+        },
+        {
+            "name": "B777-200ER",
+            "maxFuel": 647604,
+            "fuelBurn": 14700
+        },
+        {
+            "name": "B777-200F",
+            "maxFuel": 701068,
+            "fuelBurn": 17808
+        },
+        {
+            "name": "B777-200LR",
+            "maxFuel": 678177,
+            "fuelBurn": 17747
+        },
+        {
+            "name": "B777-300ER",
+            "maxFuel": 746282,
+            "fuelBurn": 15608
+        },
+        {
+            "name": "B787-8",
+            "maxFuel": 504427,
+            "fuelBurn": 10564
+        },
+        {
+            "name": "B787-9",
+            "maxFuel": 568863,
+            "fuelBurn": 11446
+        },
+        {
+            "name": "B787-10",
+            "maxFuel": 548519,
+            "fuelBurn": 11446
+        },
+        {
+            "name": "C-17 Globemaster III",
+            "maxFuel": 632087,
+            "fuelBurn": 20873
+        },
+        {
+            "name": "VC-25",
+            "maxFuel": 828771,
+            "fuelBurn": 34242
+        },
+        {
+            "name": "Super Decathlon",
+            "maxFuel": 1726,
+            "fuelBurn": 105
+        },
+        {
+            "name": "CRJ200",
+            "maxFuel": 51485,
+            "fuelBurn": 2429
+        },
+        {
+            "name": "CRJ700",
+            "maxFuel": 77239,
+            "fuelBurn": 4396
+        },
+        {
+            "name": "CRJ900",
+            "maxFuel": 78950,
+            "fuelBurn": 4396
+        },
+        {
+            "name": "CRJ1000",
+            "maxFuel": 77239,
+            "fuelBurn": 3597
+        },
+        {
+            "name": "Dash-8 Q400",
+            "maxFuel": 60226,
+            "fuelBurn": 2667
+        },
+        {
+            "name": "172 Skyhawk",
+            "maxFuel": 2138,
+            "fuelBurn": 63
+        },
+        {
+            "name": "208 Caravan",
+            "maxFuel": 8602,
+            "fuelBurn": 361
+        },
+        {
+            "name": "Citation X",
+            "maxFuel": 34114,
+            "fuelBurn": 1164
+        },
+        {
+            "name": "SR22",
+            "maxFuel": 3139,
+            "fuelBurn": 114
+        },
+        {
+            "name": "E170",
+            "maxFuel": 77830,
+            "fuelBurn": 4691
+        },
+        {
+            "name": "E175",
+            "maxFuel": 80420,
+            "fuelBurn": 4691
+        },
+        {
+            "name": "E190",
+            "maxFuel": 112330,
+            "fuelBurn": 4691
+        },
+        {
+            "name": "E195",
+            "maxFuel": 117286,
+            "fuelBurn": 4691
+        },
+        {
+            "name": "A-10",
+            "maxFuel": 40358,
+            "fuelBurn": 5079
+        },
+        {
+            "name": "F-16C",
+            "maxFuel": 42082,
+            "fuelBurn": 6254
+        },
+        {
+            "name": "F-14",
+            "maxFuel": 82382,
+            "fuelBurn": 14656
+        },
+        {
+            "name": "AC-130",
+            "maxFuel": 122678,
+            "fuelBurn": 4391
+        },
+        {
+            "name": "C-130H",
+            "maxFuel": 170997,
+            "fuelBurn": 4391
+        },
+        {
+            "name": "C-130J",
+            "maxFuel": 174926,
+            "fuelBurn": 4391
+        },
+        {
+            "name": "C-130J-30",
+            "maxFuel": 192869,
+            "fuelBurn": 4391
+        },
+        {
+            "name": "F-22",
+            "maxFuel": 68925,
+            "fuelBurn": 22685
+        },
+        {
+            "name": "P-38",
+            "maxFuel": 17725,
+            "fuelBurn": 1164
+        },
+        {
+            "name": "C-130J",
+            "maxFuel": 51485,
+            "fuelBurn": 2429
+        },
+        {
+            "name": "DC-10",
+            "maxFuel": 534310,
+            "fuelBurn": 12381
+        },
+        {
+            "name": "DC-10F",
+            "maxFuel": 533951,
+            "fuelBurn": 12381
+        },
+        {
+            "name": "F/A-18",
+            "maxFuel": 36487,
+            "fuelBurn": 12588
+        },
+        {
+            "name": "MD-11",
+            "maxFuel": 594380,
+            "fuelBurn": 18360
+        },
+        {
+            "name": "MD-11F",
+            "maxFuel": 639594,
+            "fuelBurn": 18360
+        },
+        {
+            "name": "Spitfire Mk VIII",
+            "maxFuel": 8488,
+            "fuelBurn": 403
+        }
+    ]
+}

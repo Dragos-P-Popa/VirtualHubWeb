@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/general/unsupported.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/analytics.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/general/terms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/general/terms.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/vhweb/airport.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="148" column="136" selection-start-line="148" selection-start-column="127" selection-end-line="148" selection-end-column="136" />
+            <state relative-caret-position="226">
+              <caret line="127" column="32" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -71,20 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/general/unsupported.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="1482" column="30" selection-start-line="1482" selection-start-column="30" selection-end-line="1482" selection-end-column="30" />
+            <state relative-caret-position="488">
+              <caret line="1472" column="35" lean-forward="true" selection-start-line="1472" selection-start-column="35" selection-end-line="1472" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -564,7 +547,7 @@
       <workItem from="1562849312004" duration="1239000" />
       <workItem from="1562913572219" duration="9565000" />
       <workItem from="1563016934233" duration="12038000" />
-      <workItem from="1563123410496" duration="6739000" />
+      <workItem from="1563123410496" duration="7016000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -671,17 +654,24 @@
       <option name="project" value="LOCAL" />
       <updated>1563037771372</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added Unsupported Page, sharing options">
+      <created>1563282975692</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563282975692</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353054000" />
+    <option name="totallyTimeSpent" value="353331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6415929" visible="true" weight="0.3684771" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6415929" visible="true" weight="0.3684771" />
       <window_info id="Structure" order="1" sideWeight="0.35840708" side_tool="true" weight="0.25239617" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -695,9 +685,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49893504" weight="0.13097346" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4978701" visible="true" weight="0.12831858" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5021299" side_tool="true" visible="true" weight="0.12831858" />
-      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.78913736" weight="0.32920355" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4978701" weight="0.12831858" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.2113951" side_tool="true" visible="true" weight="0.32920355" />
+      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.7886049" visible="true" weight="0.32920355" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -717,7 +707,8 @@
     <MESSAGE value="Added Sitemap URL" />
     <MESSAGE value="Added Create Event Page" />
     <MESSAGE value="Added Create Event Page&#10;Fixed View Not Found" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Create Event Page&#10;Fixed View Not Found" />
+    <MESSAGE value="Added Unsupported Page, sharing options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Unsupported Page, sharing options" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
@@ -1050,15 +1041,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vhweb/airport.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="148" column="136" selection-start-line="148" selection-start-column="127" selection-end-line="148" selection-end-column="136" />
+        <state relative-caret-position="226">
+          <caret line="127" column="32" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="1482" column="30" selection-start-line="1482" selection-start-column="30" selection-end-line="1482" selection-end-column="30" />
+        <state relative-caret-position="488">
+          <caret line="1472" column="35" lean-forward="true" selection-start-line="1472" selection-start-column="35" selection-end-line="1472" selection-end-column="35" />
         </state>
       </provider>
     </entry>
