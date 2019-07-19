@@ -121,7 +121,7 @@
     <div class="container">
         <div class="footer_left">
             <a href="https://www.instagram.com/phenolix_ltd/" target="_blank"><i class="fab fa-instagram"></i>
-                Phenolix_ltd</a>&nbsp;&nbsp;&nbsp;
+                Phenolix_ltd&nbsp;&nbsp;|</a>&nbsp;
             <a href="https://twitter.com/virtual_flight" target="_blank"><i class="fab fa-twitter"></i>
                 Virtual_Flight</a>
         </div>

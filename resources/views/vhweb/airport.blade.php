@@ -5,7 +5,7 @@
 {{--{{dd(Auth::user()->role)}}--}}
 
 @if(!isset($info["error"]))
-    @section('title', $info["airport"]["name"])
+    @section('title', $info["airport"]["name"] . " - " . $info["airport"]["icao"] . " / " . $info["airport"]["iata"] . "")
 @else
     @section('title', "Not found")
 @endif
@@ -29,7 +29,7 @@
 @php
     if (!isset($info["error"])) {
         $sm = ["title" => "VirtualHub Web — " . $info["airport"]["name"],
-               "description" => "View the weather, charts gates and more for {$info["airport"]["name"]}.",
+               "description" => "View the weather, charts, gates, and more for {$info["airport"]["name"]}.",
                "url" => url("view/" .  $info["airport"]["icao"]),
                "keywords" => "airport, " . $info["airport"]["name"] . ", " . $info["airport"]["icao"]];
 
@@ -37,7 +37,6 @@
     }
 
 @endphp
-
 
 
 @section('meta_keyword', $sm["keywords"])
@@ -146,13 +145,16 @@ if( !function_exists('mobile_user_agent_switch') ){
                 <a onclick="copy_text('{{$sm["url"]}}')"><i class="fas fa-link"></i></a>
             </div>
             <div>
-                <a href="https://community.infiniteflight.com/new-topic?title=&body=[{{$sm["title"]}}]({{$sm["url"]}})" class="ifc_share" target="_blank">{!! file_get_contents(url("storage/app/images/ifc.svg")) !!}</a>
+                <a href="https://community.infiniteflight.com/new-topic?title=&body=[{{$sm["title"]}}]({{$sm["url"]}})"
+                   class="ifc_share" target="_blank">{!! file_get_contents(url("storage/app/images/ifc.svg")) !!}</a>
             </div>
             <div>
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{$sm["url"]}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{$sm["url"]}}" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
             </div>
             <div>
-                <a href="https://twitter.com/intent/tweet?url={{$sm["url"]}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://twitter.com/intent/tweet?url={{$sm["url"]}}" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
             </div>
             <div>
                 <a href="https://wa.me/?text={{$sm["url"]}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -249,7 +251,8 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 @if(count($info["events"]) == 0)
                                     <p>No events for this airport</p>
                                 @else
-                                    <p>{{count($info["events"])}} @if(count($info["events"]) == 1) Event @else Events @endif Coming Up Soon</p>
+                                    <p>{{count($info["events"])}} @if(count($info["events"]) == 1) Event @else
+                                            Events @endif Coming Up Soon</p>
                                     <p id="ev_list_str">Next event: <br> {{$info["events"][0]["title"]}}
                                         | </p>
                                 @endif
@@ -273,140 +276,143 @@ if( !function_exists('mobile_user_agent_switch') ){
         </div>
 
 
-        <div class="chart_window hidden">
-            <h2 class="window_title">Charts | {{$info["airport"]["icao"]}}</h2>
-            <div class="charts_container">
-                <div class="charts_left">
-                    <div class="custom_table">
-                        @foreach($info["charts"] as $chart)
-                            <div class="custom_table_row" onclick="openChart('{{$chart["Url"]}}')">
-                                <div class="custom_table_row_left">
-                                    <p>{{$chart["Name"]}}</p>
-                                </div>
+        @if(count($info["charts"]) != 0)
+            <div class="chart_window hidden">
+                <h2 class="window_title">Charts | {{$info["airport"]["icao"]}}</h2>
+                <div class="charts_container">
+                    <div class="charts_left">
+                        <div class="custom_table">
+                            @foreach($info["charts"] as $chart)
+                                <div class="custom_table_row" onclick="openChart('{{$chart["Url"]}}')">
+                                    <div class="custom_table_row_left">
+                                        <p>{{$chart["Name"]}}</p>
+                                    </div>
 
-                                <div class="custom_table_row_right">
-                                    <p><i class="fas fa-arrow-right"></i></p>
+                                    <div class="custom_table_row_right">
+                                        <p><i class="fas fa-arrow-right"></i></p>
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
-                </div>
-                <div class="charts_right" id="chart_viewer">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="runway_window hidden">
-            <h2 class="window_title">Runways | {{$info["airport"]["icao"]}}</h2>
-            <div class="runway_container">
-                <div class="runway_left">
-                    <div class="custom_table">
-                        @foreach($info["runways"] as $runway)
-                            <div class="custom_table_row">
-                                <div class="custom_table_row_left">
-                                    <p>{{$runway["app_idents"]}}</p>
-                                    <p>{!! str_replace("\n","<br>", $runway["app_dimension"]) !!}</p>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="gates_window hidden">
-            <div class="window_title">
-                <h2>Gates | {{$info["airport"]["icao"]}}</h2>
-                <label for="gates_filter"></label>
-                <select id="gates_filter filter_select">
-                    <option value="0" disabled selected>Order By</option>
-                    <optgroup label="Ascending">
-                        <option value="volvo">Name</option>
-                        <option value="volvo">Size</option>
-                        <option value="volvo">Type</option>
-                        <option value="volvo">Aircraft</option>
-                    </optgroup>
-                    <optgroup label="Descending">
-                        <option value="saab">Name</option>
-                        <option value="saab">Size</option>
-                        <option value="saab">Type</option>
-                        <option value="saab">Aircraft</option>
-                    </optgroup>
-                </select>
-            </div>
-            <div class="gates_container">
-                <div class="gates_left">
-                    <div class="custom_table">
-                        @foreach($info["gates"] as $gate)
-                            <div class="custom_table_row"
-                                 onclick="goToLocation({{$gate["latitude"]}}, {{$gate["longitude"]}})">
-                                <div class="custom_table_row_left">
-                                    <p>@if($gate["name"] == "") No Name @else {{$gate["name"]}} @endif</p>
-                                    <p>{!! nl2br($gate["app_string"]) !!}</p>
-                                </div>
-                                <div class="custom_table_row_right">
-                                    <p><i class="fas fa-arrow-right"></i></p>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="gates_right" id="gates_viewer">
-                    <div class="gates_map" id='gates_map'></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="weather_window hidden">
-            <h2 class="window_title">Weather | {{$info["airport"]["icao"]}}</h2>
-            <div class="weather_container">
-                <div class="weather_left">
-                    <div class="custom_table">
-                        @foreach($info["weather"] as $weatherelement)
-                            <div class="custom_table_row">
-                                <div condition="{{$weatherelement[2]}}" class="custom_table_row_left">
-                                    <p>{{$weatherelement[0]}}</p>
-                                    <p>{{$weatherelement[1]}}</p>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="events_window hidden">
-            <h2 class="window_title">Events | {{$info["airport"]["icao"]}}</h2>
-            <div class="events_container">
-                <div class="events_left">
-                    <div class="custom_table">
-                        @foreach($info["events"] as $event)
-                            <div class="custom_table_row" json='{{json_encode($event)}}' onclick="">
-                                <div class="custom_table_row_left">
-                                    <p>{{$event["title"]}}</p>
-                                    <p isoformat="{{$event["start"]}}"></p>
-                                </div>
-
-                                <div class="custom_table_row_right">
-                                    <p><i class="fas fa-arrow-right"></i></p>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-
-                <div class="events_right" id="events_viewer">
-                    <div class="custom_table">
+                    <div class="charts_right" id="chart_viewer">
 
                     </div>
                 </div>
             </div>
-        </div>
+        @endif
+
+        @if(count($info["runways"]) != 0)
+            <div class="runway_window hidden">
+                <h2 class="window_title">Runways | {{$info["airport"]["icao"]}}</h2>
+                <div class="runway_container">
+                    <div class="runway_left">
+                        <div class="custom_table">
+                            @foreach($info["runways"] as $runway)
+                                <div class="custom_table_row">
+                                    <div class="custom_table_row_left">
+                                        <p>{{$runway["app_idents"]}}</p>
+                                        <p>{!! str_replace("\n","<br>", $runway["app_dimension"]) !!}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        @if(count($info["gates"]) != 0)
+            <div class="gates_window hidden">
+                <div class="window_title">
+                    <h2>Gates | {{$info["airport"]["icao"]}}</h2>
+                </div>
+
+                <div class="gates_container">
+                    <div class="gates_left">
+                        <div class="custom_table">
+                            @foreach($info["gates"] as $gate)
+                                <div class="custom_table_row"
+                                     onclick="goToLocation({{$gate["longitude"]}}, {{$gate["latitude"]}})">
+                                    <div class="custom_table_row_left">
+                                        <p>@if($gate["name"] == "") No Name @else {{$gate["name"]}} @endif</p>
+                                        <p>{!! nl2br($gate["app_string"]) !!}</p>
+                                    </div>
+                                    <div class="custom_table_row_right">
+                                        <p><i class="fas fa-arrow-right"></i></p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="gates_right" id="gates_viewer">
+                        <div class="gates_map" id='gates_map'></div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+
+        @if(count($info["weather"]) != 0)
+            <div class="weather_window hidden">
+                <h2 class="window_title">Weather | {{$info["airport"]["icao"]}}</h2>
+                <div class="weather_container">
+                    <div class="weather_left">
+                        <div class="custom_table">
+                            @foreach($info["weather"] as $weatherelement)
+                                <div class="custom_table_row">
+                                    <div condition="{{$weatherelement[2]}}" class="custom_table_row_left">
+                                        <p>{{$weatherelement[0]}}</p>
+                                        <p>{{$weatherelement[1]}}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        @if(count($info["events"]) != 0)
+            <div class="events_window hidden">
+                <h2 class="window_title">Events | {{$info["airport"]["icao"]}}</h2>
+                <div class="events_container">
+                    <div class="events_left">
+                        <div class="custom_table">
+                            @foreach($info["events"] as $event)
+                                <div class="custom_table_row" json='{{json_encode($event)}}' onclick="">
+                                    <div class="custom_table_row_left">
+                                        <p>{{$event["title"]}}</p>
+                                        <p isoformat="{{$event["start"]}}"></p>
+                                    </div>
+
+                                    <div class="custom_table_row_right">
+                                        <p><i class="fas fa-arrow-right"></i></p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <div class="events_right" id="events_viewer">
+                        <div class="custom_table">
+
+
+                        </div>
+
+                        <div class="gates_map hidden" id='events_map'></div>
+
+                    </div>
+                </div>
+            </div>
+        @endif
 
     @endif
-
+    <noscript>
+        <div>
+            <h1>Your browser does not support JavaScript!</h1>
+        </div>
+    </noscript>
 @endsection
 
 @section('javascript')
@@ -414,7 +420,7 @@ if( !function_exists('mobile_user_agent_switch') ){
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
             if (!mapboxgl.supported()) {
-                window.open("{{url("/unsupported/")}}","_self")
+                window.open("{{url("/unsupported/")}}", "_self")
             }
 
             mapboxgl.accessToken = 'pk.eyJ1Ijoic3VkYWZseSIsImEiOiJjajBwb3pkMGYwMDBvMnFvNTd6czFobHBtIn0.yOmnz0zEI7QvEpaEVFmz2Q';
@@ -429,20 +435,25 @@ if( !function_exists('mobile_user_agent_switch') ){
 
             var main_map_loaded = false;
             var gate_map_loaded = false;
-            var event_map_loaded = false;
-
+            var events_map_loaded = false;
 
             var currentWindow = "";
+            var selectedEvent;
+
+                    @auth
+            var current_user = {{Auth::user()->id}};
+
+                    @endauth
 
             var main_map = new mapboxgl.Map({
-                container: 'map',
-                style: current_style,
-                center: [
-                    {{$info["airport"]["longitude"]}},
-                    {{$info["airport"]["latitude"]}}],
-                zoom: 14,
-                pitch: 60
-            });
+                    container: 'map',
+                    style: current_style,
+                    center: [
+                        {{$info["airport"]["longitude"]}},
+                        {{$info["airport"]["latitude"]}}],
+                    zoom: 14,
+                    pitch: 60
+                });
 
             var gate_map = new mapboxgl.Map({
                 container: 'gates_map',
@@ -453,19 +464,56 @@ if( !function_exists('mobile_user_agent_switch') ){
                 zoom: 15,
             });
 
-            {{--var event_map = new mapboxgl.Map({--}}
-            {{--    container: 'gates_map',--}}
-            {{--    style: current_style,--}}
-            {{--    center: [--}}
-            {{--        {{$info["airport"]["longitude"]}},--}}
-            {{--        {{$info["airport"]["latitude"]}}],--}}
-            {{--    zoom: 15,--}}
-            {{--});--}}
+                    @if(count($info["events"]) != 0)
+            var events_map = new mapboxgl.Map({
+                    container: 'events_map',
+                    style: current_style,
+                    center: [
+                        {{$info["airport"]["longitude"]}},
+                        {{$info["airport"]["latitude"]}}],
+                    zoom: 15,
+                    // minZoom: 11,
+                    maxBounds: [
+                        [{{$info["airport"]["bounds"][2]}}, {{$info["airport"]["bounds"][0]}}],
+                        [{{$info["airport"]["bounds"][3]}}, {{$info["airport"]["bounds"][1]}}]// Northeast coordinates
+                    ]
+                });
+            @endif
+
+            {{--                    @php--}}
+            {{--                        $randomGates = array_rand($info["gates"], 7);--}}
+            {{--                        $zooms = [15, 16, 17, 18];--}}
+            {{--                        $pitch = [30, 40, 50, 55, 60];--}}
+
+            {{--                        $java_array = '{--}}
+            {{--                                    "camera": {--}}
+            {{--                                     center: [' . $info["airport"]["longitude"] . ', ' . $info["airport"]["latitude"] . '],--}}
+            {{--                                     zoom: 12,--}}
+            {{--                                     pitch: 10--}}
+            {{--                                     }--}}
+            {{--                                  },';--}}
+
+            {{--                        foreach ($randomGates as $gate) {--}}
+            {{--                            $java_array = $java_array . '{--}}
+            {{--                                    "camera": {--}}
+            {{--                                     center: [' . $info["gates"][$gate]["latitude"] . ', ' . $info["gates"][$gate]["longitude"] . '],--}}
+            {{--                                     zoom: ' . $zooms[array_rand($zooms)] . ',--}}
+            {{--                                     pitch: ' . $pitch[array_rand($pitch)] . '--}}
+            {{--                                     }--}}
+            {{--                                  },';--}}
+            {{--                        }--}}
+
+
+            {{--                        $java_array = substr($java_array, 0, -1);--}}
+            {{--                    @endphp--}}
+
+            {{--            var locations = [{!! $java_array !!}];--}}
 
             main_map.on('load', function () {
                 main_map_loaded = true;
                 mapDarkMode();
                 rotateCamera(0);
+                // playback(0);
             });
 
             gate_map.on('load', function () {
@@ -473,10 +521,93 @@ if( !function_exists('mobile_user_agent_switch') ){
                 mapDarkMode();
             });
 
-            // event_map.on('load', function () {
-            //     event_map_loaded = true;
-            //     mapDarkMode();
-            // });
+            @if(count($info["events"]) != 0)
+            events_map.on('load', function () {
+                events_map_loaded = true;
+                mapDarkMode();
+
+                events_map.on('click', 'gates', function (e) {
+                    var gate = events_map.queryRenderedFeatures(e.point)[0];
+                    var gate_id = gate.properties.id;
+
+                    $.ajax({
+                        url: "{{url("/api/events/join")}}",
+                        type: "post",
+                        data: {
+                            "_token": "{{ csrf_token() }}",
+                            "event_id": selectedEvent,
+                            "gate_id": gate_id,
+                        },
+                        success: function (response) {
+                            if (response.success == true) {
+                                updateOccupiedGates();
+                            } else {
+                                updateOccupiedGates();
+                                alert(response.reason)
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+
+
+                        }
+                    });
+
+                });
+            });
+
+            function updateOccupiedGates() {
+
+                $.ajax({
+                    url: "{{url("/api/events/gates")}}",
+                    type: "post",
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        "event_id": selectedEvent,
+                    },
+                    success: function (response) {
+                        if (response.success == true) {
+                            $(".occupied_gate").remove();
+
+                            for (var i = 0; i < response.gates.length; i++) {
+                                var obj = response.gates[i];
+
+                                var el = document.createElement('i');
+
+                                if (obj.user_id == current_user) {
+                                    el.className = 'occupied_gate byuser fas fa-check';
+                                } else {
+                                    el.className = 'occupied_gate fas fa-times';
+                                }
+
+                                new mapboxgl.Marker(el)
+                                    .setLngLat([obj.latitude, obj.longitude])
+                                    .addTo(events_map);
+                            }
+
+                        } else {
+                            alert(response.reason)
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+
+
+                    }
+                });
+            }
+
+            @endif
+
+            function playback(index) {
+                main_map.flyTo(locations[index].camera);
+
+                main_map.once('moveend', function () {
+
+                    window.setTimeout(function () {
+                        index = (index + 1 === locations.length) ? 0 : index + 1;
+                        playback(index);
+                    }, 3000); // After callback, show the location for 3 seconds.
+                });
+            }
 
             function rotateCamera(timestamp) {
                 main_map.rotateTo((timestamp / 150) % 360, {duration: 0});
@@ -486,7 +617,7 @@ if( !function_exists('mobile_user_agent_switch') ){
 
             function time() {
                 $.ajax({
-                    url: "{{asset("/api")}}/timezone",
+                    url: "{{url("/api/timezone")}}",
                     type: "post",
                     data: {
                         "_token": "{{ csrf_token() }}",
@@ -530,6 +661,10 @@ if( !function_exists('mobile_user_agent_switch') ){
                     @if($agent->isDesktop())
                     gate_map.setStyle(current_style);
                     @endif
+                    @if(count($info["events"]) != 0)
+                    events_map.setStyle(current_style);
+
+                    @endif
                 }
             }
 
@@ -557,7 +692,7 @@ if( !function_exists('mobile_user_agent_switch') ){
 
             $("[json]").click(function () {
                 var e = $(this);
-                var table = $("#events_viewer").children(".custom_table");
+                var table = $("#events_viewer > .custom_table");
                 var json = JSON.parse(e.attr("json"));
 
                 var v = convert_utc_to_local(json.start);
@@ -565,13 +700,100 @@ if( !function_exists('mobile_user_agent_switch') ){
 
                 table.empty();
 
+                selectedEvent = json.id;
+
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>" + json.title + "</p><p>" + json.description + "</p></div></div>");
 
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>When (Your Timezone)</p><p>From: " + convert_utc_to_local(json.start) + "<br>To: " + convert_utc_to_local(json.end) + "</p></div></div>");
 
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Route</p><p>" + json.route + "</p></div></div>");
 
-                var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\r\n/g,"\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
+                var Base64 = {
+                    _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", encode: function (e) {
+                        var t = "";
+                        var n, r, i, s, o, u, a;
+                        var f = 0;
+                        e = Base64._utf8_encode(e);
+                        while (f < e.length) {
+                            n = e.charCodeAt(f++);
+                            r = e.charCodeAt(f++);
+                            i = e.charCodeAt(f++);
+                            s = n >> 2;
+                            o = (n & 3) << 4 | r >> 4;
+                            u = (r & 15) << 2 | i >> 6;
+                            a = i & 63;
+                            if (isNaN(r)) {
+                                u = a = 64
+                            } else if (isNaN(i)) {
+                                a = 64
+                            }
+                            t = t + this._keyStr.charAt(s) + this._keyStr.charAt(o) + this._keyStr.charAt(u) + this._keyStr.charAt(a)
+                        }
+                        return t
+                    }, decode: function (e) {
+                        var t = "";
+                        var n, r, i;
+                        var s, o, u, a;
+                        var f = 0;
+                        e = e.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+                        while (f < e.length) {
+                            s = this._keyStr.indexOf(e.charAt(f++));
+                            o = this._keyStr.indexOf(e.charAt(f++));
+                            u = this._keyStr.indexOf(e.charAt(f++));
+                            a = this._keyStr.indexOf(e.charAt(f++));
+                            n = s << 2 | o >> 4;
+                            r = (o & 15) << 4 | u >> 2;
+                            i = (u & 3) << 6 | a;
+                            t = t + String.fromCharCode(n);
+                            if (u != 64) {
+                                t = t + String.fromCharCode(r)
+                            }
+                            if (a != 64) {
+                                t = t + String.fromCharCode(i)
+                            }
+                        }
+                        t = Base64._utf8_decode(t);
+                        return t
+                    }, _utf8_encode: function (e) {
+                        e = e.replace(/\r\n/g, "\n");
+                        var t = "";
+                        for (var n = 0; n < e.length; n++) {
+                            var r = e.charCodeAt(n);
+                            if (r < 128) {
+                                t += String.fromCharCode(r)
+                            } else if (r > 127 && r < 2048) {
+                                t += String.fromCharCode(r >> 6 | 192);
+                                t += String.fromCharCode(r & 63 | 128)
+                            } else {
+                                t += String.fromCharCode(r >> 12 | 224);
+                                t += String.fromCharCode(r >> 6 & 63 | 128);
+                                t += String.fromCharCode(r & 63 | 128)
+                            }
+                        }
+                        return t
+                    }, _utf8_decode: function (e) {
+                        var t = "";
+                        var n = 0;
+                        var r = c1 = c2 = 0;
+                        while (n < e.length) {
+                            r = e.charCodeAt(n);
+                            if (r < 128) {
+                                t += String.fromCharCode(r);
+                                n++
+                            } else if (r > 191 && r < 224) {
+                                c2 = e.charCodeAt(n + 1);
+                                t += String.fromCharCode((r & 31) << 6 | c2 & 63);
+                                n += 2
+                            } else {
+                                c2 = e.charCodeAt(n + 1);
+                                c3 = e.charCodeAt(n + 2);
+                                t += String.fromCharCode((r & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+                                n += 3
+                            }
+                        }
+                        return t
+                    }
+                }
 
                 for (var section in json.sections) {
                     table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>" + json.sections[section].title + "</p><p>" + Base64.decode(json.sections[section].content) + "</p></div></div>");
@@ -580,15 +802,21 @@ if( !function_exists('mobile_user_agent_switch') ){
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Manager</p><p>" + json.event_manager + "</p></div></div>");
 
 
-
-                @auth
-
-
-                @endauth
-
                 @guest
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Join</p><p>The event manager has the rights to remove or change your gate at anytime.</p><br><button onclick='login()'>Login To Join</button></div></div>");
                 @endguest
+
+                @auth
+                @if(count($info["events"]) != 0)
+                table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Join</p><p>Select an gate to join</p></div></div>");
+
+                $("#events_map").removeClass("hidden");
+                events_map.resize();
+                updateOccupiedGates();
+                @endif
+
+                @endauth
+
             });
 
             function convert_utc_to_local(time, id = "") {
@@ -722,6 +950,11 @@ if( !function_exists('mobile_user_agent_switch') ){
 
                 main_map.resize();
                 gate_map.resize();
+
+                @if(count($info["events"]) != 0)
+                events_map.resize();
+
+                @endif
             }
 
             window.onpopstate = function (event) {
@@ -770,6 +1003,10 @@ if( !function_exists('mobile_user_agent_switch') ){
                 currentWindow = "";
                 main_map.resize();
                 gate_map.resize();
+                @if(count($info["events"]) != 0)
+                events_map.resize();
+
+                @endif
             }
 
 

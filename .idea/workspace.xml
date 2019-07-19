@@ -2,9 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/python/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-fighters-normal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-heavy-normal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-heli-normal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-jets-normal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-props-normal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-turboprop-normal.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crawler.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/Events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/dataupdater.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/dataupdater.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/frequencies.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/frequencies.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/gates-mapbox.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/gates-mapbox.geojson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/gates.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/gates.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/runways-mapbox.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/runways-mapbox.geojson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/runways.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/runways.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+            <state relative-caret-position="473">
+              <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
               <folding>
                 <element signature="e#6#42#0#PHP" expanded="true" />
               </folding>
@@ -46,32 +69,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/vhweb/airport.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="767" column="17" lean-forward="true" selection-start-line="767" selection-start-column="17" selection-end-line="767" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="51">
+              <caret line="446" column="16" selection-start-line="446" selection-start-column="16" selection-end-line="446" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/main_page.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="43" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="43" />
+            <state relative-caret-position="510">
+              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+              <folding>
+                <element signature="e#40#60#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="1472" column="35" lean-forward="true" selection-start-line="1472" selection-start-column="35" selection-end-line="1472" selection-end-column="35" />
+            <state relative-caret-position="482">
+              <caret line="1627" lean-forward="true" selection-start-line="1627" selection-end-line="1627" />
             </state>
           </provider>
         </entry>
@@ -142,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/laravel-echo-server.json" />
@@ -166,7 +179,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/cookie.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/vhw.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/general/general.blade.php" />
-        <option value="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" />
         <option value="$PROJECT_DIR$/app/api/SitemapGenerator.php" />
         <option value="$PROJECT_DIR$/app/api/Sitemap.php" />
         <option value="$PROJECT_DIR$/resources/views/vhweb/all_ap_sitemap.blade.php" />
@@ -177,22 +189,24 @@
         <option value="$PROJECT_DIR$/resources/js/date-time-picker.min.js" />
         <option value="$PROJECT_DIR$/app/api/AirportInfo.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/APIController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" />
-        <option value="$PROJECT_DIR$/app/api/Events.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/app/api/Weather.php" />
         <option value="$PROJECT_DIR$/robots.txt" />
         <option value="$PROJECT_DIR$/resources/views/general/terms.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/general/unsupported.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" />
-        <option value="$PROJECT_DIR$/resources/css/app.css" />
-        <option value="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/api/Events.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" />
+        <option value="$PROJECT_DIR$/resources/css/app.css" />
+        <option value="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" />
       </list>
     </option>
   </component>
@@ -320,7 +334,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1920" />
     <option name="height" value="1200" />
   </component>
@@ -385,13 +399,6 @@
               <item name="vf" type="b2602c69:ProjectViewProjectNode" />
               <item name="vf" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vf" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -433,28 +440,6 @@
               <item name="vf" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="vf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vf" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vf" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vf" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -473,26 +458,29 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/storage/app/images" />
-      <recent name="$PROJECT_DIR$/resources/images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/storage/app/images" />
       <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/views/main_page_layout" />
       <recent name="$PROJECT_DIR$/app/api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/images" />
+      <recent name="$PROJECT_DIR$/resources/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -560,7 +548,8 @@
       <workItem from="1562849312004" duration="1239000" />
       <workItem from="1562913572219" duration="9565000" />
       <workItem from="1563016934233" duration="12038000" />
-      <workItem from="1563123410496" duration="7869000" />
+      <workItem from="1563123410496" duration="8124000" />
+      <workItem from="1563444789867" duration="19821000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -688,11 +677,23 @@
       <option name="project" value="LOCAL" />
       <updated>1563283542174</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added Description">
+      <created>1563283996534</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1563283996534</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="phpunit_xml - 2019.07.19 at 19h 47m 49s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354184000" />
+    <option name="totallyTimeSpent" value="374260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -707,22 +708,22 @@
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6415929" visible="true" weight="0.3684771" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6415929" visible="true" weight="0.37220448" />
       <window_info id="Structure" order="1" sideWeight="0.35840708" side_tool="true" weight="0.25239617" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32920355" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32920355" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.32920355" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946752" visible="true" weight="0.22566372" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49893504" weight="0.22566372" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49893504" weight="0.13097346" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49733758" weight="0.12831858" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005325" side_tool="true" visible="true" weight="0.22566372" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4968051" visible="true" weight="0.12831858" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50319487" side_tool="true" visible="true" weight="0.12831858" />
       <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.7880724" weight="0.32920355" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -744,19 +745,10 @@
     <MESSAGE value="Added Create Event Page" />
     <MESSAGE value="Added Create Event Page&#10;Fixed View Not Found" />
     <MESSAGE value="Added Unsupported Page, sharing options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Unsupported Page, sharing options" />
+    <MESSAGE value="Added Description" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Description" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding>
-            <element signature="e#45#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/allusers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -893,13 +885,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vhweb/all_ap_sitemap.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vhweb/allapsitemap.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -954,13 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/AirportInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="46" column="50" lean-forward="true" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -989,44 +967,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/Events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="905">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#40#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/general/terms.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-795">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-          <folding>
-            <element signature="e#6#42#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,20 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main_page.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="1472" column="35" lean-forward="true" selection-start-line="1472" selection-start-column="35" selection-end-line="1472" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1072,20 +1002,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vhweb/airport.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="767" column="17" lean-forward="true" selection-start-line="767" selection-start-column="17" selection-end-line="767" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="5" selection-end-line="15" selection-end-column="5" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#23#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/AirportInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="50" lean-forward="true" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/Events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main_page.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="129" column="14" lean-forward="true" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
+          <folding>
+            <element signature="e#5741#5747#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
+          <folding>
+            <element signature="e#6#42#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="1627" lean-forward="true" selection-start-line="1627" selection-end-line="1627" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/vhweb/airport.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="446" column="16" selection-start-line="446" selection-start-column="16" selection-end-line="446" selection-end-column="16" />
         </state>
       </provider>
     </entry>

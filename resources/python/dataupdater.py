@@ -67,7 +67,59 @@ for txt_file in pathlib.Path(directory).glob('**/*.dat'):
                 all_gates_in_airport["properties"]["name"] = string.capwords(values[-1])
                 all_gates_in_airport["properties"]["airport"] = airport
                 all_gates_in_airport["properties"]["aircrafts"] = string.capwords(values[5].replace("|", ", "))
-                all_gates_in_airport["properties"]["id"] = values[-1] + "-" + airport + str(abs(int(float(values[1]) * float(values[2]) * float(values[3]))))
+                all_gates_in_airport["properties"]["id"] = (values[-1] + values[4] + str(float(values[3])) + "-" + airport + str(float(values[1]) * float(values[2]) * float(values[3]) + float(values[1]))).replace('\'', '')
+
+                aircraft_types = all_gates_in_airport["properties"]["aircrafts"].split(", ")
+                aircraft_weight = []
+                aircraft_image = ""
+
+                for aircraft_type in aircraft_types:
+
+                    if aircraft_type == "Helos":
+                        aircraft_weight.append(0)
+
+                    if aircraft_type == "Fighters":
+                        aircraft_weight.append(1)
+
+                    if aircraft_type == "Props":
+                        aircraft_weight.append(2)
+
+                    if aircraft_type == "Turboprops":
+                        aircraft_weight.append(3)
+
+                    if aircraft_type == "Jets":
+                        aircraft_weight.append(4)
+
+                    if aircraft_type == "Heavy":
+                        aircraft_weight.append(5)
+
+                    if aircraft_type == "All":
+                        aircraft_weight.append(5)
+
+
+                highest_value = max(aircraft_weight)
+
+                if highest_value == 0:
+                    aircraft_image = "aircraft-heli-normal"
+
+                if highest_value == 1:
+                    aircraft_image = "aircraft-fighters-normal"
+
+                if highest_value == 2:
+                    aircraft_image = "aircraft-props-normal"
+
+                if highest_value == 3:
+                    aircraft_image = "aircraft-turboprop-normal"
+
+                if highest_value == 4:
+                    aircraft_image = "aircraft-jets-normal"
+
+                if highest_value == 5:
+                    aircraft_image = "aircraft-heavy-normal"
+
+                all_gates_in_airport["properties"]["image"] = aircraft_image
+
+                print(all_gates_in_airport["properties"]["image"])
 
                 l1 = 1
             if line_id == '1301':
@@ -157,8 +209,8 @@ with open('runways-mapbox.geojson', 'w', encoding='utf-8') as outfile:
     outfile.write(geojson_runways)
     outfile.write(geojson_end)
 
-deleteTableGates = 'DELETE FROM flightplan_gates;'
-sqlQueriesGates = "".join("INSERT INTO flightplan_gates VALUES (null, " + str(gate["geometry"]["coordinates"][0]) + ", " + str(gate["geometry"]["coordinates"][1]) + ", " + str(gate["properties"]["heading"]) + ", '" + gate["properties"]["type"] + "', '" + gate["properties"]["size"] + "', '" + gate["properties"]["airport"] + "', '" + gate["properties"]["name"].replace('\'', '') + "', '" + gate["properties"]["aircrafts"] + "');" for gate in all_gates_world)
+deleteTableGates = 'DELETE FROM vh_gates;ALTER TABLE vh_gates AUTO_INCREMENT = 0;'
+sqlQueriesGates = "".join("INSERT INTO vh_gates VALUES (null, " + str(gate["geometry"]["coordinates"][0]) + ", " + str(gate["geometry"]["coordinates"][1]) + ", " + str(gate["properties"]["heading"]) + ", '" + gate["properties"]["type"] + "', '" + gate["properties"]["size"] + "', '" + gate["properties"]["airport"] + "', '" + gate["properties"]["name"].replace('\'', '') + "', '" + gate["properties"]["aircrafts"] + "', '" + gate["properties"]["id"] + "');" for gate in all_gates_world)
 
 with open('gates.sql', 'w', encoding='utf-8') as outfile:
     outfile.write(deleteTableGates + sqlQueriesGates)

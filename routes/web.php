@@ -90,6 +90,10 @@ Route::get('/api/sitemap/allairports', 'SitemapController@all_ap_page');
 
 Route::post('/api/events/new', 'VirtualHubWeb@addNewEvent')->middleware('auth');
 
+Route::post('/api/events/join', 'VirtualHubWeb@joinEvent')->middleware('auth');
+
+Route::post('/api/events/gates', 'VirtualHubWeb@occupiedGates')->middleware('auth');
+
 //----------------------------------------------------|
 
 
