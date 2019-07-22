@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/python/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-fighters-normal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-heavy-normal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-heli-normal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-jets-normal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-props-normal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/aircraft-turboprop-normal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/storage" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/QuickLook/Icon.tiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/QuickLook/Preview.tiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/QuickLook/Thumbnail.tiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/metadata.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crawler.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/Events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/python/dataupdater.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/dataupdater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/python/frequencies.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/frequencies.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/python/gates-mapbox.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/gates-mapbox.geojson" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/python/gates.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/gates.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/python/runways-mapbox.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/runways-mapbox.geojson" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/python/runways.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/runways.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
+            <state relative-caret-position="203">
+              <caret line="76" column="84" lean-forward="true" selection-start-line="76" selection-start-column="84" selection-end-line="76" selection-end-column="84" />
               <folding>
                 <element signature="e#6#42#0#PHP" expanded="true" />
               </folding>
@@ -69,11 +52,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/vhweb/airport.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="446" column="16" selection-start-line="446" selection-start-column="16" selection-end-line="446" selection-end-column="16" />
+            <state relative-caret-position="606">
+              <caret line="483" column="63" selection-start-line="483" selection-start-column="63" selection-end-line="483" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/APIController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="107" column="45" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
+              <folding>
+                <element signature="e#78#92#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="1170">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
               <folding>
                 <element signature="e#40#60#0#PHP" expanded="true" />
               </folding>
@@ -93,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="1627" lean-forward="true" selection-start-line="1627" selection-end-line="1627" />
+            <state relative-caret-position="24405">
+              <caret line="1627" selection-start-line="1627" selection-end-line="1627" />
             </state>
           </provider>
         </entry>
@@ -151,6 +146,7 @@
         <option value="SudarshanMahesh &lt;s.mahesh@icloud.com&gt;" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -188,7 +184,6 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/js/date-time-picker.min.js" />
         <option value="$PROJECT_DIR$/app/api/AirportInfo.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/APIController.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
@@ -203,10 +198,11 @@
         <option value="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/api/Events.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" />
         <option value="$PROJECT_DIR$/resources/css/app.css" />
         <option value="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/APIController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -334,7 +330,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1920" />
     <option name="height" value="1200" />
   </component>
@@ -346,7 +342,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -444,6 +439,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -549,7 +545,8 @@
       <workItem from="1562913572219" duration="9565000" />
       <workItem from="1563016934233" duration="12038000" />
       <workItem from="1563123410496" duration="8124000" />
-      <workItem from="1563444789867" duration="19821000" />
+      <workItem from="1563444789867" duration="20272000" />
+      <workItem from="1563789358671" duration="955000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -684,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563283996534</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added Gate Assignment, social sharing buttons.">
+      <created>1563568799030</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1563568799030</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -693,7 +697,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="374260000" />
+    <option name="totallyTimeSpent" value="375666000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -706,9 +710,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6415929" visible="true" weight="0.37220448" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6415929" visible="true" weight="0.37593183" />
       <window_info id="Structure" order="1" sideWeight="0.35840708" side_tool="true" weight="0.25239617" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -722,9 +725,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49893504" weight="0.13097346" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4968051" visible="true" weight="0.12831858" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50319487" side_tool="true" visible="true" weight="0.12831858" />
-      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.7880724" weight="0.32920355" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49627262" visible="true" weight="0.12831858" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.5037274" side_tool="true" visible="true" weight="0.12831858" />
+      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.78753996" visible="true" weight="0.32920355" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -746,7 +749,9 @@
     <MESSAGE value="Added Create Event Page&#10;Fixed View Not Found" />
     <MESSAGE value="Added Unsupported Page, sharing options" />
     <MESSAGE value="Added Description" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Description" />
+    <MESSAGE value="Added Gate Assignment, social sharing buttons." />
+    <MESSAGE value="Show top 10 airports when search query is empty (API)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Show top 10 airports when search query is empty (API)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/allusers.blade.php">
@@ -929,16 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/APIController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#78#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -1060,37 +1055,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
-          <folding>
-            <element signature="e#6#42#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="1627" lean-forward="true" selection-start-line="1627" selection-end-line="1627" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="1170">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
           <folding>
             <element signature="e#40#60#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24405">
+          <caret line="1627" selection-start-line="1627" selection-end-line="1627" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vhweb/airport.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="446" column="16" selection-start-line="446" selection-start-column="16" selection-end-line="446" selection-end-column="16" />
+        <state relative-caret-position="606">
+          <caret line="483" column="63" selection-start-line="483" selection-start-column="63" selection-end-line="483" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/APIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="107" column="45" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
+          <folding>
+            <element signature="e#78#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="76" column="84" lean-forward="true" selection-start-line="76" selection-start-column="84" selection-end-line="76" selection-end-column="84" />
+          <folding>
+            <element signature="e#6#42#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

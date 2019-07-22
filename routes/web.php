@@ -78,7 +78,7 @@ Route::get('/api/airportinfo/{icao}/{section?}', 'APIController@airportinfoWebAP
 
 Route::get('/api/gates/{icao}', 'APIController@airportinfoWebAPIgates');
 
-Route::get('/api/search/{query}', 'APIController@searchAirport');
+Route::get('/api/search/{query?}', 'APIController@searchAirport');
 
 Route::get('/api/slacknotification/email/{app}/{platform}', 'APIController@slackEmailNotification');
 

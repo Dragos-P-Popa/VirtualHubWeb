@@ -105,9 +105,15 @@ class APIController extends Controller {
 		}
 	}
 
-	public function searchAirport( $query ) {
-		$airport = DB::select( "SELECT name, icao, concat_ws(' | ', icao, nullif(trim(iata), '')) as 'app_string' FROM vh_airports WHERE search_string LIKE '%" . $query . "%' ORDER BY populairity DESC, CASE WHEN icao LIKE '" . $query . "%' THEN 1 WHEN iata LIKE '%" . $query . "' THEN 3 ELSE 4 END LIMIT 30" );
-		$json    = json_encode( $airport );
+	public function searchAirport( $query = "" ) {
+		$data = [];
+		if ($query == "") {
+			$data = DB::select( "SELECT name, icao, concat_ws(' | ', icao, nullif(trim(iata), '')) as 'app_string' FROM vh_airports WHERE iata != '' ORDER BY populairity DESC LIMIT 10" );
+		} else {
+			$data = DB::select( "SELECT name, icao, concat_ws(' | ', icao, nullif(trim(iata), '')) as 'app_string' FROM vh_airports WHERE iata != '' AND search_string LIKE '%" . $query . "%' ORDER BY populairity DESC, CASE WHEN icao LIKE '" . $query . "%' THEN 1 WHEN iata LIKE '%" . $query . "' THEN 3 ELSE 4 END LIMIT 30" );
+		}
+
+		$json    = json_encode( $data );
 		$json    = json_decode( $json, true );
 
 		return $json;
