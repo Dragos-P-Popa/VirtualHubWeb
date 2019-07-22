@@ -107,6 +107,11 @@ class APIController extends Controller {
 
 	public function searchAirport( $query = "" ) {
 		$data = [];
+
+		$query = str_replace(" ", "%", $query);
+
+		echo $query;
+
 		if ($query == "") {
 			$data = DB::select( "SELECT name, icao, concat_ws(' | ', icao, nullif(trim(iata), '')) as 'app_string' FROM vh_airports WHERE iata != '' ORDER BY populairity DESC LIMIT 10" );
 		} else {
