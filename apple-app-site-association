@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "LHN97JVCRQ.com.virtualflight.VirtualHub",
+        "paths": [
+          "/view/*"
+        ]
+      }
+    ]
+  }
+}
