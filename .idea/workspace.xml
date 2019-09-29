@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.well-known/apple-app-site-association.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/virtualhub_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/virtualhub_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.well-known/apple-app-site-association.json" beforeDir="false" afterPath="$PROJECT_DIR$/.well-known/apple-app-site-association" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -235,16 +232,16 @@
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/images" />
+      <recent name="$PROJECT_DIR$/resources/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.well-known/" />
       <recent name="$PROJECT_DIR$/storage/app/images" />
       <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/views/main_page_layout" />
-      <recent name="$PROJECT_DIR$/app/api" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/storage/app/images" />
-      <recent name="$PROJECT_DIR$/resources/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -318,7 +315,7 @@
       <workItem from="1567034042491" duration="6000" />
       <workItem from="1569527439259" duration="481000" />
       <workItem from="1569578745374" duration="841000" />
-      <workItem from="1569754099688" duration="393000" />
+      <workItem from="1569754099688" duration="667000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -481,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563802085850</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fixed ignoring space character. (&quot; &quot;)">
+      <created>1569754742207</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1569754742213</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
