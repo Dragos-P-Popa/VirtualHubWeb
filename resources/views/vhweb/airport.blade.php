@@ -140,7 +140,7 @@ if( !function_exists('mobile_user_agent_switch') ){
             <div class="fillUp"></div>
         </div>
 
-        <div class="sharing">
+        <div class="sharing" onclick="share('{{$sm["title"]}}', '{{$sm["url"]}}')">
             <div>
                 <a onclick="copy_text('{{$sm["url"]}}')"><i class="fas fa-link"></i></a>
             </div>
@@ -245,26 +245,26 @@ if( !function_exists('mobile_user_agent_switch') ){
                             @endif
                         </div>
 
-                        <div class="custom_table_row" @if(count($info["events"]) != 0) window="events_window" @endif>
-                            <div class="custom_table_row_left">
-                                <p>Events</p>
-                                @if(count($info["events"]) == 0)
-                                    <p>No events for this airport</p>
-                                @else
-                                    <p>{{count($info["events"])}} @if(count($info["events"]) == 1) Event @else
-                                            Events @endif Coming Up Soon</p>
-                                    <p id="ev_list_str">Next event: <br> {{$info["events"][0]["title"]}}
-                                        | </p>
-                                @endif
-                                <br>
-                                <p><a href="{{url("events/" . $info["airport"]["icao"] . "/new")}}">New event</a></p>
-                            </div>
-                            @if(count($info["events"]) != 0)
-                                <div class="custom_table_row_right">
-                                    <p><i class="fas fa-arrow-right"></i></p>
-                                </div>
-                            @endif
-                        </div>
+{{--                        <div class="custom_table_row" @if(count($info["events"]) != 0) window="events_window" @endif>--}}
+{{--                            <div class="custom_table_row_left">--}}
+{{--                                <p>Events</p>--}}
+{{--                                @if(count($info["events"]) == 0)--}}
+{{--                                    <p>No events for this airport</p>--}}
+{{--                                @else--}}
+{{--                                    <p>{{count($info["events"])}} @if(count($info["events"]) == 1) Event @else--}}
+{{--                                            Events @endif Coming Up Soon</p>--}}
+{{--                                    <p id="ev_list_str">Next event: <br> {{$info["events"][0]["title"]}}--}}
+{{--                                        | </p>--}}
+{{--                                @endif--}}
+{{--                                <br>--}}
+{{--                                <p><a href="{{url("events/" . $info["airport"]["icao"] . "/new")}}">New event</a></p>--}}
+{{--                            </div>--}}
+{{--                            @if(count($info["events"]) != 0)--}}
+{{--                                <div class="custom_table_row_right">--}}
+{{--                                    <p><i class="fas fa-arrow-right"></i></p>--}}
+{{--                                </div>--}}
+{{--                            @endif--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="preview_right">
@@ -1159,6 +1159,19 @@ if( !function_exists('mobile_user_agent_switch') ){
                 alert("Page link has been copied!")
             }
 
+            function share(title, url) {
+                if (navigator.share) {
+                    navigator.share({
+                        title: title,
+                        url: url
+                    }).then(() => {
+                        console.log('Thanks for sharing!');
+                    })
+                        .catch(console.error);
+                } else {
+                    // fallback
+                }
+            }
         </script>
 
         <script>
