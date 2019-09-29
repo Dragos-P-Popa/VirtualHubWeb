@@ -26,26 +26,17 @@
     @yield('external_css')
     @yield('vh_banner')
     @yield('meta_social')
-    <link rel="shortcut icon" href="{{asset("storage/app/images")}}/favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="{{asset("storage/app/images")}}/favicon.ico">
-    <link rel="icon" type="image/png" sizes="196x196" href="{{asset("storage/app/images")}}/favicon-192.png">
-    <link rel="icon" type="image/png" sizes="160x160" href="{{asset("storage/app/images")}}/favicon-160.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{asset("storage/app/images")}}/favicon-96.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="{{asset("storage/app/images")}}/favicon-64.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset("storage/app/images")}}/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset("storage/app/images")}}/favicon-16.png">
-    <link rel="apple-touch-icon" href="{{asset("storage/app/images")}}/favicon-57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{asset("storage/app/images")}}/favicon-114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{asset("storage/app/images")}}/favicon-72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{asset("storage/app/images")}}/favicon-144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{asset("storage/app/images")}}/favicon-60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{asset("storage/app/images")}}/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset("storage/app/images")}}/favicon-76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{asset("storage/app/images")}}/favicon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset("storage/app/images")}}/favicon-180.png">
-    <meta name="msapplication-TileColor" content="#00B80A">
-    <meta name="msapplication-TileImage" content="{{asset("storage/app/images")}}/favicon-144.png">
-    <meta name="msapplication-config" content="{{asset("storage/app/images")}}/browserconfig.xml">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url("")}}/storage/app/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url("")}}/storage/app/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url("")}}/storage/app/images/favicon-16x16.png">
+    <link rel="manifest" href="{{url("")}}/storage/app/images/site.webmanifest">
+    <link rel="mask-icon" href="{{url("")}}/storage/app/images/safari-pinned-tab.svg" color="#0090ff">
+    <link rel="shortcut icon" href="{{url("")}}/storage/app/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="{{url("")}}/storage/app/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="color-scheme" value="light dark">
     <title>{{ config('app.name', 'Phenolix') }} | @yield('app_section') | @yield('title')</title>
