@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/storage/app/images/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/android-chrome-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/mstile-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/safari-pinned-tab.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/app/images/site.webmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/browserconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/browserconfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-160.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-310.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/apple-touch-icon.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,43 +37,6 @@
         <option value="CSS File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>?v=1</find>
-      <find>#000</find>
-      <find>AIRPORT_ICAO | AIRPORT_IATA</find>
-      <find>curs</find>
-      <find>user_id</find>
-      <find>vhw</find>
-      <find>calc(100vh - 180px)</find>
-      <find>class=&quot;section&quot;</find>
-      <find>VirtualFlight</find>
-      <find>&gt; p</find>
-      <find>bold</find>
-      <find>&lt;/strong&gt;&lt;/p&gt;</find>
-      <find>&lt;/strong&gt;</find>
-      <find>vf_logo</find>
-      <find>Privacy Policy</find>
-      <find>gradient_sec</find>
-      <find>transparant_nav</find>
-      <find>[header_style]</find>
-      <find>button</find>
-      <find>.se</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>rgba(0,0,0,0.1)</replace>
-      <replace>AIRPORT_NAME</replace>
-      <replace>calc(90vh - 180px)</replace>
-      <replace>Phenolix</replace>
-      <replace>&gt; ul &gt; li</replace>
-      <replace>px_logo</replace>
-      <replace>&lt;/p&gt;</replace>
-      <replace>Terms and Conditions</replace>
-      <replace>color 1s, background-color 1s, border-bottom-color 1s</replace>
-      <replace>header_style</replace>
-      <replace>.header_style</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -345,7 +280,7 @@
       <workItem from="1567034042491" duration="6000" />
       <workItem from="1569527439259" duration="481000" />
       <workItem from="1569578745374" duration="841000" />
-      <workItem from="1569754099688" duration="1841000" />
+      <workItem from="1569754099688" duration="2178000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -529,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569785115994</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added Support for new favicons.">
+      <created>1569787316051</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1569787316051</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -577,7 +519,8 @@
     <MESSAGE value="Added Gate Assignment, social sharing buttons." />
     <MESSAGE value="Show top 10 airports when search query is empty (API)" />
     <MESSAGE value="Fixed ignoring space character. (&quot; &quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed ignoring space character. (&quot; &quot;)" />
+    <MESSAGE value="Added Support for new favicons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Support for new favicons." />
   </component>
   <component name="masterDetails">
     <states>
