@@ -140,7 +140,7 @@ if( !function_exists('mobile_user_agent_switch') ){
             <div class="fillUp"></div>
         </div>
 
-        <div class="sharing" onclick="share('{{$sm["title"]}}', '{{$sm["url"]}}')">
+        <div class="sharing">
             <div>
                 <a onclick="copy_text('{{$sm["url"]}}')"><i class="fas fa-link"></i></a>
             </div>
@@ -172,7 +172,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                     <div class="custom_table">
                         <div class="custom_table_row">
                             <div class="custom_table_row_left">
-                                <h1>{{$info["airport"]["name"]}}</h1>
+                                <h1 onclick="share('{{$sm["title"]}}', '{{$sm["url"]}}')">{{$info["airport"]["name"]}}</h1>
                                 <h2>{{$info["airport"]["icao"]}} | {{$info["airport"]["iata"]}}</h2>
                                 <h3>{{$info["airport"]["city"]}}@if($info["airport"]["state"] != "")
                                         ,@endif {{$info["airport"]["state"]}}@if($info["airport"]["country"] != "")
@@ -180,7 +180,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 <h3 id="timezone">{{$info["airport"]["localdate"]["datefull"]}}</h3>
                             </div>
                         </div>
-                        <div class="custom_table_row" window="weather_window">
+                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["weather"]) != 0) window="weather_window" @endif @endif>
                             <div class="custom_table_row_left">
                                 <p>Weather</p>
                                 @if(count($info["weather"]) == 0)
@@ -202,7 +202,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                             @endif
                         </div>
 
-                        <div class="custom_table_row" @if(count($info["charts"]) != 0) window="chart_window" @endif>
+                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["charts"]) != 0) window="chart_window" @endif @endif>
                             <div class="custom_table_row_left">
                                 <p>Charts</p>
                                 <p>@if(count($info["charts"]) == 0) No Charts @else {{count($info["charts"])}} @endif
@@ -216,7 +216,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 @endif
                             @endif
                         </div>
-                        <div class="custom_table_row" @if(count($info["gates"]) != 0) window="gates_window" @endif>
+                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["gates"]) != 0) window="gates_window" @endif @endif>
                             <div class="custom_table_row_left">
                                 <p>Gates</p>
                                 <p>@if(count($info["gates"]) == 0) No Gates @else {{count($info["gates"])}} @endif
@@ -230,7 +230,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 @endif
                             @endif
                         </div>
-                        <div class="custom_table_row" @if(count($info["runways"]) != 0) window="runway_window" @endif>
+                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["runways"]) != 0) window="runway_window" @endif @endif>
                             <div class="custom_table_row_left">
                                 <p>Runways</p>
                                 <p>@if(count($info["runways"]) == 0) No Runways @else {{count($info["runways"])}} @endif
@@ -245,26 +245,26 @@ if( !function_exists('mobile_user_agent_switch') ){
                             @endif
                         </div>
 
-{{--                        <div class="custom_table_row" @if(count($info["events"]) != 0) window="events_window" @endif>--}}
-{{--                            <div class="custom_table_row_left">--}}
-{{--                                <p>Events</p>--}}
-{{--                                @if(count($info["events"]) == 0)--}}
-{{--                                    <p>No events for this airport</p>--}}
-{{--                                @else--}}
-{{--                                    <p>{{count($info["events"])}} @if(count($info["events"]) == 1) Event @else--}}
-{{--                                            Events @endif Coming Up Soon</p>--}}
-{{--                                    <p id="ev_list_str">Next event: <br> {{$info["events"][0]["title"]}}--}}
-{{--                                        | </p>--}}
-{{--                                @endif--}}
-{{--                                <br>--}}
-{{--                                <p><a href="{{url("events/" . $info["airport"]["icao"] . "/new")}}">New event</a></p>--}}
-{{--                            </div>--}}
-{{--                            @if(count($info["events"]) != 0)--}}
-{{--                                <div class="custom_table_row_right">--}}
-{{--                                    <p><i class="fas fa-arrow-right"></i></p>--}}
-{{--                                </div>--}}
-{{--                            @endif--}}
-{{--                        </div>--}}
+                        <div class="custom_table_row" @if(count($info["events"]) != 0) window="events_window" @endif>
+                            <div class="custom_table_row_left">
+                                <p>Events</p>
+                                @if(count($info["events"]) == 0)
+                                    <p>No events for this airport</p>
+                                @else
+                                    <p>{{count($info["events"])}} @if(count($info["events"]) == 1) Event @else
+                                            Events @endif Coming Up Soon</p>
+                                    <p id="ev_list_str">Next event: <br> {{$info["events"][0]["title"]}}
+                                        | </p>
+                                @endif
+                                <br>
+                                <p><a href="{{url("events/" . $info["airport"]["icao"] . "/new")}}">New event</a></p>
+                            </div>
+                            @if(count($info["events"]) != 0)
+                                <div class="custom_table_row_right">
+                                    <p><i class="fas fa-arrow-right"></i></p>
+                                </div>
+                            @endif
+                        </div>
                     </div>
                 </div>
                 <div class="preview_right">
