@@ -139,27 +139,6 @@ if( !function_exists('mobile_user_agent_switch') ){
             </div>
             <div class="fillUp"></div>
         </div>
-
-        <div class="sharing">
-            <div>
-                <a onclick="copy_text('{{$sm["url"]}}')"><i class="fas fa-link"></i></a>
-            </div>
-            <div>
-                <a href="https://community.infiniteflight.com/new-topic?title=&body=[{{$sm["title"]}}]({{$sm["url"]}})"
-                   class="ifc_share" target="_blank">{!! file_get_contents(url("storage/app/images/ifc.svg")) !!}</a>
-            </div>
-            <div>
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{$sm["url"]}}" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-            </div>
-            <div>
-                <a href="https://twitter.com/intent/tweet?url={{$sm["url"]}}" target="_blank"><i
-                            class="fab fa-twitter"></i></a>
-            </div>
-            <div>
-                <a href="https://wa.me/?text={{$sm["url"]}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
     </div>
 
     @if(isset($info["error"]))
@@ -172,12 +151,34 @@ if( !function_exists('mobile_user_agent_switch') ){
                     <div class="custom_table">
                         <div class="custom_table_row">
                             <div class="custom_table_row_left">
-                                <h1 onclick="share('{{$sm["title"]}}', '{{$sm["url"]}}')">{{$info["airport"]["name"]}}</h1>
+                                <h1>{{$info["airport"]["name"]}}</h1>
                                 <h2>{{$info["airport"]["icao"]}} | {{$info["airport"]["iata"]}}</h2>
                                 <h3>{{$info["airport"]["city"]}}@if($info["airport"]["state"] != "")
                                         ,@endif {{$info["airport"]["state"]}}@if($info["airport"]["country"] != "")
                                         , @endif{{$info["airport"]["country"]}}</h3>
                                 <h3 id="timezone">{{$info["airport"]["localdate"]["datefull"]}}</h3>
+                                <a class="share_native" onclick="share('{{$sm["title"]}}', '{{$sm["url"]}}')">Share</a>
+
+                                <div class="sharing">
+                                    <div>
+                                        <a onclick="copy_text('{{$sm["url"]}}')"><i class="fas fa-link"></i></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://community.infiniteflight.com/new-topic?title=&body=[{{$sm["title"]}}]({{$sm["url"]}})"
+                                           class="ifc_share" target="_blank">{!! file_get_contents(url("storage/app/images/ifc.svg")) !!}</a>
+                                    </div>
+                                    <div>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{$sm["url"]}}" target="_blank"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://twitter.com/intent/tweet?url={{$sm["url"]}}" target="_blank"><i
+                                                class="fab fa-twitter"></i></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://wa.me/?text={{$sm["url"]}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["weather"]) != 0) window="weather_window" @endif @endif>
@@ -869,6 +870,12 @@ if( !function_exists('mobile_user_agent_switch') ){
                         }
                     }
                 });
+
+                if (navigator.share) {
+                    $(".sharing").remove();
+                } else {
+                    $(".share_native").remove();
+                }
             };
 
             function login() {
@@ -1160,17 +1167,12 @@ if( !function_exists('mobile_user_agent_switch') ){
             }
 
             function share(title, url) {
-                if (navigator.share) {
-                    navigator.share({
-                        title: title,
-                        url: url
-                    }).then(() => {
-                        console.log('Thanks for sharing!');
-                    })
-                        .catch(console.error);
-                } else {
-                    // fallback
-                }
+                navigator.share({
+                    title: title,
+                    url: url
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(console.error);
             }
         </script>
 

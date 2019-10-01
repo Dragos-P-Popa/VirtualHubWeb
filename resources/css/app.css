@@ -1363,6 +1363,7 @@ h3 {
 
 .top_airport_info {
     display: flex;
+    align-items: center;
 }
 
 .sharing {
@@ -1371,7 +1372,11 @@ h3 {
 }
 
 .sharing > div {
-    margin-left: 10px;
+    margin-left: 20px;
+}
+
+.sharing > div:first-of-type {
+    margin-left: 0;
 }
 
 .ifc_share > svg {
@@ -1437,7 +1442,7 @@ h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 46.6%;
+    width: 48%;
 
     border-bottom: solid #d6d6d6 1px;
     padding-bottom: 5px;
@@ -1451,7 +1456,7 @@ h3 {
     top: 40px;
     z-index: 3;
     padding: 15px;
-    width: 46.6%;
+    width: 48%;
     max-height: 50vh;
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
@@ -1476,7 +1481,7 @@ h3 {
 @media all and (max-width: 765px) {
     .searchbar > .input_bar, .searchbar > .search_suggestions {
         margin: 0 auto;
-        width: 95%;
+        width: 100%;
     }
 }
 
@@ -1487,14 +1492,6 @@ h3 {
 
     .top_airport_info {
        flex-direction: column;
-    }
-
-    .sharing {
-        justify-content: space-between;
-    }
-
-    .sharing > div {
-        margin-left: 0;
     }
 }
 
