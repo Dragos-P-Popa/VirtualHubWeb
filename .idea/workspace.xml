@@ -593,10 +593,15 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586904452217" />
-    <state x="266" y="127" key="CommitChangelistDialog2" timestamp="1587050991929">
-      <screen x="0" y="23" width="1680" height="976" />
+    <state x="266" y="112" key="CommitChangelistDialog2" timestamp="1587051022430">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="266" y="112" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1587051022430" />
     <state x="266" y="127" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1587050991929" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1587051036671">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1587051036671" />
     <state x="517" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586438438251">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
