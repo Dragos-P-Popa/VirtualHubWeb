@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/general/account.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dashboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dashboard.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AirportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AirportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/Events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/vhweb.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/vhweb.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/general/terms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/general/terms.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,9 +185,15 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -182,7 +201,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -198,10 +217,6 @@
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/storage/app/images" />
-      <recent name="$PROJECT_DIR$/resources/images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.well-known/" />
       <recent name="$PROJECT_DIR$/storage/app/images" />
@@ -209,24 +224,28 @@
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/views/main_page_layout" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/images" />
+      <recent name="$PROJECT_DIR$/resources/images" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -282,7 +301,26 @@
       <workItem from="1569527439259" duration="481000" />
       <workItem from="1569578745374" duration="841000" />
       <workItem from="1569754099688" duration="2409000" />
-      <workItem from="1569931522429" duration="2331000" />
+      <workItem from="1569931522429" duration="2582000" />
+      <workItem from="1570485639372" duration="147000" />
+      <workItem from="1570880747931" duration="315000" />
+      <workItem from="1571147714945" duration="1322000" />
+      <workItem from="1571225505627" duration="437000" />
+      <workItem from="1571396253467" duration="18000" />
+      <workItem from="1573502802986" duration="317000" />
+      <workItem from="1573741919888" duration="2020000" />
+      <workItem from="1574084845923" duration="146000" />
+      <workItem from="1574940299493" duration="1625000" />
+      <workItem from="1576269916209" duration="1622000" />
+      <workItem from="1576713738959" duration="111000" />
+      <workItem from="1576760387337" duration="389000" />
+      <workItem from="1586438432740" duration="2082000" />
+      <workItem from="1586556947772" duration="183000" />
+      <workItem from="1586559368067" duration="2773000" />
+      <workItem from="1586734036998" duration="3655000" />
+      <workItem from="1586738112468" duration="294000" />
+      <workItem from="1586777512897" duration="11631000" />
+      <workItem from="1586953183932" duration="5235000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -487,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569938349774</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Moved sharing options below the Airport Name Section. + Added native sharing menu for supported browser.">
+      <created>1569940295347</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1569940295347</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -536,7 +581,34 @@
     <MESSAGE value="Show top 10 airports when search query is empty (API)" />
     <MESSAGE value="Fixed ignoring space character. (&quot; &quot;)" />
     <MESSAGE value="Added Support for new favicons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Support for new favicons." />
+    <MESSAGE value="Moved sharing options below the Airport Name Section. + Added native sharing menu for supported browser." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved sharing options below the Airport Name Section. + Added native sharing menu for supported browser." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="190" key="#Deployment" timestamp="1586438824649">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="190" key="#Deployment/0.0.1680.1050@0.0.1680.1050" timestamp="1586438824649" />
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586904452217">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586904452217" />
+    <state x="266" y="127" key="CommitChangelistDialog2" timestamp="1587050991929">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="266" y="127" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1587050991929" />
+    <state x="517" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586438438251">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="517" y="343" key="com.intellij.ide.util.TipDialog/0.23.1680.976@0.23.1680.976" timestamp="1586438438250" />
+    <state x="509" y="161" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586956224657">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="509" y="161" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586956224657" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586736216018">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586736216018" />
   </component>
   <component name="masterDetails">
     <states>

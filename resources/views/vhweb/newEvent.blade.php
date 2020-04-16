@@ -27,6 +27,12 @@
             </div>
 
             <div>
+                <label for="event_server">Event Server</label>
+                <input type="text" name="event_server" id="event_server" required placeholder="Expert/Training?"/>
+            </div>
+
+
+            <div>
                 <label for="event_date_time_start">Starts At (UTC)</label>
                 <input type="text" name="event_date_time_start" id="event_date_time_start" required placeholder="">
             </div>
@@ -62,7 +68,7 @@
     </form>
 
 
-    
+
 @endsection
 
 @php
@@ -73,7 +79,9 @@ $future60 = date('Y-m-d', strtotime($today. ' + 60 days'));
 @endphp
 
 @section('javascript')
+    <!--suppress VueDuplicateTag -->
     <script src="{{url('resources/js/date-time-picker.min.js')}}"></script>
+    <!--suppress VueDuplicateTag -->
     <script>
         var custom_sections = 1;
 
@@ -114,6 +122,7 @@ $future60 = date('Y-m-d', strtotime($today. ' + 60 days'));
                 section.find("div").each(function( index ) {
                     var div = $( this );
 
+
                     if (index === 0 ) {
                         title = div.find("input").val();
                     }
@@ -121,7 +130,6 @@ $future60 = date('Y-m-d', strtotime($today. ' + 60 days'));
                     if (index === 1 ) {
                         content = div.find("textarea").val();
                     }
-
 
                 });
 

@@ -7,7 +7,7 @@
 @php
 
 
-@endphp
+    @endphp
 
 @section('content')
     <div class="terms">
@@ -199,11 +199,11 @@
                 obligated not to disclose or use it for any other purpose.</p>
 
             <p>Our Service allows you to get access to various information that are courtesy of <span bold=""><a
-                            href="https://www.mapbox.com/tos/">Mapbox, Inc</a></span>, <span bold=""><a
-                            href="https://avwx.rest">AVWX.rest</a></span>, <span bold=""><a
-                            href="https://airportediting.com">Infinite Flight Airport Editing</a></span> and <span
-                        bold=""><a
-                            href="https://www.aviationapi.com">AviationAPI</a></span> respectively. Phenolix or
+                        href="https://www.mapbox.com/tos/">Mapbox, Inc</a></span>, <span bold=""><a
+                        href="https://avwx.rest">AVWX.rest</a></span>, <span bold=""><a
+                        href="https://airportediting.com">Infinite Flight Airport Editing</a></span> and <span
+                    bold=""><a
+                        href="https://www.aviationapi.com">AviationAPI</a></span> respectively. Phenolix or
                 VirtualHub does NOT
                 take full
                 credit of these services.</p>
@@ -217,21 +217,21 @@
                     <li>
                         <p bold>Firebase Analytics</p>
                         <p>Firebase Analytics is a analytics service. You can visit their Terms and Conditions page here: <a
-                                    href="https://firebase.google.com/policies/analytics">Firebase Analytics</a>
+                                href="https://firebase.google.com/policies/analytics">Firebase Analytics</a>
                         </p>
                     </li>
                     <li>
                         <p bold>AdMob and AdSense</p>
                         <p>AdMob and AdSense is a advertisement service. You can visit their Terms and Conditions page here:
                             <a
-                                    href="https://support.google.com/admob/answer/6128543">AdMob & AdSense</a>
+                                href="https://support.google.com/admob/answer/6128543">AdMob & AdSense</a>
                         </p>
                     </li>
 
                     <li>
                         <p bold>Google Play Services, Fabric, and Crashlytics</p>
                         <p>You can visit their Terms and Conditions page here: <a
-                                    href="https://www.google.com/policies/privacy/">Google Play Services, Fabric, and Crashlytics</a>
+                                href="https://www.google.com/policies/privacy/">Google Play Services, Fabric, and Crashlytics</a>
                         </p>
                     </li>
                 </ul>

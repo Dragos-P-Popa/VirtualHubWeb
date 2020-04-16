@@ -28,7 +28,7 @@
 
 @section('big_header')
     <a href="{{url("api/sitemap/allairports")}}" hidden>hidden</a>
-    
+
     <div class="vh_header">
         <div class="container">
             <div class="header_text">
@@ -193,14 +193,14 @@
         <div class="collection_view">
             @foreach($populair_airports as $airport)
                 <div class="collection_item small">
+                    <p><span>{{number_format($airport->populairity , 0, ',', '.')}}</span> Views</p>
                     <p><a href="{{url("/view")}}/{{$airport->icao}}">{{$airport->name}}</a></p>
-                    <p>{{number_format($airport->populairity , 0, ',', '.')}} Views</p>
                 </div>
             @endforeach
         </div>
     </div>
 
-    
+
 @endsection
 
 @section('javascript')

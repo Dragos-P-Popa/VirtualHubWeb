@@ -27,14 +27,24 @@ class VirtualHubWeb extends Controller {
 	 * @return \Illuminate\Contracts\Support\Renderable
 	 */
 	public function airport( $icao ) {
-		$info = new APIController();
-		$info = $info->airportinfo( $icao );
 
-		$info["airport"]["bounds"] = $this->getBoundingBox($info["airport"]["latitude"], $info["airport"]["longitude"], 3);
+	        $intOrString = (int)$icao;
+	        if ($intOrString != 0 ){
+                $info = new APIController();
+                $info = $info->getUserEvents( $icao);
 
-		return view( 'vhweb.airport', array(
-			"info" => $info
-		) );
+                return view( 'vhweb.airport', array(
+                    "info" => $info));
+
+	        } else {
+                $info = new APIController();
+                $info = $info->airportinfo( $icao );
+
+                $info["airport"]["bounds"] = $this->getBoundingBox($info["airport"]["latitude"], $info["airport"]["longitude"], 3);
+
+                return view( 'vhweb.airport', array(
+                    "info" => $info));
+    }
 	}
 
 	public function newEventPage( $icao ) {
@@ -56,9 +66,10 @@ class VirtualHubWeb extends Controller {
 		$route       = $_POST["event_route"];
 		$sections    = $_POST["event_sections"];
 		$airport     = $_POST["event_airport"];
+		$server      = $_POST['event_server'];
 		$user_id     = Auth::user()->id;
 
-		$query = "INSERT INTO vh_events SET airport = '" . $airport . "', title = '" . $name . "', description = '" . $description . "', start = '" . $start . "', end = '" . $end . "', route = '" . $route . "', sections = '" . $sections . "', user_id = '" . $user_id . "'";
+		$query = "INSERT INTO vh_events SET airport = '" . $airport . "', title = '" . $name . "', description = '" . $description . "', server = '" . $server . "', start = '" . $start . "', end = '" . $end . "', route = '" . $route . "', sections = '" . $sections . "', user_id = '" . $user_id . "'";
 		DB::insert( $query );
 
 		return redirect( 'view/' . $airport . '/events' );
@@ -86,6 +97,13 @@ class VirtualHubWeb extends Controller {
 			return JsonResponse::create(["success" => true]);
 		}
 	}
+
+	public function removeEvent() {
+        $event_id = $_POST["event_id"];
+        DB::delete("DELETE FROM vh_events WHERE event_id = " . $event_id . ";");
+
+        return view('errors.503');
+    }
 
 	public function occupiedGates() {
 		$event_id = $_POST["event_id"];
@@ -148,4 +166,5 @@ class VirtualHubWeb extends Controller {
 
 		return array($lat1,$lat2,$lon1,$lon2);
 	}
+
 }

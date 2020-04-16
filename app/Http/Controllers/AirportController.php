@@ -5,6 +5,7 @@ include( "app/api/AirportInfo.php" );
 
 use App\Flightplans;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
@@ -24,13 +25,13 @@ class AirportController extends Controller {
 	 * @return \Illuminate\Contracts\Support\Renderable
 	 */
 	public function index( $icao ) {
+        $userId = Auth::user()->id;
 		$icao = strtoupper( $icao );
 
 		$info = new \AirportInfo();
 		$info = $info->getInfoFor($icao);
 
-		return view( 'airport', array(
-			"info" => $info
-		) );
+		return view( 'airport',
+            array("info" => $info));
 	}
 }

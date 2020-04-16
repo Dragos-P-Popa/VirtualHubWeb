@@ -3,8 +3,8 @@
 @section('logo', 'vhw')
 
 {{--{{dd(Auth::user()->role)}}--}}
-
 @if(!isset($info["error"]))
+
     @section('title', $info["airport"]["name"] . " - " . $info["airport"]["icao"] . " / " . $info["airport"]["iata"] . "")
 @else
     @section('title', "Not found")
@@ -12,6 +12,7 @@
 
 @section('external_css')
     @if(!isset($info["error"]))
+        <!--suppress VueDuplicateTag -->
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet'/>
     @endif
@@ -266,6 +267,8 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 </div>
                             @endif
                         </div>
+
+
                     </div>
                 </div>
                 <div class="preview_right">
@@ -556,6 +559,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 });
             });
 
+
             function updateOccupiedGates() {
 
                 $.ajax({
@@ -709,6 +713,10 @@ if( !function_exists('mobile_user_agent_switch') ){
 
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Route</p><p>" + json.route + "</p></div></div>");
 
+                table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Server</p><p>" + json.server + "</p></div></div>");
+
+
+
                 var Base64 = {
                     _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", encode: function (e) {
                         var t = "";
@@ -814,10 +822,19 @@ if( !function_exists('mobile_user_agent_switch') ){
                 $("#events_map").removeClass("hidden");
                 events_map.resize();
                 updateOccupiedGates();
+
                 @endif
 
-                @endauth
+                var current_user = {{Auth::user()->id}};
 
+                if (json.user_id == current_user){
+                    table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Remove event</p><a href='/'>Remove this event</a>");
+
+
+                    console.log(json);
+                }
+
+                @endauth
             });
 
             function convert_utc_to_local(time, id = "") {

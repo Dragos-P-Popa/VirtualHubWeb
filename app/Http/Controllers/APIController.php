@@ -56,6 +56,24 @@ class APIController extends Controller {
 		return $info;
 	}
 
+    public function getUserEvents( $id ) {
+        $events = DB::select( "SELECT * FROM vh_events WHERE user_id = " . $id );
+        $json   = json_encode( $events );
+        $json   = json_decode( $json, true );
+
+        $i = 0;
+
+        foreach ( $json as $e ) {
+            $s = json_decode( $e["sections"] );
+
+
+            $json[ $i ]["sections"] = $s;
+            $i ++;
+        }
+
+        return $json;
+    }
+
 	public function airportinfoWebAPI( $icao, $section = "all" ) {
 		if ( $this->icaoValidator( $icao ) ) {
 			$info = $this->airportinfo( $icao );

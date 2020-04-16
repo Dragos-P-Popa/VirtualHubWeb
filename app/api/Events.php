@@ -22,6 +22,23 @@ class Events {
 		return $json;
 	}
 
+    public function getUserEvents( $id ) {
+        $events = DB::select( "SELECT e.*, u.name AS 'event_manager', DATE_FORMAT(e.start, '%Y-%m-%dT%T+00:00') AS 'start', DATE_FORMAT(e.end, '%Y-%m-%dT%T+00:00') AS 'end' FROM vh_events e, users u WHERE e.user_id = " + $id );
+        $json   = json_encode( $events );
+        $json   = json_decode( $json, true );
+
+        $i = 0;
+
+        foreach ( $json as $e ) {
+            $s = json_decode( $e["sections"] );
+
+
+            $json[ $i ]["sections"] = $s;
+            $i ++;
+        }
+
+        return $json;
+    }
 
 
 	private function stringToURLHTML( $str ) {
