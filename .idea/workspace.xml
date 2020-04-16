@@ -1,24 +1,426 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/general/account.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dashboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dashboard.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+    <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="Moved sharing options below the Airport Name Section. + Added native sharing menu for supported browser.">
+      <change afterPath="$PROJECT_DIR$/app/Airport.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/EventsGates.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/app.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AirportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AirportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Airports.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Gates.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gates.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/Events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/vhweb.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/vhweb.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/general/terms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/general/terms.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Airport.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Charts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Charts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Frequencies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Frequencies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Gates.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Runways.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Runways.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/Weather.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Weather.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/loading.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/loading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/vhweb.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/airport.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/chart.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/Procfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/as.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/axe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/.angular-cli.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/e2e/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/e2e/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/gun.helper.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/gun.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/typings.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/angular/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/axe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/basic/private.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/basic/space.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/basic/tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/basic/user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/chat/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/chat/user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/contact/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/express.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/game/nts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/game/space.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/hapi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/http-external-ws.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/install.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/json/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/move/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/party.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/pop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.buckconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.flowconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.watchmanconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/BUCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/assets/html/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/java/com/gundemo/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/java/com/gundemo/MainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/keystores/BUCK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/keystores/debug.keystore.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo-tvOS/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo-tvOSTests/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/AppDelegate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/AppDelegate.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/Base.lproj/LaunchScreen.xib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/Images.xcassets/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/main.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemoTests/GunDemoTests.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemoTests/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/shim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/App/Demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/App/PolyFillCrypto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/App/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/App/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/extensions/asyncStorageAdapter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/extensions/sea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/MainWorker.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/MainWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/MainWorker.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/WebViewWorker.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/WebViewWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/WebViewWorker.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/asyncSerialize.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/asyncSerialize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/asyncSerialize.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/compat.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/compat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/compat.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/serializeBinary.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/serializeBinary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/serializeBinary.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/webViewWorkerString.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/webViewWorkerString.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/webViewWorkerString.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/Chat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/Json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/Todos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/start.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/stats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/todo/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/vanilla/todo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/vue/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/vue/todo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/examples/where/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/gun.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/gun.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/hooks/build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/hooks/post_push" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/aws.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/bye.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/cryptomodules.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/erase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/evict.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/forget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/fsrm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/fun.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/hub.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/ipfs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/jsonp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/later.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/les.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/load.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/match.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/memdisk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/meta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/monotype.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/multicast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/normalize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/not.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/open.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/radisk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/radix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/reboot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/rfs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/rindexed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/rls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/rmem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/role.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/rs3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/serve.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/shim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/space.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/stats.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/super.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/then.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/time.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/tmp.test.sql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/unbuild.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/unset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/untitled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/uws.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/verify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/webrtc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/wire.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/ws.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/wsp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/lib/wsproto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/nts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/aeskey.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/buffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/create.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/decrypt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/encrypt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/https.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/pair.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/root.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/sea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/secret.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/settings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/sha1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/sha256.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/shim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/sign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/then.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/verify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/sea/work.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/HAM.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/adapters/localStorage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/adapters/mesh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/adapters/websocket.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/ask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/back.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/chain.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/dup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/get.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/graph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/node.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/on.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/onto.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/polyfill/unbuild.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/put.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/root.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/set.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/src/val.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/abc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/axe/holy-grail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/axe/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/debug/deep-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/expect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/gun.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/https/ca.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/https/ca.csr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/https/ca.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/https/server.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/https/server.csr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/https/server.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/https/server.key.passphrase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/https/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/json2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/mocha.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/mocha.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/mocha.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/normalize/normalize.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/performance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/s3pricing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/set.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/shoot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/shoot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/shotgun.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/timelines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/old/tmp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/1putackget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/2getget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/b2s2s2b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/curl-server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/distributed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/holy/grail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/holy/gun-server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/holy/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/holy/ports.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/holy-grail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/load.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/radisk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/s2s-all-delayed-peer-add.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/s2s-all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/scale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/set.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/speak.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/panic/who.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/benchmark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/memdisk.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/memdisk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/memory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/perf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/ptsd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/ptsd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/radix.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/radix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/spam.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/stool.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/streampipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/rad/browser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/rad/parse.rad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/rad/rad.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/radix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/sea/sea-tmp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/sea/sea.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/sea/sea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/sea/sea_old.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/server/http.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/server/node-client.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/server/node-write.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/bigsync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/contacts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/indexedDB.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/mitra/client_to_server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/mitra/gun_https2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/radisk.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/say.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/seanode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/space.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/time.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/tmp/tmp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket/test/wire.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-fighters-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-fighters-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-heavy-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-heavy-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-heli-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-heli-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-jets-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-jets-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-props-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-props-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-turboprop-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-turboprop-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/android-chrome-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/android-chrome-192x192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/android-chrome-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/android-chrome-512x512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/apple-touch-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/appstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/appstore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/browserconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/browserconfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon-16x16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon-32x32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/ifc.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ifc.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/mstile-150x150.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/mstile-150x150.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/playstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/playstore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/px_logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/px_logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/px_logo_full.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/px_logo_full.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/safari-pinned-tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/safari-pinned-tab.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/site.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/site.webmanifest" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,27 +430,14 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <executable />
+      <executable path="composer" />
     </execution>
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="true" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -187,7 +576,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -202,7 +590,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -217,16 +605,16 @@
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/.well-known/" />
-      <recent name="$PROJECT_DIR$/storage/app/images" />
-      <recent name="$PROJECT_DIR$/resources/js" />
-      <recent name="$PROJECT_DIR$/resources/views/layouts" />
-      <recent name="$PROJECT_DIR$/resources/views/main_page_layout" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/storage/app/images" />
       <recent name="$PROJECT_DIR$/resources/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/resources/sass" />
+      <recent name="$PROJECT_DIR$/app/Http" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -234,18 +622,6 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -321,6 +697,7 @@
       <workItem from="1586738112468" duration="294000" />
       <workItem from="1586777512897" duration="11631000" />
       <workItem from="1586953183932" duration="5235000" />
+      <workItem from="1587051595216" duration="18860000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -550,20 +927,19 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -589,15 +965,29 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#Deployment/0.0.1680.1050@0.0.1680.1050" timestamp="1586438824649" />
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586904452217">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="763" y="289" key="#com.intellij.ide.util.MemberChooser" timestamp="1587072659652">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="763" y="289" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1200@0.0.1920.1200" timestamp="1587072659652" />
+    <state x="661" y="328" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587070589589">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586904452217" />
-    <state x="266" y="112" key="CommitChangelistDialog2" timestamp="1587051022430">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="661" y="328" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1587070589589" />
+    <state x="304" y="128" key="CommitChangelistDialog2" timestamp="1587075133407">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="266" y="112" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1587051022430" />
+    <state x="304" y="128" key="CommitChangelistDialog2/0.0.1920.1200@0.0.1920.1200" timestamp="1587075133407" />
     <state x="266" y="127" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1587050991929" />
+    <state x="714" y="519" key="ComposerInitDialogKey" timestamp="1587051784586">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="714" y="519" key="ComposerInitDialogKey/0.0.1920.1200@0.0.1920.1200" timestamp="1587051784586" />
+    <state x="710" y="333" key="NewPhpClassDialog" timestamp="1587070267396">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="710" y="333" key="NewPhpClassDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1587070267396" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1587051036671">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

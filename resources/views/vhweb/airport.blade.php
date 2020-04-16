@@ -2,16 +2,16 @@
 @section('app_section', env('APP_VHW'))
 @section('logo', 'vhw')
 
-{{--{{dd(Auth::user()->role)}}--}}
-@if(!isset($info["error"]))
+{{--{{dd($info)}}--}}
+@if(!isset($info->error))
 
-    @section('title', $info["airport"]["name"] . " - " . $info["airport"]["icao"] . " / " . $info["airport"]["iata"] . "")
+    @section('title', $info->name . " - " . $info->icao . " / " . $info->iata . "")
 @else
     @section('title', "Not found")
 @endif
 
 @section('external_css')
-    @if(!isset($info["error"]))
+    @if(!isset($info->error))
         <!--suppress VueDuplicateTag -->
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet'/>
@@ -19,20 +19,20 @@
 @endsection
 
 @section('vh_banner')
-    @if(!isset($info["error"]))
+    @if(!isset($info->error))
         <meta name="apple-itunes-app"
-              content="app-id=1278250028, app-argument=virtualhub://airportinfo/weather?icao={{$info["airport"]["icao"]}}"/>
+              content="app-id=1278250028, app-argument=virtualhub://airportinfo/weather?icao={{$info->icao}}"/>
     @else
         <meta name="apple-itunes-app" content="app-id=1278250028"/>
     @endif
 @endsection
 
 @php
-    if (!isset($info["error"])) {
-        $sm = ["title" => "VirtualHub Web — " . $info["airport"]["name"],
-               "description" => "View the weather, charts, gates, and more for {$info["airport"]["name"]}.",
-               "url" => url("view/" .  $info["airport"]["icao"]),
-               "keywords" => "airport, " . $info["airport"]["name"] . ", " . $info["airport"]["icao"]];
+    if (!isset($info->error)) {
+        $sm = ["title" => "VirtualHub Web — " . $info->name,
+               "description" => "View the weather, charts, gates, and more for {$info->name}.",
+               "url" => url("view/" .  $info->icao),
+               "keywords" => "airport, " . $info->name . ", " . $info->icao];
 
                $sharing_text = $sm["description"] . " - " . $sm["url"];
     }
@@ -104,12 +104,12 @@ if( !function_exists('mobile_user_agent_switch') ){
 
                     <div class="store_badges">
                         <a href="https://itunes.apple.com/app/virtualhub/id1278250028?mt=8" target="_blank">
-                            <img src="{{asset("storage/app/images/appstore.png")}}" alt="">
+                            <img src="{{asset("/images/appstore.png")}}" alt="">
                         </a>
 
                         <a href="https://play.google.com/store/apps/details?id=com.virtualflight.VirtualHub"
                            target="_blank">
-                            <img src="{{asset("storage/app/images/playstore.png")}}" alt="">
+                            <img src="{{asset("/images/playstore.png")}}" alt="">
                         </a>
                     </div>
                 </div>
@@ -142,7 +142,7 @@ if( !function_exists('mobile_user_agent_switch') ){
         </div>
     </div>
 
-    @if(isset($info["error"]))
+    @if(isset($info->error))
 
 
     @else
@@ -152,12 +152,12 @@ if( !function_exists('mobile_user_agent_switch') ){
                     <div class="custom_table">
                         <div class="custom_table_row">
                             <div class="custom_table_row_left">
-                                <h1>{{$info["airport"]["name"]}}</h1>
-                                <h2>{{$info["airport"]["icao"]}} | {{$info["airport"]["iata"]}}</h2>
-                                <h3>{{$info["airport"]["city"]}}@if($info["airport"]["state"] != "")
-                                        ,@endif {{$info["airport"]["state"]}}@if($info["airport"]["country"] != "")
-                                        , @endif{{$info["airport"]["country"]}}</h3>
-                                <h3 id="timezone">{{$info["airport"]["localdate"]["datefull"]}}</h3>
+                                <h1>{{$info->name}}</h1>
+                                <h2>{{$info->icao}} | {{$info->iata}}</h2>
+                                <h3>{{$info->city}}@if($info->state != "")
+                                        ,@endif {{$info->state}}@if($info->country != "")
+                                        , @endif{{$info->country}}</h3>
+                                <h3 id="timezone">{{$info->localdate->datefull}}</h3>
                                 <a class="share_native" onclick="share('{{$sm["title"]}}', '{{$sm["url"]}}')">Share</a>
 
                                 <div class="sharing">
@@ -166,7 +166,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     </div>
                                     <div>
                                         <a href="https://community.infiniteflight.com/new-topic?title=&body=[{{$sm["title"]}}]({{$sm["url"]}})"
-                                           class="ifc_share" target="_blank">{!! file_get_contents(url("storage/app/images/ifc.svg")) !!}</a>
+                                           class="ifc_share" target="_blank"><i class="fas fa-infinity"></i></a>
                                     </div>
                                     <div>
                                         <a href="https://www.facebook.com/sharer/sharer.php?u={{$sm["url"]}}" target="_blank"><i
@@ -185,17 +185,17 @@ if( !function_exists('mobile_user_agent_switch') ){
                         <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["weather"]) != 0) window="weather_window" @endif @endif>
                             <div class="custom_table_row_left">
                                 <p>Weather</p>
-                                @if(count($info["weather"]) == 0)
+                                @if(count($info->weather) == 0)
                                     No Weather Available
                                 @else
-                                    @foreach($info["weather"] as $weatherelement)
+                                    @foreach($info->weather as $weatherelement)
                                         @if(strtolower($weatherelement[0]) === "metar" )
                                             <p condition="{{$weatherelement[2]}}">{{$weatherelement[1]}}</p>
                                         @endif
                                     @endforeach
                                 @endif
                             </div>
-                            @if(count($info["weather"]) != 0)
+                            @if(count($info->weather) != 0)
                                 @if($agent->isDesktop())
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
@@ -204,13 +204,13 @@ if( !function_exists('mobile_user_agent_switch') ){
                             @endif
                         </div>
 
-                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["charts"]) != 0) window="chart_window" @endif @endif>
+                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->charts) != 0) window="chart_window" @endif @endif>
                             <div class="custom_table_row_left">
                                 <p>Charts</p>
-                                <p>@if(count($info["charts"]) == 0) No Charts @else {{count($info["charts"])}} @endif
+                                <p>@if(count($info->charts) == 0) No Charts @else {{count($info->charts)}} @endif
                                     Available</p>
                             </div>
-                            @if(count($info["charts"]) != 0)
+                            @if(count($info->charts) != 0)
                                 @if($agent->isDesktop())
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
@@ -218,13 +218,13 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 @endif
                             @endif
                         </div>
-                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["gates"]) != 0) window="gates_window" @endif @endif>
+                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->gates) != 0) window="gates_window" @endif @endif>
                             <div class="custom_table_row_left">
                                 <p>Gates</p>
-                                <p>@if(count($info["gates"]) == 0) No Gates @else {{count($info["gates"])}} @endif
+                                <p>@if(count($info->gates) == 0) No Gates @else {{count($info->gates)}} @endif
                                     Available</p>
                             </div>
-                            @if(count($info["gates"]) != 0)
+                            @if(count($info->gates) != 0)
                                 @if($agent->isDesktop())
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
@@ -232,13 +232,13 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 @endif
                             @endif
                         </div>
-                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["runways"]) != 0) window="runway_window" @endif @endif>
+                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->runways) != 0) window="runway_window" @endif @endif>
                             <div class="custom_table_row_left">
                                 <p>Runways</p>
-                                <p>@if(count($info["runways"]) == 0) No Runways @else {{count($info["runways"])}} @endif
+                                <p>@if(count($info->runways) == 0) No Runways @else {{count($info->runways)}} @endif
                                     Available</p>
                             </div>
-                            @if(count($info["runways"]) != 0)
+                            @if(count($info->runways) != 0)
                                 @if($agent->isDesktop())
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
@@ -247,19 +247,19 @@ if( !function_exists('mobile_user_agent_switch') ){
                             @endif
                         </div>
 
-                        <div class="custom_table_row" @if(count($info["events"]) != 0) window="events_window" @endif>
+                        <div class="custom_table_row" @if(count($info->events) != 0) window="events_window" @endif>
                             <div class="custom_table_row_left">
                                 <p>Events</p>
-                                @if(count($info["events"]) == 0)
+                                @if(count($info->events) == 0)
                                     <p>No events for this airport</p>
                                 @else
-                                    <p>{{count($info["events"])}} @if(count($info["events"]) == 1) Event @else
+                                    <p>{{count($info->events)}} @if(count($info->events) == 1) Event @else
                                             Events @endif Coming Up Soon</p>
-                                    <p id="ev_list_str">Next event: <br> {{$info["events"][0]["title"]}}
+                                    <p id="ev_list_str">Next event: <br> {{$info->events[0]->title}}
                                         | </p>
                                 @endif
                                 <br>
-                                <p><a href="{{url("events/" . $info["airport"]["icao"] . "/new")}}">New event</a></p>
+                                <p><a href="{{url("events/" . $info->icao . "/new")}}">New event</a></p>
                             </div>
                             @if(count($info["events"]) != 0)
                                 <div class="custom_table_row_right">
@@ -280,16 +280,16 @@ if( !function_exists('mobile_user_agent_switch') ){
         </div>
 
 
-        @if(count($info["charts"]) != 0)
+        @if(count($info->charts) != 0)
             <div class="chart_window hidden">
-                <h2 class="window_title">Charts | {{$info["airport"]["icao"]}}</h2>
+                <h2 class="window_title">Charts | {{$info->icao}}</h2>
                 <div class="charts_container">
                     <div class="charts_left">
                         <div class="custom_table">
-                            @foreach($info["charts"] as $chart)
-                                <div class="custom_table_row" onclick="openChart('{{$chart["Url"]}}')">
+                            @foreach($info->charts as $chart)
+                                <div class="custom_table_row" onclick="openChart('{{$chart->Url}}')">
                                     <div class="custom_table_row_left">
-                                        <p>{{$chart["Name"]}}</p>
+                                        <p>{{$chart->Name}}</p>
                                     </div>
 
                                     <div class="custom_table_row_right">
@@ -306,17 +306,17 @@ if( !function_exists('mobile_user_agent_switch') ){
             </div>
         @endif
 
-        @if(count($info["runways"]) != 0)
+        @if(count($info->runways) != 0)
             <div class="runway_window hidden">
-                <h2 class="window_title">Runways | {{$info["airport"]["icao"]}}</h2>
+                <h2 class="window_title">Runways | {{$info->icao}}</h2>
                 <div class="runway_container">
                     <div class="runway_left">
                         <div class="custom_table">
-                            @foreach($info["runways"] as $runway)
+                            @foreach($info->runways as $runway)
                                 <div class="custom_table_row">
                                     <div class="custom_table_row_left">
-                                        <p>{{$runway["app_idents"]}}</p>
-                                        <p>{!! str_replace("\n","<br>", $runway["app_dimension"]) !!}</p>
+                                        <p>{{$runway->app_idents}}</p>
+                                        <p>{!! str_replace("\n","<br>", $runway->app_dimension) !!}</p>
                                     </div>
                                 </div>
                             @endforeach
@@ -326,21 +326,21 @@ if( !function_exists('mobile_user_agent_switch') ){
             </div>
         @endif
 
-        @if(count($info["gates"]) != 0)
+        @if(count($info->gates) != 0)
             <div class="gates_window hidden">
                 <div class="window_title">
-                    <h2>Gates | {{$info["airport"]["icao"]}}</h2>
+                    <h2>Gates | {{$info->icao}}</h2>
                 </div>
 
                 <div class="gates_container">
                     <div class="gates_left">
                         <div class="custom_table">
-                            @foreach($info["gates"] as $gate)
+                            @foreach($info->gates as $gate)
                                 <div class="custom_table_row"
-                                     onclick="goToLocation({{$gate["longitude"]}}, {{$gate["latitude"]}})">
+                                     onclick="goToLocation({{$gate->longitude}}, {{$gate->latitude}})">
                                     <div class="custom_table_row_left">
-                                        <p>@if($gate["name"] == "") No Name @else {{$gate["name"]}} @endif</p>
-                                        <p>{!! nl2br($gate["app_string"]) !!}</p>
+                                        <p>@if($gate->name == "") No Name @else {{$gate->name}} @endif</p>
+                                        <p>{!! nl2br($gate->app_string) !!}</p>
                                     </div>
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
@@ -357,13 +357,13 @@ if( !function_exists('mobile_user_agent_switch') ){
         @endif
 
 
-        @if(count($info["weather"]) != 0)
+        @if(count($info->weather) != 0)
             <div class="weather_window hidden">
-                <h2 class="window_title">Weather | {{$info["airport"]["icao"]}}</h2>
+                <h2 class="window_title">Weather | {{$info->icao}}</h2>
                 <div class="weather_container">
                     <div class="weather_left">
                         <div class="custom_table">
-                            @foreach($info["weather"] as $weatherelement)
+                            @foreach($info->weather as $weatherelement)
                                 <div class="custom_table_row">
                                     <div condition="{{$weatherelement[2]}}" class="custom_table_row_left">
                                         <p>{{$weatherelement[0]}}</p>
@@ -377,17 +377,17 @@ if( !function_exists('mobile_user_agent_switch') ){
             </div>
         @endif
 
-        @if(count($info["events"]) != 0)
+        @if(count($info->events) != 0)
             <div class="events_window hidden">
-                <h2 class="window_title">Events | {{$info["airport"]["icao"]}}</h2>
+                <h2 class="window_title">Events | {{$info->icao}}</h2>
                 <div class="events_container">
                     <div class="events_left">
                         <div class="custom_table">
-                            @foreach($info["events"] as $event)
+                            @foreach($info->events as $event)
                                 <div class="custom_table_row" json='{{json_encode($event)}}' onclick="">
                                     <div class="custom_table_row_left">
-                                        <p>{{$event["title"]}}</p>
-                                        <p isoformat="{{$event["start"]}}"></p>
+                                        <p>{{$event->title}}</p>
+                                        <p isoformat="{{$event->start}}"></p>
                                     </div>
 
                                     <div class="custom_table_row_right">
@@ -420,7 +420,7 @@ if( !function_exists('mobile_user_agent_switch') ){
 @endsection
 
 @section('javascript')
-    @if(!isset($info["error"]))
+    @if(!isset($info->error))
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
             if (!mapboxgl.supported()) {
@@ -453,8 +453,8 @@ if( !function_exists('mobile_user_agent_switch') ){
                     container: 'map',
                     style: current_style,
                     center: [
-                        {{$info["airport"]["longitude"]}},
-                        {{$info["airport"]["latitude"]}}],
+                        {{$info->longitude}},
+                        {{$info->latitude}}],
                     zoom: 14,
                     pitch: 60
                 });
@@ -463,8 +463,8 @@ if( !function_exists('mobile_user_agent_switch') ){
                 container: 'gates_map',
                 style: current_style,
                 center: [
-                    {{$info["airport"]["longitude"]}},
-                    {{$info["airport"]["latitude"]}}],
+                    {{$info->longitude}},
+                    {{$info->latitude}}],
                 zoom: 15,
             });
 
@@ -473,13 +473,13 @@ if( !function_exists('mobile_user_agent_switch') ){
                     container: 'events_map',
                     style: current_style,
                     center: [
-                        {{$info["airport"]["longitude"]}},
-                        {{$info["airport"]["latitude"]}}],
+                        {{$info->longitude}},
+                        {{$info->latitude}}],
                     zoom: 15,
                     // minZoom: 11,
                     maxBounds: [
-                        [{{$info["airport"]["bounds"][2]}}, {{$info["airport"]["bounds"][0]}}],
-                        [{{$info["airport"]["bounds"][3]}}, {{$info["airport"]["bounds"][1]}}]// Northeast coordinates
+                        [{{$info->bounds[2]}}, {{$info->bounds[0]}}],
+                        [{{$info->bounds[3]}}, {{$info->bounds[1]}}]// Northeast coordinates
                     ]
                 });
             @endif
@@ -491,7 +491,7 @@ if( !function_exists('mobile_user_agent_switch') ){
 
             {{--                        $java_array = '{--}}
             {{--                                    "camera": {--}}
-            {{--                                     center: [' . $info["airport"]["longitude"] . ', ' . $info["airport"]["latitude"] . '],--}}
+            {{--                                     center: [' . $info->["longitude"] . ', ' . $info->["latitude"] . '],--}}
             {{--                                     zoom: 12,--}}
             {{--                                     pitch: 10--}}
             {{--                                     }--}}
@@ -525,7 +525,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 mapDarkMode();
             });
 
-            @if(count($info["events"]) != 0)
+            @if(count($info->events) != 0)
             events_map.on('load', function () {
                 events_map_loaded = true;
                 mapDarkMode();
@@ -626,7 +626,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                     type: "post",
                     data: {
                         "_token": "{{ csrf_token() }}",
-                        "timezone": "{{$info["airport"]["timezone"]}}",
+                        "timezone": "{{$info->timezone}}",
                     },
                     success: function (response) {
                         $("#timezone").html(response).show();
@@ -643,7 +643,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 setTimeout(function () {
                     window.location = "https://itunes.apple.com/appdir";
                 }, 50);
-                window.location = 'virtualhub://airportinfo?icao={{$info["airport"]["icao"]}}';
+                window.location = 'virtualhub://airportinfo?icao={{$info->icao}}';
                 @endif
 
                 @if($agent->is('Android'))
@@ -666,7 +666,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                     @if($agent->isDesktop())
                     gate_map.setStyle(current_style);
                     @endif
-                    @if(count($info["events"]) != 0)
+                    @if(count($info->events) != 0)
                     events_map.setStyle(current_style);
 
                     @endif
@@ -816,7 +816,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 @endguest
 
                 @auth
-                @if(count($info["events"]) != 0)
+                @if(count($info->events) != 0)
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Join</p><p>Select an gate to join</p></div></div>");
 
                 $("#events_map").removeClass("hidden");
@@ -899,7 +899,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 var cookieAccepted = getCookie("laravel_cookie_consent");
 
                 if (cookieAccepted) {
-                    document.cookie = "vhw_redirect={{$info["airport"]["icao"]}}; path=/";
+                    document.cookie = "vhw_redirect={{$info->icao}}; path=/";
                 }
 
                 setTimeout(function () {
@@ -975,7 +975,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 main_map.resize();
                 gate_map.resize();
 
-                @if(count($info["events"]) != 0)
+                @if(count($info->events) != 0)
                 events_map.resize();
 
                 @endif
@@ -1020,14 +1020,14 @@ if( !function_exists('mobile_user_agent_switch') ){
                 $('.nav_links').css("display", "flex");
                 $('.close').css("display", "none");
 
-                if (getPathLastSegment() !== "{{$info["airport"]["icao"]}}") {
+                if (getPathLastSegment() !== "{{$info->icao}}") {
                     removePathLastSegment(allow);
                 }
 
                 currentWindow = "";
                 main_map.resize();
                 gate_map.resize();
-                @if(count($info["events"]) != 0)
+                @if(count($info->events) != 0)
                 events_map.resize();
 
                 @endif

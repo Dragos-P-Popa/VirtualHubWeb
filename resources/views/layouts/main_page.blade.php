@@ -19,22 +19,21 @@
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-    <link href="{{ asset('resources/css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('resources/css/loading.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     @yield('external_css')
     @yield('vh_banner')
     @yield('meta_social')
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{url("")}}/storage/app/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{url("")}}/storage/app/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{url("")}}/storage/app/images/favicon-16x16.png">
-    <link rel="manifest" href="{{url("")}}/storage/app/images/site.webmanifest">
-    <link rel="mask-icon" href="{{url("")}}/storage/app/images/safari-pinned-tab.svg" color="#0090ff">
-    <link rel="shortcut icon" href="{{url("")}}/storage/app/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url("")}}/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url("")}}/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url("")}}/images/favicon-16x16.png">
+    <link rel="manifest" href="{{url("")}}/images/site.webmanifest">
+    <link rel="mask-icon" href="{{url("")}}/images/safari-pinned-tab.svg" color="#0090ff">
+    <link rel="shortcut icon" href="{{url("")}}/images/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="{{url("")}}/storage/app/images/browserconfig.xml">
+    <meta name="msapplication-config" content="{{url("")}}/images/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -124,8 +123,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-<script src="{{ asset('resources/js/app.js') }}"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="{{ mix('js/app.js') }}"></script>
+@if(url("") == "http://vh-net.com" || url("") == "https://vh-net.com")
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+@endif
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({
         google_ad_client: "ca-pub-5010357477858879",
@@ -150,7 +151,7 @@
 </script>
 @yield('javascript')
 
-@if(url("") == "http://vh-net.com" || url("") != "https://vh-net.com")
+@if(url("") == "http://vh-net.com" || url("") == "https://vh-net.com")
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96063635-2"></script>
     <script>

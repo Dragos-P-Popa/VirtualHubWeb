@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Airport;
+use App\Events;
+use App\EventsGates;
 use App\Flightplans;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -21,58 +24,30 @@ class VirtualHubWeb extends Controller {
 
 	}
 
-	/**
-	 * Show the application dashboard.
-	 *
-	 * @return \Illuminate\Contracts\Support\Renderable
-	 */
 	public function airport( $icao ) {
-
-	        $intOrString = (int)$icao;
-	        if ($intOrString != 0 ){
-                $info = new APIController();
-                $info = $info->getUserEvents( $icao);
-
-                return view( 'vhweb.airport', array(
-                    "info" => $info));
-
-	        } else {
-                $info = new APIController();
-                $info = $info->airportinfo( $icao );
-
-                $info["airport"]["bounds"] = $this->getBoundingBox($info["airport"]["latitude"], $info["airport"]["longitude"], 3);
-
-                return view( 'vhweb.airport', array(
-                    "info" => $info));
-    }
+        $info = Airport::FullInfo($icao);
+        return view( 'vhweb.airport', compact('info'));
 	}
 
 	public function newEventPage( $icao ) {
-		include "app/api/Airport.php";
-
-		$info = new \Airport();
-		$info = $info->getAirportInformation( $icao );
-
-		return view( 'vhweb.newEvent', array(
-			"info" => $info
-		) );
+        $info = Airport::Info($icao);
+        return view( 'vhweb.newEvent', compact('info'));
 	}
 
 	public function addNewEvent() {
-		$name        = $_POST["event_name"];
-		$description = $_POST["event_description"];
-		$start       = $_POST["event_date_time_start"];
-		$end         = $_POST["event_date_time_end"];
-		$route       = $_POST["event_route"];
-		$sections    = $_POST["event_sections"];
-		$airport     = $_POST["event_airport"];
-		$server      = $_POST['event_server'];
-		$user_id     = Auth::user()->id;
+		$event = new Events();
+		$event->title = $_POST["event_name"];
+		$event->description = $_POST["event_description"];
+		$event->start = $_POST["event_date_time_start"];
+		$event->end = $_POST["event_date_time_end"];
+		$event->route = $_POST["event_route"];
+		$event->sections = $_POST["event_sections"];
+		$event->airport = $_POST["event_airport"];
+		$event->server = $_POST['event_server'];
+		$event->user_id = Auth::user()->id;
+		$event->save();
 
-		$query = "INSERT INTO vh_events SET airport = '" . $airport . "', title = '" . $name . "', description = '" . $description . "', server = '" . $server . "', start = '" . $start . "', end = '" . $end . "', route = '" . $route . "', sections = '" . $sections . "', user_id = '" . $user_id . "'";
-		DB::insert( $query );
-
-		return redirect( 'view/' . $airport . '/events' );
+		return redirect( 'view/' . $event->airport . '/events' );
 	}
 
 	public function joinEvent() {
@@ -80,29 +55,19 @@ class VirtualHubWeb extends Controller {
 		$event_id = $_POST["event_id"];
 		$gate_id = $_POST["gate_id"];
 
-		$get_gate_occupied = DB::select("SELECT * FROM vh_events_gates WHERE event_id = " . $event_id . " AND gate_id = '" . $gate_id . "';");
+		$response = EventsGates::Join($user_id, $event_id, $gate_id);
 
-		if (count($get_gate_occupied) != 0) {
-			return JsonResponse::create(["success" => false, "reason" => "This gate is occupied."]);
-		} else {
-			$get_gate_occupied_byuser = DB::select("SELECT * FROM vh_events_gates WHERE event_id = " . $event_id . " AND user_id = '" . $user_id . "';");
-
-			if (count($get_gate_occupied_byuser) != 0) {
-				DB::delete("DELETE FROM vh_events_gates WHERE event_id = " . $event_id . " AND user_id = '" . $user_id . "';");
-			}
-
-			$query = "INSERT INTO vh_events_gates SET event_id = " . $event_id . ", gate_id = '" . $gate_id . "', user_id = " . $user_id . ";";
-			DB::insert( $query );
-
-			return JsonResponse::create(["success" => true]);
-		}
+		return JsonResponse::create($response);
 	}
 
 	public function removeEvent() {
         $event_id = $_POST["event_id"];
-        DB::delete("DELETE FROM vh_events WHERE event_id = " . $event_id . ";");
 
-        return view('errors.503');
+        $event = Events::ByID($event_id);
+        $airport = $event->airport;
+        $event->delete();
+
+        return redirect( 'view/' . $airport );
     }
 
 	public function occupiedGates() {
@@ -112,59 +77,4 @@ class VirtualHubWeb extends Controller {
 
 		return JsonResponse::create(["success" => true, "gates" => $get_gate_occupied]);
 	}
-
-	// Distance is in km, alat and alon are in degrees
-	function getBoundingBox($lat_degrees,$lon_degrees,$distance_in_miles) {
-
-		$radius = 3963.1; // of earth in miles
-
-		// bearings - FIX
-		$due_north = deg2rad(0);
-		$due_south = deg2rad(180);
-		$due_east = deg2rad(90);
-		$due_west = deg2rad(270);
-
-		// convert latitude and longitude into radians
-		$lat_r = deg2rad($lat_degrees);
-		$lon_r = deg2rad($lon_degrees);
-
-		// find the northmost, southmost, eastmost and westmost corners $distance_in_miles away
-		// original formula from
-		// http://www.movable-type.co.uk/scripts/latlong.html
-
-		$northmost  = asin(sin($lat_r) * cos($distance_in_miles/$radius) + cos($lat_r) * sin ($distance_in_miles/$radius) * cos($due_north));
-		$southmost  = asin(sin($lat_r) * cos($distance_in_miles/$radius) + cos($lat_r) * sin ($distance_in_miles/$radius) * cos($due_south));
-
-		$eastmost = $lon_r + atan2(sin($due_east)*sin($distance_in_miles/$radius)*cos($lat_r),cos($distance_in_miles/$radius)-sin($lat_r)*sin($lat_r));
-		$westmost = $lon_r + atan2(sin($due_west)*sin($distance_in_miles/$radius)*cos($lat_r),cos($distance_in_miles/$radius)-sin($lat_r)*sin($lat_r));
-
-
-		$northmost = rad2deg($northmost);
-		$southmost = rad2deg($southmost);
-		$eastmost = rad2deg($eastmost);
-		$westmost = rad2deg($westmost);
-
-		// sort the lat and long so that we can use them for a between query
-		if ($northmost > $southmost) {
-			$lat1 = $southmost;
-			$lat2 = $northmost;
-
-		} else {
-			$lat1 = $northmost;
-			$lat2 = $southmost;
-		}
-
-
-		if ($eastmost > $westmost) {
-			$lon1 = $westmost;
-			$lon2 = $eastmost;
-
-		} else {
-			$lon1 = $eastmost;
-			$lon2 = $westmost;
-		}
-
-		return array($lat1,$lat2,$lon1,$lon2);
-	}
-
 }

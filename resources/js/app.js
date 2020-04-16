@@ -58,3 +58,5 @@ function removeShadowFromElement(el) {
         el.removeClass("shadow");
     }
 }
+
+import './date-time-picker.min';

@@ -79,9 +79,6 @@ $future60 = date('Y-m-d', strtotime($today. ' + 60 days'));
 @endphp
 
 @section('javascript')
-    <!--suppress VueDuplicateTag -->
-    <script src="{{url('resources/js/date-time-picker.min.js')}}"></script>
-    <!--suppress VueDuplicateTag -->
     <script>
         var custom_sections = 1;
 
