@@ -44,6 +44,9 @@ Route::get('/events/{icao}/new', 'VirtualHubWeb@newEventPage')->middleware('auth
 //Account
 Route::get('/account', 'AccountController@index')->middleware('auth');
 
+Route::get('/view/events/created', 'UserEventsController@created')->middleware('auth');
+
+Route::get('/view/events/attending', 'UserEventsController@attending')->middleware('auth');
 
 //----------------------------------------------------|
 //General
@@ -95,19 +98,9 @@ Route::post('/api/events/join', 'VirtualHubWeb@joinEvent')->middleware('auth');
 
 Route::post('/api/events/gates', 'VirtualHubWeb@occupiedGates')->middleware('auth');
 
-//Route::get('/api/events/remove/', 'VirtualHubWeb@removeEvent')->middleware('auth');
+Route::get('/api/events/{id}/remove/', 'VirtualHubWeb@removeEvent')->middleware('auth');
 
 //----------------------------------------------------|
-
-
-
-
-
-
-
-
-
-
 
 
 

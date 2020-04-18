@@ -48,7 +48,7 @@ class AccountController extends Controller {
             $eventId = 'Null';
         }
 
-        return view( 'general.account',
+        return view( 'account.account',
             array("firstEvent" => $user_events),
             array("eventsAttending" => $eventId));
     }

@@ -2,7 +2,6 @@
 @section('app_section', env('APP_VHW'))
 @section('logo', 'vhw')
 
-{{--{{dd($info)}}--}}
 @if(!isset($info->error))
 
     @section('title', $info->name . " - " . $info->icao . " / " . $info->iata . "")
@@ -828,7 +827,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 var current_user = {{Auth::user()->id}};
 
                 if (json.user_id == current_user){
-                    table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Remove event</p><a href='/'>Remove this event</a>");
+                    table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Remove event</p><a href='{{url('/api/events/' . '23' . '/remove/')}}'>Remove this event</a>");
 
 
                     console.log(json);

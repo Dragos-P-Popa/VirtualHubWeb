@@ -29,5 +29,9 @@ class EventsGates extends Model{
         }
     }
 
+    static function ByUser($userID){
+        $events = EventsGates::where([['user_id', '=', $userID]])->get();
+        return $events;
+    }
 
 }

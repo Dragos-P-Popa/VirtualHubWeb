@@ -27,14 +27,18 @@
                         @if($firstEvent == 'Null')
                             <p>No Events</p>
                             <p>You have no current event. Set some up!</p>
-                        @else
+                        @elseif($firstEvent != 'Null')
                         <p>Next event</p>
 
                         <br>
                         <h2>{{$firstEvent['title']}}</h2>
                         <p>{{$firstEvent['start']}}</p>
                         <p>{{$firstEvent['description']}}</p>
+                        <br>
+                        <p><a href="{{url("/view/events/created")}}">View all events</a></p>
                         @endif
+
+
                     </div>
                 </div>
 
@@ -66,7 +70,10 @@
                             <h2>{{get_object_vars($eventsAttending[0])['title']}}</h2>
                             <p>{{get_object_vars($eventsAttending[0])['start']}}</p>
                             <p>{{get_object_vars($eventsAttending[0])['description']}}</p>
+                            <br>
+                            <p><a href="{{url("/view/events/attending")}}">View all events</a></p>
                         @endif
+
                     </div>
                 </div>
 

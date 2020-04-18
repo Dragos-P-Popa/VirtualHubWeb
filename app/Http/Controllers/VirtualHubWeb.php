@@ -60,12 +60,12 @@ class VirtualHubWeb extends Controller {
 		return JsonResponse::create($response);
 	}
 
-	public function removeEvent() {
-        $event_id = $_POST["event_id"];
+	public function removeEvent( $id ) {
 
-        $event = Events::ByID($event_id);
-        $airport = $event->airport;
-        $event->delete();
+        $event = Events::ByID(23);
+
+        $airport = $event[0]->airport;
+        $event[0]->delete();
 
         return redirect( 'view/' . $airport );
     }

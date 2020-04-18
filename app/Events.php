@@ -33,6 +33,23 @@ class Events extends Model {
         return $events;
     }
 
+    static function ForUserAttending($userID){
+        if($userID == null && Auth::id() == null) {
+            abort(404, 'User not found.');
+        }
+        if($userID == null) {
+            $userID = Auth::id();
+        }
+
+        $events = array();
+        $gatesOccupied = EventsGates::ByUser($userID);
+        foreach($gatesOccupied as $eventAttending){
+            array_push($events, Events::where('id', $eventAttending['event_id'])->get()[0]);
+        }
+
+        return $events;
+    }
+
     static function ByID($id) {
         $events = Events::where('id', $id)->get();
         $events = self::DateFormatter($events);

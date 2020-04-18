@@ -2,425 +2,591 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="Moved sharing options below the Airport Name Section. + Added native sharing menu for supported browser.">
-      <change afterPath="$PROJECT_DIR$/app/Airport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/EventsGates.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/app.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserEventsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/account/userEvents.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dashboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dashboard.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/841eba74-e912-435a-88f8-a7bf1dd240cd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/841eba74-e912-435a-88f8-a7bf1dd240cd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vagrant.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Airports.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.well-known/apple-app-site-association" beforeDir="false" afterPath="$PROJECT_DIR$/.well-known/apple-app-site-association" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/ads.html" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/ads.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/app.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/app.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/ca-pub-5010357477858879.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/ca-pub-5010357477858879.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/css" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/f(1).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/f(1).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/f(2).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/f(2).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/f(3).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/f(3).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/f.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/f.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/jquery-ui.min.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/jquery-ui.min.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/jquery.min.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/jquery.min.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/loading.css" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/loading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/mapbox-gl.css" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/mapbox-gl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/mapbox-gl.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/mapbox-gl.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/osd.js.download" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/osd.js.download" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/saved_resource(1).html" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/saved_resource(1).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/saved_resource(2).html" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/saved_resource(2).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/saved_resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/saved_resource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/zrt_lookup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/zrt_lookup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Aircrafts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Aircrafts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Airlines.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Airlines.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Airport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Airport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Charts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Charts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Events/MessagePushed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/MessagePushed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/EventsGates.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/EventsGates.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Fixes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Fixes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/FlightplanBundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/FlightplanBundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Flightplans.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Flightplans.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Frequencies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Frequencies.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Gates.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Gates.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/APIController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AircraftsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AircraftsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AirlinesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AirlinesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AirportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AirportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FixesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FixesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GatesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GatesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SitemapController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SitemapController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/Airport.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/Charts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Charts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/Frequencies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Frequencies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/Gates.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/Runways.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Runways.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/Weather.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Weather.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Runways.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Runways.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Weather.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Weather.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/.idea/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/.idea/api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/AirportInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/AirportInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/fetch_community_events.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/fetch_community_events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apple-app-site-association" beforeDir="false" afterPath="$PROJECT_DIR$/apple-app-site-association" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/analytics.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/analytics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cookie-consent.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cookie-consent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/horizon.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/horizon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sitemap.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/sitemap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AircraftsFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AircraftsFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AirlinesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AirlinesFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AirportsFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AirportsFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ApiUsersFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ApiUsersFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/FixesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/FixesFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/FlightplanBundlesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/FlightplanBundlesFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/FlightplansFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/FlightplansFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/GatesFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/GatesFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_21_112342_create_flightplans_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_112342_create_flightplans_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_21_112501_create_aircrafts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_112501_create_aircrafts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_21_112509_create_airlines_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_112509_create_airlines_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_21_112526_create_flightplan_bundles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_112526_create_flightplan_bundles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_21_112542_create_fixes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_112542_create_fixes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_21_112552_create_gates_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_112552_create_gates_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_21_113645_create_airports_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_113645_create_airports_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_22_104132_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_22_104132_create_failed_jobs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel-echo-server.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel-echo-server.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/aircraft-fighters-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-fighters-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/aircraft-heavy-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-heavy-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/aircraft-heli-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-heli-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/aircraft-jets-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-jets-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/aircraft-props-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-props-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/aircraft-turboprop-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-turboprop-normal.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/android-chrome-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/android-chrome-192x192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/android-chrome-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/android-chrome-512x512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/apple-touch-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/appstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/appstore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/browserconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/browserconfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon-16x16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon-32x32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/ifc.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ifc.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/mstile-150x150.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/mstile-150x150.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/playstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/playstore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/px_logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/px_logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/px_logo_full.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/px_logo_full.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/px_logo_tr_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/px_logo_tr_small.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/safari-pinned-tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/safari-pinned-tab.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/site.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/site.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/vh_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/vh_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/virtualhub_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/virtualhub_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/loading.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/loading.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/vhweb.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/horizon/app-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/horizon/app-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/horizon/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/horizon/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/horizon/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/horizon/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/horizon/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/horizon/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/horizon/img/horizon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/horizon/img/horizon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/horizon/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/horizon/img/sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/horizon/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/horizon/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/vf_logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/vf_logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/vh_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/vh_logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/airport.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/chart.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/de/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/de/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/el/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/el/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/es/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/es/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/et/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/et/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/fr/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/fr/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/hu/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/hu/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nb/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nb/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nl/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nl/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pl/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pl/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pt/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pt/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ru/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ru/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sk/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sk/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sv/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sv/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/tr/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/tr/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/.idea/update_script.iml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/.idea/update_script.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/dataupdater.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/dataupdater.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/frequencies.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/frequencies.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/gates-mapbox.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/gates-mapbox.geojson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/gates.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/gates.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/runways-mapbox.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/runways-mapbox.geojson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/runways.sql" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/runways.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/loading.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/loading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/allusers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/allusers.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/notauthorized.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/notauthorized.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/update_script/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/update_script/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/updatedata.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/updatedata.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/401.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/401.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/403.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/403.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/419.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/419.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/429.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/429.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/500.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/500.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/503.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/503.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/illustrated-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/illustrated-layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/minimal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/minimal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/general/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/account.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/general/terms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/general/terms.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/general/unsupported.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/general/unsupported.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/general.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main_page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/allapsitemap.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/allapsitemap.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/newEvent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/Procfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/as.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/axe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/.angular-cli.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/e2e/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/e2e/app.po.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/e2e/tsconfig.e2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/gun.helper.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/app/gun.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/src/typings.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/angular/tslint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/axe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/basic/private.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/basic/space.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/basic/tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/basic/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/chat/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/chat/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/contact/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/express.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/game/nts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/game/space.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/hapi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/http-external-ws.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/http.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/install.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/json/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/move/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/party.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/pop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.buckconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.flowconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/.watchmanconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/BUCK" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/assets/html/blank.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/java/com/gundemo/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/java/com/gundemo/MainApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/keystores/BUCK" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/keystores/debug.keystore.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/android/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo-tvOS/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo-tvOSTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/AppDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/AppDelegate.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/Base.lproj/LaunchScreen.xib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/Images.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/Images.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemo/main.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemoTests/GunDemoTests.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/ios/GunDemoTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/shim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/App/Demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/App/PolyFillCrypto.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/App/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/App/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/extensions/asyncStorageAdapter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/extensions/sea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/MainWorker.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/MainWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/MainWorker.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/WebViewWorker.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/WebViewWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/WebViewWorker.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/asyncSerialize.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/asyncSerialize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/asyncSerialize.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/compat.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/compat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/compat.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/serializeBinary.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/serializeBinary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/serializeBinary.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/webViewWorkerString.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/webViewWorkerString.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react-native/src/webview-crypto/webViewWorkerString.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/Chat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/Json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/Todos.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/react/src/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/start.js.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/stats.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/todo/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/vanilla/todo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/vue/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/vue/todo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/examples/where/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/gun.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/gun.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/hooks/build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/hooks/post_push" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/aws.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/bye.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/cryptomodules.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/debug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/erase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/evict.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/file.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/forget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/fsrm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/fun.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/http.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/hub.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/ipfs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/jsonp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/later.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/les.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/load.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/match.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/memdisk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/meta.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/monotype.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/multicast.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/normalize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/not.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/open.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/path.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/radisk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/radix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/reboot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/rfs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/rindexed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/rls.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/rmem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/role.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/rs3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/serve.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/shim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/space.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/stats.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/super.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/then.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/time.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/tmp.test.sql.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/unbuild.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/unset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/untitled.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/uws.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/verify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/webrtc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/wire.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/ws.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/wsp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/lib/wsproto.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/nts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/aeskey.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/array.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/buffer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/decrypt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/encrypt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/https.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/pair.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/root.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/sea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/secret.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/settings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/sha1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/sha256.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/shim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/sign.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/then.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/verify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/sea/work.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/HAM.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/adapters/localStorage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/adapters/mesh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/adapters/websocket.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/ask.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/back.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/chain.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/dup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/get.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/graph.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/on.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/onto.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/polyfill/unbuild.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/put.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/root.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/set.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/type.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/src/val.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/abc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/axe/holy-grail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/axe/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/debug/deep-set.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/expect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/gun.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/https/ca.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/https/ca.csr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/https/ca.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/https/server.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/https/server.csr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/https/server.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/https/server.key.passphrase" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/https/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/json2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/mocha.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/mocha.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/mocha.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/normalize/normalize.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/interface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/performance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/s3pricing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/set.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/shoot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/shoot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/shotgun.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/timelines.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/old/tmp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/1putackget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/2getget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/b2s2s2b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/curl-server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/distributed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/holy/grail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/holy/gun-server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/holy/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/holy/ports.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/e2e/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/holy-grail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/load.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/radisk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/s2s-all-delayed-peer-add.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/s2s-all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/scale.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/set.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/speak.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/panic/who.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/benchmark.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/memdisk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/memdisk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/memory.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/perf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/ptsd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/ptsd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/radix.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/radix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/spam.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/stool.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/ptsd/streampipe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/rad/browser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/rad/parse.rad" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/rad/rad.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/radix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/sea/sea-tmp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/sea/sea.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/sea/sea.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/sea/sea_old.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/server/http.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/server/node-client.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/server/node-write.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/bigsync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/contacts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/indexedDB.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/mitra/client_to_server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/mitra/gun_https2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/radisk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/say.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/seanode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/space.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/time.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/tmp/tmp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/test/wire.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-fighters-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-fighters-normal.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-heavy-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-heavy-normal.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-heli-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-heli-normal.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-jets-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-jets-normal.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-props-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-props-normal.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/aircraft-turboprop-normal.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/aircraft-turboprop-normal.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/android-chrome-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/android-chrome-192x192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/android-chrome-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/android-chrome-512x512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/apple-touch-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/appstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/appstore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/browserconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/browserconfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon-16x16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon-32x32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/ifc.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/ifc.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/mstile-150x150.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/mstile-150x150.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/playstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/playstore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/px_logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/px_logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/px_logo_full.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/px_logo_full.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/safari-pinned-tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/safari-pinned-tab.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/images/site.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/site.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/A10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/A10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/A318.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/A318.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/A319.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/A319.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/A320.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/A320.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/A321.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/A321.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/A332.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/A332.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/A333.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/A333.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/A346.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/A346.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/A388.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/A388.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/AC130.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/AC130.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/Aircrafts.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/Aircrafts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B737.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B737.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B738.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B738.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B739.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B739.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B742.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B742.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B744.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B744.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B747Nasa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B747Nasa.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B747Shuttle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B747Shuttle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B748.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B748.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B752.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B752.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B763.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B763.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B772.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B772.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B772Cargo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B772Cargo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B77L.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B77L.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B77W.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B77W.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B789.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B789.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/B78X.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/B78X.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/C-172.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/C-172.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/C130H.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/C130H.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/C130J-30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/C130J-30.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/C130J.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/C130J.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/C17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/C17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/C208.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/C208.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/C750.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/C750.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/CRJ2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/CRJ2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/DC10-TANKER.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/DC10-TANKER.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/DC10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/DC10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/DH8D.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/DH8D.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/E170.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/E170.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/E175.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/E175.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/E190.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/E190.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/E195.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/E195.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/F14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/F14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/F16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/F16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/F22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/F22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/MD-11-CARGO.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/MD-11-CARGO.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/MD-11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/MD-11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/P38.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/P38.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/SR22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/SR22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/Spitfire.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/Spitfire.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/aircrafts/VC-25_(Air_Force_One).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/aircrafts/VC-25_(Air_Force_One).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/BGBW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/BGBW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/BGGH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/BGGH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/BGJN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/BGJN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/BGKK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/BGKK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/BIAR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/BIAR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/BIVM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/BIVM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/BIVO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/BIVO.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/CYFB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/CYFB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/DIAP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/DIAP.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EBAW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EBAW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EBBL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EBBL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EBCI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EBCI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EBFS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EBFS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EBGB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EBGB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EBLG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EBLG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EBSF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EBSF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDDH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDDH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDDK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDDK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDDL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDDL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDDN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDDN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDHL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDHL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDJA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDJA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDJG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDJG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDKB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDKB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDKV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDKV.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDLD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDLD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDLE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDLE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDLV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDLV.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDLW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDLW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDMD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDMD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDME.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDME.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDMS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDMS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDMV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDMV.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EDNX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EDNX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGAA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGAA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGAC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGAC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGDL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGDL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGDM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGDM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGGW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGGW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGHI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGHI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGHJ.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGHJ.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGHL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGHL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGKA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGKA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGKB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGKB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGLC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGLC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGLD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGLD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGLF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGLF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGMC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGMC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGMD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGMD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGNH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGNH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGNX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGNX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGPH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGPH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGSS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGSS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGTC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGTC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGUB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGUB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGUW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGUW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGVO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGVO.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGWN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGWN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGXT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGXT.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EGYE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EGYE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EHAM+Aerodrome+Chart.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EHAM+Aerodrome+Chart.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EHAM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EHAM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EKRN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EKRN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/EKVG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/EKVG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ELLX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ELLX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ENBR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ENBR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ENHA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ENHA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ENSH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ENSH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESBB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESBB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESGJ.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESGJ.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESGL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESGL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESKK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESKK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESKM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESKM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESKN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESKN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESMX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESMX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESND.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESND.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESNS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESNS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESNU.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESNU.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESOE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESOE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESSK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESSK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ESSL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ESSL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ETIC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ETIC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/ETNG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/ETNG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/FACT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/FACT.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/FAMM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/FAMM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/GCTS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/GCTS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/GMMX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/GMMX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/HAGN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/HAGN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KACK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KACK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KANK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KANK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KASE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KASE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KAST.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KAST.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KATW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KATW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KAUS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KAUS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KAVX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KAVX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KBJC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KBJC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KBKF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KBKF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KBNL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KBNL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KBUR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KBUR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KCAE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KCAE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KCLT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KCLT.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KCNO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KCNO.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KCUB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KCUB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KDEN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KDEN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KDFW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KDFW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KEGE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KEGE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KFCI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KFCI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KFRG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KFRG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KFTG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KFTG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KFVX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KFVX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KHKY.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KHKY.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KIND.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KIND.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KIWD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KIWD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KJFK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KJFK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KJQF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KJQF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KLAX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KLAX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KMCF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KMCF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KMDW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KMDW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KMIA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KMIA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KMLI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KMLI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KMOB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KMOB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KMRN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KMRN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KMTJ.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KMTJ.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KNKX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KNKX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KOLM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KOLM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KONT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KONT.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KOPF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KOPF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KORH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KORH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KOSH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KOSH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KOWD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KOWD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KPIA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KPIA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KPOB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KPOB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KPSM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KPSM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KPUO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KPUO.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KPVC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KPVC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KRIV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KRIV.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KRNT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KRNT.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KSAN.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KSAN.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KSAN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KSAN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KSDF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KSDF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KSEA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KSEA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KSFO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KSFO.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KSLI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KSLI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KSNA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KSNA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KSPA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KSPA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KSWF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KSWF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KTPA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KTPA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KTPF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KTPF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KTTN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KTTN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KUDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KUDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KUDG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KUDG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KUES.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KUES.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KUGN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KUGN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KVCV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KVCV.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/KXNO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/KXNO.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LDDU.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LDDU.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LDOS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LDOS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LDRI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LDRI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LELN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LELN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFLI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFLI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFLJ.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFLJ.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFOB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFOB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFOC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFOC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFOE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFOE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFOF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFOF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFPB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFPB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFPC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFPC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFPG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFPG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFPV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFPV.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LFRM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LFRM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LGIR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LGIR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LGKO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LGKO.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LGKY.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LGKY.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LGMK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LGMK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LGML.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LGML.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LGSK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LGSK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LGSM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LGSM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LHHH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LHHH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LHK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LHK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LHKA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LHKA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LHKD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LHKD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LHSA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LHSA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LHSS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LHSS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LHZK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LHZK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LIMC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LIMC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LJLJ+PARKING+AND+DOCKING.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LJLJ+PARKING+AND+DOCKING.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LSGG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LSGG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LTAC.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LTAC.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LTAF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LTAF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LTAG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LTAG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LTBJ.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LTBJ.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LTCI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LTCI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LTCL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LTCL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/LTFE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/LTFE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MMTJ.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MMTJ.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MMUN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MMUN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYAB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYAB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYAF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYAF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYAP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYAP.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYAS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYAS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYAT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYAT.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYAW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYAW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYCH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYCH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYCI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYCI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYCX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYCX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYEH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYEH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYEL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYEL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYEM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYEM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYLD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYLD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/MYLS.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/MYLS.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/NZPP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/NZPP.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/OJAI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/OJAI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/OLBA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/OLBA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/OMDB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/OMDB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PACD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PACD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PACE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PACE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PADQ.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PADQ.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PADU.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PADU.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PAHP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PAHP.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PAIW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PAIW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PAKK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PAKK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PANU.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PANU.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PAOR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PAOR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PASI.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PASI.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PASM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PASM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PAUN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PAUN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PHDH.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PHDH.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PHJR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PHJR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/PHNL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/PHNL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/RJFF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/RJFF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/RJOM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/RJOM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/RJOO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/RJOO.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/SBGR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/SBGR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/SBSP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/SBSP.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/SMJP+AIRPORT+INFO+(CUSTOM+CHART).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/SMJP+AIRPORT+INFO+(CUSTOM+CHART).pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/SPGL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/SPGL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/TAPA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/TAPA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/TDPD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/TDPD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/TJAB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/TJAB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/TKPK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/TKPK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/UHPP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/UHPP.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/UNNT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/UNNT.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/UUDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/UUDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/UUEE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/UUEE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/WIDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/WIDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/WMKJ.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/WMKJ.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/WMKK.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/WMKK.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/XXXX.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/XXXX.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/YSCB.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/YSCB.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/charts/YSSY.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/charts/YSSY.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/fixes.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/fixes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/QuickLook/Icon.tiff" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/QuickLook/Icon.tiff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/QuickLook/Preview.tiff" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/QuickLook/Preview.tiff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/QuickLook/Thumbnail.tiff" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/QuickLook/Thumbnail.tiff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/metadata.info" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/aircrafts_icons_template.pxd/metadata.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/px_logo_tr_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/px_logo_tr_small.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/images/virtualhub_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/images/virtualhub_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/liveroutes.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/liveroutes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/tc.html" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/tc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/vhw/airports.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/vhw/airports.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -605,16 +771,16 @@
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/storage/app/images" />
-      <recent name="$PROJECT_DIR$/resources/images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/account" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/resources/sass" />
       <recent name="$PROJECT_DIR$/app/Http" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/images" />
+      <recent name="$PROJECT_DIR$/resources/images" />
     </key>
   </component>
   <component name="RunManager">
@@ -698,6 +864,7 @@
       <workItem from="1586777512897" duration="11631000" />
       <workItem from="1586953183932" duration="5235000" />
       <workItem from="1587051595216" duration="18860000" />
+      <workItem from="1587149079764" duration="9184000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -927,19 +1094,20 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -965,6 +1133,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#Deployment/0.0.1680.1050@0.0.1680.1050" timestamp="1586438824649" />
+    <state x="552" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587150748022">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="552" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1587150748022" />
     <state x="763" y="289" key="#com.intellij.ide.util.MemberChooser" timestamp="1587072659652">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
@@ -974,10 +1146,10 @@
     </state>
     <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586904452217" />
     <state x="661" y="328" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1587070589589" />
-    <state x="304" y="128" key="CommitChangelistDialog2" timestamp="1587075133407">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="57" y="112" width="1356" height="854" key="CommitChangelistDialog2" timestamp="1587251988542">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="266" y="112" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1587051022430" />
+    <state x="57" y="112" width="1356" height="854" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1587251988542" />
     <state x="304" y="128" key="CommitChangelistDialog2/0.0.1920.1200@0.0.1920.1200" timestamp="1587075133407" />
     <state x="266" y="127" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1587050991929" />
     <state x="714" y="519" key="ComposerInitDialogKey" timestamp="1587051784586">
@@ -1000,10 +1172,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="509" y="161" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586956224657" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586736216018">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1587247984367">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586736216018" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1587247984367" />
   </component>
   <component name="masterDetails">
     <states>
