@@ -36,8 +36,13 @@
                 <p class="form_error">{{ $message }}</p>
                 <br>
                 @enderror
+                @error('g-recaptcha-response')
+                <p class="form_error">The captcha needs to be completed</p>
+                <br>
+                @enderror
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
+
                     <div>
                         <label for="name">Name</label>
                         <div>
@@ -73,6 +78,14 @@
                             <input id="password_confirmation" type="password" name="password_confirmation"
                                    required placeholder="●●●●●●●●" autocomplete="current-password">
                         </div>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="captcha">Captcha</label>
+
+                        {!! NoCaptcha::renderJs() !!}
+                        {!! NoCaptcha::display() !!}
                     </div>
                     <br>
 
