@@ -58,6 +58,7 @@
 
                 selectedEvent = json.id;
 
+
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>" + json.title + "</p><p>" + json.description + "</p></div></div>");
 
                 table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>When (Your Timezone)</p><p>From: " + convert_utc_to_local(json.start) + "<br>To: " + convert_utc_to_local(json.end) + "</p></div></div>");
@@ -165,10 +166,7 @@
                 var current_user = {{Auth::user()->id}};
 
                 if (json.user_id == current_user){
-                    table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Remove event</p><a href='{{url('/api/events/' . '23' . '/remove/')}}'>Remove this event</a>");
-
-
-                    console.log(json);
+                    table.append("<div class=\"custom_table_row\"><div class=\"custom_table_row_left\"><p>Remove event</p><a href=\"/api/events/" + json.id + "/remove/\"=>Remove this event</a>");
                 }
 
                 @endauth

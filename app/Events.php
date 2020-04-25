@@ -81,9 +81,5 @@ class Events extends Model {
         return $events;
     }
 
-    function delete() {
-        $OccupiedGates = EventsGates::Occupied($this->id);
-        $OccupiedGates->delete();
-        return parent::delete();
-    }
+
 }

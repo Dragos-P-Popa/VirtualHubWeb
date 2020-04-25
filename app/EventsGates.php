@@ -34,4 +34,10 @@ class EventsGates extends Model{
         return $events;
     }
 
+    static function ById($eventID){
+        $events = EventsGates::where([['id', '=', $eventID]])->get();
+        return $events;
+    }
+
+
 }

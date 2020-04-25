@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dashboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dashboard.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/EventsGates.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/EventsGates.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VirtualHubWeb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/userEvents.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/userEvents.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +286,8 @@
       <workItem from="1586953183932" duration="5235000" />
       <workItem from="1587051595216" duration="18860000" />
       <workItem from="1587149079764" duration="10007000" />
-      <workItem from="1587329382427" duration="1485000" />
+      <workItem from="1587329382427" duration="1630000" />
+      <workItem from="1587835228133" duration="1965000" />
     </task>
     <task id="LOCAL-00001" summary="Moved event fetch script to /api/ and renamed to fetch_community_events.py. Updated APIController error message.">
       <created>1562513893473</created>
@@ -508,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587252314748</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="- Added Google ReCaptcha to the register form.">
+      <created>1587331411798</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1587331411798</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -561,7 +566,8 @@
     <MESSAGE value="Added Support for new favicons." />
     <MESSAGE value="Moved sharing options below the Airport Name Section. + Added native sharing menu for supported browser." />
     <MESSAGE value="- 'View all events' now works on the account page for Created events and Attending Events&#10;- Added Events::ForUserAttending() which returns the events a user is attending" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 'View all events' now works on the account page for Created events and Attending Events&#10;- Added Events::ForUserAttending() which returns the events a user is attending" />
+    <MESSAGE value="- Added Google ReCaptcha to the register form." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added Google ReCaptcha to the register form." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -582,10 +588,10 @@
     </state>
     <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587330394762" />
     <state x="661" y="328" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1587070589589" />
-    <state x="0" y="76" width="1140" height="854" key="CommitChangelistDialog2" timestamp="1587252309813">
+    <state x="0" y="76" width="1140" height="854" key="CommitChangelistDialog2" timestamp="1587331411383">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="0" y="76" width="1140" height="854" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1587252309813" />
+    <state x="0" y="76" width="1140" height="854" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1587331411383" />
     <state x="304" y="128" key="CommitChangelistDialog2/0.0.1920.1200@0.0.1920.1200" timestamp="1587075133407" />
     <state x="266" y="127" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1587050991929" />
     <state x="714" y="519" key="ComposerInitDialogKey" timestamp="1587051784586">
@@ -596,10 +602,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="710" y="333" key="NewPhpClassDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1587070267396" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1587331359408">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1587331415298">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1587331359408" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1587331415298" />
     <state x="517" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586438438251">
       <screen x="0" y="23" width="1680" height="976" />
     </state>
@@ -608,10 +614,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="509" y="161" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586956224657" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1587329745712">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1587836246184">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1587329745712" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1587836246184" />
   </component>
   <component name="masterDetails">
     <states>

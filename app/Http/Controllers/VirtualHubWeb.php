@@ -61,11 +61,13 @@ class VirtualHubWeb extends Controller {
 	}
 
 	public function removeEvent( $id ) {
+	    $id = (int) $id;
 
-        $event = Events::ByID(23);
-
+        $event = Events::ByID($id);
         $airport = $event[0]->airport;
-        $event[0]->delete();
+
+        DB::delete("DELETE FROM vh_events_gates WHERE event_id = " . $id . ";");
+        DB::delete("DELETE FROM vh_events WHERE id = " . $id . ";");
 
         return redirect( 'view/' . $airport );
     }
