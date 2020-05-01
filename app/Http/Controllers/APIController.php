@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-include( "app/api/AirportInfo.php" );
 
+use app\api\AirportInfo;
+use App\Airport;
 use App\Gates;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
@@ -42,19 +43,10 @@ class APIController extends Controller {
 
 	}
 
-	public function airportinfo( $icao ) {
-		$icao = strtoupper( $icao );
-
-		$info = new \AirportInfo();
-		$info = $info->getInfoFor( $icao );
-
-		$ap_id = $info["airport"]["id"];
-
-		DB::update( "UPDATE realtime_data SET total = total + 1 WHERE name = 'total_vh_airportinfo_api_used'" );
-		DB::update( "UPDATE vh_airports SET populairity = populairity + 1  WHERE id = " . $ap_id );
-
-		return $info;
-	}
+    public function airportinfo( $icao ) {
+        $info = Airport::FullInfo($icao);
+        return $info;
+    }
 
     public function getUserEvents( $id ) {
         $events = DB::select( "SELECT * FROM vh_events WHERE user_id = " . $id );

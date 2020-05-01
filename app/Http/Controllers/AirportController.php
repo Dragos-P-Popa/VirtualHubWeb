@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-include( "app/api/AirportInfo.php" );
 
+use app\api\AirportInfo;
 use App\Flightplans;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
