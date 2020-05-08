@@ -42,11 +42,11 @@ Route::get('/events/{icao}/new', 'VirtualHubWeb@newEventPage')->middleware('auth
 
 //----------------------------------------------------|
 //Account
-Route::get('/account', 'AccountController@index')->middleware('auth');
+//Route::get('/account', 'AccountController@index')->middleware('auth');
 
-Route::get('/view/events/created', 'UserEventsController@created')->middleware('auth');
+//Route::get('/view/events/created', 'UserEventsController@created')->middleware('auth');
 
-Route::get('/view/events/attending', 'UserEventsController@attending')->middleware('auth');
+//Route::get('/view/events/attending', 'UserEventsController@attending')->middleware('auth');
 
 //----------------------------------------------------|
 //General

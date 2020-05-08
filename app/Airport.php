@@ -32,7 +32,7 @@ class Airport extends Model {
         $airport->gates       = Airport::Gates( $icao );
         $airport->runways     = Airport::Runways( $icao );
         $airport->frequencies = Airport::Frequencies( $icao );
-        $airport->events      = Airport::Events( $icao );
+        //$airport->events      = Airport::Events( $icao );
         $airport->bounds      = Airport::BoundingBox( $airport->latitude, $airport->longitude, 3 );
 
         return $airport;
@@ -68,9 +68,9 @@ class Airport extends Model {
         return Frequencies::ForAirport( $icao );
     }
 
-    static function Events( string $icao ) {
-        return Events::ForAirport( $icao );
-    }
+    //static function Events( string $icao ) {
+    //    return Events::ForAirport( $icao );
+    //}
 
     private static function LocalTime( $zone ) {
         date_default_timezone_set( $zone );

@@ -246,28 +246,15 @@ if( !function_exists('mobile_user_agent_switch') ){
                             @endif
                         </div>
 
-                        <div class="custom_table_row" @if(count($info->events) != 0) window="events_window" @endif>
+                        <div class="custom_table_row">
                             <div class="custom_table_row_left">
                                 <p>Events</p>
-                                @if(count($info->events) == 0)
-                                    <p>No events for this airport</p>
-                                @else
-                                    <p>{{count($info->events)}} @if(count($info->events) == 1) Event @else
-                                            Events @endif Coming Up Soon</p>
-                                    <p id="ev_list_str">Next event: <br> {{$info->events[0]->title}}
-                                        | </p>
-                                @endif
+                                    <p>1 Events Coming Up Soon</p>
+                                    <p id="ev_list_str">Next event: <br>{{$info->icao}} Flyout</p>
                                 <br>
-                                <p><a href="{{url("events/" . $info->icao . "/new")}}">New event</a></p>
+                                <p><a href="https://vh-net.com/404">New event</a></p>
                             </div>
-                            @if(count($info["events"]) != 0)
-                                <div class="custom_table_row_right">
-                                    <p><i class="fas fa-arrow-right"></i></p>
-                                </div>
-                            @endif
                         </div>
-
-
                     </div>
                 </div>
                 <div class="preview_right">
@@ -376,7 +363,7 @@ if( !function_exists('mobile_user_agent_switch') ){
             </div>
         @endif
 
-        @if(count($info->events) != 0)
+       {{-- @if(count($info->events) != 0)
             <div class="events_window hidden">
                 <h2 class="window_title">Events | {{$info->icao}}</h2>
                 <div class="events_container">
@@ -409,6 +396,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 </div>
             </div>
         @endif
+        --}}
 
     @endif
     <noscript>
@@ -467,7 +455,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 zoom: 15,
             });
 
-                    @if(count($info["events"]) != 0)
+            {{--  @if(count($info["events"]) != 0)
             var events_map = new mapboxgl.Map({
                     container: 'events_map',
                     style: current_style,
@@ -482,6 +470,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                     ]
                 });
             @endif
+            --}}
 
             {{--                    @php--}}
             {{--                        $randomGates = array_rand($info["gates"], 7);--}}
@@ -524,7 +513,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                 mapDarkMode();
             });
 
-            @if(count($info->events) != 0)
+            {{-- @if(count($info->events) != 0)
             events_map.on('load', function () {
                 events_map_loaded = true;
                 mapDarkMode();
@@ -601,6 +590,9 @@ if( !function_exists('mobile_user_agent_switch') ){
 
             @endif
 
+            --}}
+
+
             function playback(index) {
                 main_map.flyTo(locations[index].camera);
 
@@ -665,10 +657,11 @@ if( !function_exists('mobile_user_agent_switch') ){
                     @if($agent->isDesktop())
                     gate_map.setStyle(current_style);
                     @endif
-                    @if(count($info->events) != 0)
+                    {{-- @if(count($info->events) != 0)
                     events_map.setStyle(current_style);
 
                     @endif
+                    --}}
                 }
             }
 
@@ -974,10 +967,11 @@ if( !function_exists('mobile_user_agent_switch') ){
                 main_map.resize();
                 gate_map.resize();
 
-                @if(count($info->events) != 0)
+                {{--@if(count($info->events) != 0)
                 events_map.resize();
 
-                @endif
+                @endif --}}
+
             }
 
             window.onpopstate = function (event) {
@@ -1026,10 +1020,11 @@ if( !function_exists('mobile_user_agent_switch') ){
                 currentWindow = "";
                 main_map.resize();
                 gate_map.resize();
-                @if(count($info->events) != 0)
+                {{-- @if(count($info->events) != 0)
                 events_map.resize();
 
                 @endif
+                --}}
             }
 
 

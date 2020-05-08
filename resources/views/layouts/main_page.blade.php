@@ -57,10 +57,11 @@
         </div>
         <div class="nav_right">
             <div class="nav_links">
-                <div>
+                {{-- <div>
                     <p><a href="{{url('contact')}}">Contact</a></p>
                 </div>
 
+                Global site tag (gtag.js) - Google Analytics
                 @guest
                     <div>
                         <p><a href="{{route('login')}}">Login</a></p>
@@ -70,6 +71,7 @@
                         <p><a href="{{route('register')}}">Register</a></p>
                     </div>
                 @else
+
                     <div>
                         <p><a href="{{url('account/')}}">My account</a></p>
                     </div>
@@ -84,6 +86,7 @@
                         </form>
                     </div>
                 @endguest
+                --}}
             </div>
 
             <div class="close" style="display: none">
