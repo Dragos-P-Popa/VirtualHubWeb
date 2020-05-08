@@ -252,7 +252,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     <p>1 Events Coming Up Soon</p>
                                     <p id="ev_list_str">Next event: <br>{{$info->icao}} Flyout</p>
                                 <br>
-                                <p><a href="https://vh-net.com/404">New event</a></p>
+                                <a>New event</a>
                             </div>
                         </div>
                     </div>
