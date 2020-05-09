@@ -122,6 +122,7 @@ if( !function_exists('mobile_user_agent_switch') ){
         </div>
     @endif
 @endsection
+{{dump($info->ATC)}}
 
 @section('content')
     <div class="top_airport_info">

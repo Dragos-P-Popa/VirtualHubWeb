@@ -32,6 +32,7 @@ class Airport extends Model {
         $airport->gates       = Airport::Gates( $icao );
         $airport->runways     = Airport::Runways( $icao );
         $airport->frequencies = Airport::Frequencies( $icao );
+        $airport->ATC         = Airport::ATC( $icao );
         //$airport->events      = Airport::Events( $icao );
         $airport->bounds      = Airport::BoundingBox( $airport->latitude, $airport->longitude, 3 );
 
@@ -66,6 +67,10 @@ class Airport extends Model {
 
     static function Frequencies( string $icao ) {
         return Frequencies::ForAirport( $icao );
+    }
+
+    static function ATC( string $icao ) {
+        return ATC::ForAirport( $icao );
     }
 
     //static function Events( string $icao ) {

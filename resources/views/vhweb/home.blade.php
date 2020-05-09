@@ -130,7 +130,7 @@
                 <i class="fas fa-cloud-sun"></i>
                 <div>
                     <h3>Weather</h3>
-                    <p>You can search an airport by name, icao, iata, country and city in the shown searchbar.</p>
+                    <p>You can search an airport and relevant weather information such as wind speed and temperature will show up!</p>
                 </div>
             </div>
 

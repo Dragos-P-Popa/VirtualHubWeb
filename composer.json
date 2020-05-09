@@ -20,7 +20,9 @@
         "spatie/laravel-blade-javascript": "^2.2",
         "spatie/laravel-cookie-consent": "^2.6",
         "spatie/laravel-sitemap": "^5.2",
-        "symfony/process": "^4.3"
+        "symfony/process": "^4.3",
+        "ext-curl": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

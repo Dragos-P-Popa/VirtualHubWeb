@@ -22,7 +22,7 @@ class Gates extends Model
 
     private static function AppFormatter($gates) {
         for ($i = 0; $i < count($gates); $i++) {
-            $gates[$i]->app_string = "Class: " . $gates[$i]->size . "\nAircrafts: " .  $gates[$i]->aircrafts;
+            $gates[$i]->app_string = "Class: " . $gates[$i]->size . "\nAircraft: " .  $gates[$i]->aircrafts;
             $gates[$i]->name = $gates[$i]->type . " " .  $gates[$i]->name;
         }
         return $gates;
