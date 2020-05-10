@@ -49,7 +49,7 @@ class ATC {
             } else {
                 $casualInfo = array();
                 foreach (json_decode($response) as $obj){
-                    if($obj->Name == $icao){
+                    if($obj->Name == strtoupper($icao)){
                         $temp = array();
                         $temp['UserName'] = $obj->UserName;
                         $temp['Type']     = $options[$obj->Type];
@@ -78,7 +78,7 @@ class ATC {
             } else {
                 $trainingInfo = array();
                 foreach (json_decode($response) as $obj){
-                    if($obj->Name == $icao){
+                    if($obj->Name == strtoupper($icao)){
                         $temp = array();
                         $temp['UserName'] = $obj->UserName;
                         $temp['Type']     = $options[$obj->Type];
@@ -107,7 +107,7 @@ class ATC {
             } else {
                 $expertInfo = array();
                 foreach (json_decode($response) as $obj){
-                    if($obj->Name == $icao){
+                    if($obj->Name == strtoupper($icao)){
                         $temp = array();
                         $temp['UserName'] = $obj->UserName;
                         $temp['Type']     = $options[$obj->Type];

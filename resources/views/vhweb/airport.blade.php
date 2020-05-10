@@ -245,10 +245,10 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 @endif
                             @endif
                         </div>
-                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->ATC) != 0) window="ATC_window" @endif @endif>
+
+                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->ATC) != 0) window="atc_window" @endif @endif>
                             <div class="custom_table_row_left">
                                 <p>Active ATC</p>
-
                             </div>
                             @if(count($info->ATC) != 0)
                                 @if($agent->isDesktop())
@@ -325,14 +325,14 @@ if( !function_exists('mobile_user_agent_switch') ){
             </div>
         @endif
 
-        @if(count($info->runways) != 0)
-            <div class="ATC_window hidden">
+            <div class="atc_window hidden">
                 <h2 class="window_title">Active ATC | {{$info->icao}}</h2>
                 <div class="runway_container">
                     <div class="runway_left">
                         <div class="custom_table">
+                            <br>
                             <h1>Training Server</h1>
-                            @if($info->ATC['Training'] == 0)
+                            @if($info->ATC['Training'] == [])
                                 <b><p>No active ATC</p></b>
                                 <br>
                             @endif
@@ -341,7 +341,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     <div class="custom_table_row_left">
                                         <p>{{$atc['Type']}}</p>
                                         <p>Controller: {{$atc['UserName']}}</p>
-                                        <p>{{$atc['StartTime']}} <- Work in progress</p>
+                                        <p>Online Since: {{date("Y-m-d H:i:s", substr(substr(substr($atc['StartTime'], 6), 0, -2), 0, 10))}} <- <b>Work in progress</b></p>
                                     </div>
                                 </div>
                             @endforeach
@@ -357,8 +357,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     <div class="custom_table_row_left">
                                         <p>{{$atc['Type']}}</p>
                                         <p>Controller: {{$atc['UserName']}}</p>
-                                        <p>{{$atc['StartTime']}} <- Work in progress</p>
-
+                                        <p>Online Since: {{date("Y-m-d H:i:s", substr(substr(substr($atc['StartTime'], 6), 0, -2), 0, 10))}} <- <b>Work in progress</b></p>
                                     </div>
                                 </div>
                             @endforeach
@@ -374,8 +373,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     <div class="custom_table_row_left">
                                         <p>{{$atc['Type']}}</p>
                                         <p>Controller: {{$atc['UserName']}}</p>
-                                        <p>{{$atc['StartTime']}} <- Work in progress</p>
-
+                                        <p>Online Since: {{date("Y-m-d H:i:s", substr(substr(substr($atc['StartTime'], 6), 0, -2), 0, 10))}} <- <b>Work in progress</b></p>
                                     </div>
                                 </div>
                             @endforeach
@@ -383,7 +381,6 @@ if( !function_exists('mobile_user_agent_switch') ){
                     </div>
                 </div>
             </div>
-        @endif
 
         @if(count($info->gates) != 0)
             <div class="gates_window hidden">
@@ -1000,8 +997,8 @@ if( !function_exists('mobile_user_agent_switch') ){
                         urlWindow = "runways";
                         break;
 
-                    case "ATC_window":
-                        urlWindow = "ATC"
+                    case "atc_window":
+                        urlWindow = "atc"
                         break;
 
                     case "events_window":
@@ -1072,6 +1069,10 @@ if( !function_exists('mobile_user_agent_switch') ){
                             openWindow("weather_window");
                             break;
 
+                        case "atc":
+                            openWindow("atc_window");
+                            break;
+
                         case "events":
                             openWindow("weather_window");
                             break;
@@ -1136,8 +1137,8 @@ if( !function_exists('mobile_user_agent_switch') ){
                         urlWindow = "runway_window";
                         break;
 
-                    case 'ATC':
-                        urlWindow = "ATC_window";
+                    case 'atc':
+                        urlWindow = "atc_window";
                         break;
 
                     case "events":
