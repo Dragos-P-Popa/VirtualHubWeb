@@ -122,7 +122,6 @@ if( !function_exists('mobile_user_agent_switch') ){
         </div>
     @endif
 @endsection
-{{dd($info->ATC)}}
 
 @section('content')
     <div class="top_airport_info">
@@ -246,6 +245,19 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 @endif
                             @endif
                         </div>
+                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->ATC) != 0) window="ATC_window" @endif @endif>
+                            <div class="custom_table_row_left">
+                                <p>Active ATC</p>
+
+                            </div>
+                            @if(count($info->ATC) != 0)
+                                @if($agent->isDesktop())
+                                    <div class="custom_table_row_right">
+                                        <p><i class="fas fa-arrow-right"></i></p>
+                                    </div>
+                                @endif
+                            @endif
+                        </div>
 
                         <div class="custom_table_row">
                             <div class="custom_table_row_left">
@@ -304,6 +316,66 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     <div class="custom_table_row_left">
                                         <p>{{$runway->app_idents}}</p>
                                         <p>{!! str_replace("\n","<br>", $runway->app_dimension) !!}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        @if(count($info->runways) != 0)
+            <div class="ATC_window hidden">
+                <h2 class="window_title">Active ATC | {{$info->icao}}</h2>
+                <div class="runway_container">
+                    <div class="runway_left">
+                        <div class="custom_table">
+                            <h1>Training Server</h1>
+                            @if($info->ATC['Training'] == 0)
+                                <b><p>No active ATC</p></b>
+                                <br>
+                            @endif
+                            @foreach($info->ATC['Training'] as $atc)
+                                <div class="custom_table_row">
+                                    <div class="custom_table_row_left">
+                                        <p>{{$atc['Type']}}</p>
+                                        <p>Controller: {{$atc['UserName']}}</p>
+                                        <p>{{$atc['StartTime']}} <- Work in progress</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                            <br>
+                            <h1>Casual Server</h1>
+                            @if($info->ATC['Casual'] == [])
+                                <b><p>No active ATC</p></b>
+                                <br>
+                            @endif
+                            @foreach($info->ATC['Casual'] as $atc)
+
+                                <div class="custom_table_row">
+                                    <div class="custom_table_row_left">
+                                        <p>{{$atc['Type']}}</p>
+                                        <p>Controller: {{$atc['UserName']}}</p>
+                                        <p>{{$atc['StartTime']}} <- Work in progress</p>
+
+                                    </div>
+                                </div>
+                            @endforeach
+                            <br>
+                            <h1>Expert Server</h1>
+                            @if($info->ATC['Expert'] == [])
+                                <b><p>No active ATC</p></b>
+                                <br>
+                            @endif
+                            @foreach($info->ATC['Expert'] as $atc)
+
+                                <div class="custom_table_row">
+                                    <div class="custom_table_row_left">
+                                        <p>{{$atc['Type']}}</p>
+                                        <p>Controller: {{$atc['UserName']}}</p>
+                                        <p>{{$atc['StartTime']}} <- Work in progress</p>
+
                                     </div>
                                 </div>
                             @endforeach
@@ -928,6 +1000,10 @@ if( !function_exists('mobile_user_agent_switch') ){
                         urlWindow = "runways";
                         break;
 
+                    case "ATC_window":
+                        urlWindow = "ATC"
+                        break;
+
                     case "events_window":
                         urlWindow = "events";
                         break;
@@ -1058,6 +1134,10 @@ if( !function_exists('mobile_user_agent_switch') ){
 
                     case "runways":
                         urlWindow = "runway_window";
+                        break;
+
+                    case 'ATC':
+                        urlWindow = "ATC_window";
                         break;
 
                     case "events":

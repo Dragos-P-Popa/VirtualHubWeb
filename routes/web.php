@@ -37,6 +37,8 @@ Route::get('/view/{icao}/runways', 'VirtualHubWeb@airport');
 
 Route::get('/view/{icao}/gates', 'VirtualHubWeb@airport');
 
+Route::get('/view/{icao}/atc', 'VirtualHubWeb@airport');
+
 Route::get('/events/{icao}/new', 'VirtualHubWeb@newEventPage')->middleware('auth');
 
 
