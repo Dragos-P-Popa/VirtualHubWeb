@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="Converted All Data Function To Models. Css and Js must now be edited in /resources folder and compiled with Node. See package.json &gt; scripts.">
-      <change afterPath="$PROJECT_DIR$/app/Metar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Weather.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Weather.php" afterDir="false" />
+    <list default="true" id="b7053932-28dc-4ebc-8c0f-34b01dc4787a" name="Default Changelist" comment="Improved Weather + Added Clouds">
+      <change beforePath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vhweb/airport.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -531,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587331411798</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Improved Weather + Added Clouds">
+      <created>1589402494041</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1589402494041</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -584,7 +588,8 @@
     <MESSAGE value="Moved sharing options below the Airport Name Section. + Added native sharing menu for supported browser." />
     <MESSAGE value="- 'View all events' now works on the account page for Created events and Attending Events&#10;- Added Events::ForUserAttending() which returns the events a user is attending" />
     <MESSAGE value="- Added Google ReCaptcha to the register form." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added Google ReCaptcha to the register form." />
+    <MESSAGE value="Improved Weather + Added Clouds" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved Weather + Added Clouds" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -619,10 +624,11 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="710" y="333" key="NewPhpClassDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1587070267396" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1587331415298">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="503" y="303" key="Vcs.Push.Dialog.v2" timestamp="1589402496877">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1587331415298" />
+    <state x="503" y="303" key="Vcs.Push.Dialog.v2/0.0.1920.1200@0.0.1920.1200" timestamp="1589402496877" />
     <state x="517" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586438438251">
       <screen x="0" y="23" width="1680" height="976" />
     </state>

@@ -181,7 +181,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 </div>
                             </div>
                         </div>
-                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info["weather"]) != 0) window="weather_window" @endif @endif>
+                        <div class="custom_table_row" @if(count($info["weather"]) != 0) window="weather_window" @endif>
                             <div class="custom_table_row_left">
                                 <p>Weather</p>
                                 @if(count($info->weather) == 0)
@@ -195,67 +195,57 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 @endif
                             </div>
                             @if(count($info->weather) != 0)
-                                @if($agent->isDesktop())
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
                                     </div>
-                                @endif
                             @endif
                         </div>
 
-                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->charts) != 0) window="chart_window" @endif @endif>
+                        <div class="custom_table_row" @if(count($info->charts) != 0) window="chart_window" @endif>
                             <div class="custom_table_row_left">
                                 <p>Charts</p>
                                 <p>@if(count($info->charts) == 0) No Charts @else {{count($info->charts)}} @endif
                                     Available</p>
                             </div>
                             @if(count($info->charts) != 0)
-                                @if($agent->isDesktop())
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
                                     </div>
-                                @endif
                             @endif
                         </div>
-                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->gates) != 0) window="gates_window" @endif @endif>
+                        <div class="custom_table_row" @if(count($info->gates) != 0) window="gates_window" @endif>
                             <div class="custom_table_row_left">
                                 <p>Gates</p>
                                 <p>@if(count($info->gates) == 0) No Gates @else {{count($info->gates)}} @endif
                                     Available</p>
                             </div>
                             @if(count($info->gates) != 0)
-                                @if($agent->isDesktop())
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
                                     </div>
-                                @endif
                             @endif
                         </div>
-                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->runways) != 0) window="runway_window" @endif @endif>
+                        <div class="custom_table_row"  @if(count($info->runways) != 0) window="runway_window" @endif>
                             <div class="custom_table_row_left">
                                 <p>Runways</p>
                                 <p>@if(count($info->runways) == 0) No Runways @else {{count($info->runways)}} @endif
                                     Available</p>
                             </div>
                             @if(count($info->runways) != 0)
-                                @if($agent->isDesktop())
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
                                     </div>
-                                @endif
                             @endif
                         </div>
 
-                        <div class="custom_table_row" @if($agent->isDesktop()) @if(count($info->ATC) != 0) window="atc_window" @endif @endif>
+                        <div class="custom_table_row" @if(count($info->ATC) != 0) window="atc_window" @endif>
                             <div class="custom_table_row_left">
                                 <p>Active ATC</p>
                             </div>
                             @if(count($info->ATC) != 0)
-                                @if($agent->isDesktop())
                                     <div class="custom_table_row_right">
                                         <p><i class="fas fa-arrow-right"></i></p>
                                     </div>
-                                @endif
                             @endif
                         </div>
 
