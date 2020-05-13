@@ -34,4 +34,6 @@ class AirportController extends Controller {
 		return view( 'airport',
             array("info" => $info));
 	}
+
+
 }

@@ -37,32 +37,36 @@ class Weather {
 		}
 	}
 
-	static private function parseWeather( $response ) {
-		$weatherMinifiedJson = [];
+	static private function parseWeather( $response )
+    {
+        $weatherMinifiedJson = [];
 
-		$weatherMinifiedJson["temperature"]["value_c"]   = round( $response["temp_c"] );
-		$weatherMinifiedJson["temperature"]["value_f"]   = round( $response["temp_c"] * 9 / 5 + 32 );
-		$weatherMinifiedJson["temperature"]["condition"] = "Good";
+            $weatherMinifiedJson["temperature"]["value_c"] = round($response["temp_c"]);
+            $weatherMinifiedJson["temperature"]["value_f"] = round($response["temp_c"] * 9 / 5 + 32);
+            $weatherMinifiedJson["temperature"]["condition"] = "Good";
 
-		$weatherMinifiedJson["visibility"]["value_km"]  = round( $response["visibility_statute_mi"] * 1.609344 );
-		$weatherMinifiedJson["visibility"]["value_m"]   = round( $response["visibility_statute_mi"], 1 );
-		$weatherMinifiedJson["visibility"]["condition"] = "Good";
+            $weatherMinifiedJson["visibility"]["value_km"] = round($response["visibility_statute_mi"] * 1.609344);
+            $weatherMinifiedJson["visibility"]["value_m"] = round($response["visibility_statute_mi"], 1);
+            $weatherMinifiedJson["visibility"]["condition"] = "Good";
 
-		$weatherMinifiedJson["pressure"]["value_hg"]  = round( $response["altim_in_hg"], 1 );
-		$weatherMinifiedJson["pressure"]["value_hpa"] = round( $response["altim_in_hg"] / 0.02953 );
-		$weatherMinifiedJson["pressure"]["condition"] = "Good";
+            $weatherMinifiedJson["pressure"]["value_hg"] = round($response["altim_in_hg"], 1);
+            $weatherMinifiedJson["pressure"]["value_hpa"] = round($response["altim_in_hg"] / 0.02953);
+            $weatherMinifiedJson["pressure"]["condition"] = "Good";
 
-		$weatherMinifiedJson["wind"]["value_kts"]     = round( $response["wind_speed_kt"] );
-		$weatherMinifiedJson["wind"]["value_kmh"]     = round( $response["wind_speed_kt"] * 1.85200 );
-		$weatherMinifiedJson["wind"]["value_heading"] = round( $response["wind_dir_degrees"] );
-		$weatherMinifiedJson["wind"]["condition"]     = "Bad";
+            $weatherMinifiedJson["wind"]["value_kts"] = round($response["wind_speed_kt"]);
+            $weatherMinifiedJson["wind"]["value_kmh"] = round($response["wind_speed_kt"] * 1.85200);
+            $weatherMinifiedJson["wind"]["value_heading"] = round($response["wind_dir_degrees"]);
+            $weatherMinifiedJson["wind"]["condition"] = "Bad";
 
-		$weatherMinifiedJson["station"] = $response["station_id"];
-		$weatherMinifiedJson["metar"]   = $response["raw_text"];
 
-		$visVal  = $weatherMinifiedJson["visibility"]["value_km"];
-		$tempVal = $weatherMinifiedJson["temperature"]["value_c"];
-		$windVal = $weatherMinifiedJson["wind"]["value_kts"];
+            $weatherMinifiedJson["station"] = $response["station_id"];
+            $weatherMinifiedJson["metar"] = $response["raw_text"];
+
+
+            $visVal = $weatherMinifiedJson["visibility"]["value_km"];
+            $tempVal = $weatherMinifiedJson["temperature"]["value_c"];
+            $windVal = $weatherMinifiedJson["wind"]["value_kts"];
+
 
 		switch ( $visVal ) {
 			case $visVal >= 7:

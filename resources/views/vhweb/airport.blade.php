@@ -341,7 +341,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     <div class="custom_table_row_left">
                                         <p>{{$atc['Type']}}</p>
                                         <p>Controller: {{$atc['UserName']}}</p>
-                                        <p>Online Since: {{date("Y-m-d H:i:s", substr(substr(substr($atc['StartTime'], 6), 0, -2), 0, 10))}} <- <b>Work in progress</b></p>
+                                        <p>Online Since: {{date("Y-m-d H:i:s", substr(substr(substr($atc['StartTime'], 6), 0, -2), 0, 10))}} <b>UTC</b></p>
                                     </div>
                                 </div>
                             @endforeach
@@ -357,7 +357,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     <div class="custom_table_row_left">
                                         <p>{{$atc['Type']}}</p>
                                         <p>Controller: {{$atc['UserName']}}</p>
-                                        <p>Online Since: {{date("Y-m-d H:i:s", substr(substr(substr($atc['StartTime'], 6), 0, -2), 0, 10))}} <- <b>Work in progress</b></p>
+                                        <p>Online Since: {{date("Y-m-d H:i:s", substr(substr(substr($atc['StartTime'], 6), 0, -2), 0, 10))}} <b>UTC</b></p>
                                     </div>
                                 </div>
                             @endforeach
@@ -373,7 +373,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     <div class="custom_table_row_left">
                                         <p>{{$atc['Type']}}</p>
                                         <p>Controller: {{$atc['UserName']}}</p>
-                                        <p>Online Since: {{date("Y-m-d H:i:s", substr(substr(substr($atc['StartTime'], 6), 0, -2), 0, 10))}} <- <b>Work in progress</b></p>
+                                        <p>Online Since: {{date("Y-m-d H:i:s", substr(substr(substr($atc['StartTime'], 6), 0, -2), 0, 10))}} <b>UTC</b></p>
                                     </div>
                                 </div>
                             @endforeach

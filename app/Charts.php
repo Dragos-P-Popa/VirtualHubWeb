@@ -11,6 +11,8 @@ class Charts {
 
 
     static function ForAirport( $airport, $localOnly = false ) {
+        $airport = strtoupper($airport);
+
         $ctx = stream_context_create( array(
             'http' =>
                 array(
