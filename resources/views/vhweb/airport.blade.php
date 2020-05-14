@@ -124,6 +124,7 @@ if( !function_exists('mobile_user_agent_switch') ){
 @endsection
 
 @section('content')
+        {{\App\Airport::UpPopularity($info->icao)}}
     <div class="top_airport_info">
         <div class="searchbar">
             <div class="input_bar">
