@@ -187,7 +187,7 @@
     <br>
     <br>
 
-    <h2>Our top 4 populair airports</h2>
+    <h2>Our top 4 popular airports</h2>
     <br>
     <div class="data_count" shadow>
         <div class="collection_view">
