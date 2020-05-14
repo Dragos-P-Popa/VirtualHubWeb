@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Airport extends Model {
     protected $table = 'vh_airports';
-
+    public $timestamps = false;
+    
     static function FullInfo( string $icao = null, string $iata = null ) {
         $airport = null;
 
@@ -76,6 +77,11 @@ class Airport extends Model {
     //static function Events( string $icao ) {
     //    return Events::ForAirport( $icao );
     //}
+    
+    static function UpPopularity( string $icao){
+        $pop = Airport::where('icao', $icao)->value('populairity');
+        Airport::where('icao', $icao)->update(array('populairity' => $pop+1));
+    }
 
     private static function LocalTime( $zone ) {
         date_default_timezone_set( $zone );
