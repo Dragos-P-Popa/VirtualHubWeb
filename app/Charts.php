@@ -6,7 +6,7 @@ class Charts {
     static $chartsStorage = "charts/";
 
     function __construct() {
-
+//dd(self::$chartsStorage);
     }
 
 

@@ -3,11 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Airport extends Model {
     protected $table = 'vh_airports';
     public $timestamps = false;
-    
+
     static function FullInfo( string $icao = null, string $iata = null ) {
         $airport = null;
 
@@ -36,6 +37,9 @@ class Airport extends Model {
         $airport->ATC         = Airport::ATC( $icao );
         //$airport->events      = Airport::Events( $icao );
         $airport->bounds      = Airport::BoundingBox( $airport->latitude, $airport->longitude, 3 );
+
+        $airport->increment('populairity');
+        DB::update( "UPDATE realtime_data SET total = total + 1 WHERE name = 'total_vh_airportinfo_api_used'" );
 
         return $airport;
     }
@@ -77,11 +81,6 @@ class Airport extends Model {
     //static function Events( string $icao ) {
     //    return Events::ForAirport( $icao );
     //}
-    
-    static function UpPopularity( string $icao){
-        $pop = Airport::where('icao', $icao)->value('populairity');
-        Airport::where('icao', $icao)->update(array('populairity' => $pop+1));
-    }
 
     private static function LocalTime( $zone ) {
         date_default_timezone_set( $zone );
