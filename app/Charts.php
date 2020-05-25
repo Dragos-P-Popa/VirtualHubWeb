@@ -3,7 +3,7 @@
 namespace App;
 
 class Charts {
-    static $chartsStorage = "storage/app/charts/";
+    static $chartsStorage = "charts/";
 
     function __construct() {
 
@@ -86,7 +86,7 @@ class Charts {
     }
 
     private static function getChartsFromServer() {
-        return scandir( base_path( self::$chartsStorage ) );
+        return scandir( self::$chartsStorage );
     }
 
 }
