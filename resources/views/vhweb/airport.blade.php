@@ -337,7 +337,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                 </div>
                             @endforeach
                             <br>
-                            <h1>Casual Server</h1>
+                            <!-- <h1>Casual Server</h1>
                             @if($info->ATC['Casual'] == [])
                                 <b><p>No active ATC</p></b>
                                 <br>
@@ -352,7 +352,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     </div>
                                 </div>
                             @endforeach
-                            <br>
+                            <br> -->
                             <h1>Expert Server</h1>
                             @if($info->ATC['Expert'] == [])
                                 <b><p>No active ATC</p></b>
