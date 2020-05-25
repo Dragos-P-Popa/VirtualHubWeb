@@ -252,7 +252,7 @@ if( !function_exists('mobile_user_agent_switch') ){
 
                         <div class="custom_table_row">
                             <div class="custom_table_row_left">
-                                <p>Events</p>
+                                <p>Events -Coming Soon-</p>
                                     <p>1 Events Coming Up Soon</p>
                                     <p id="ev_list_str">Next event: <br>{{$info->icao}} Flyout</p>
                                 <br>
