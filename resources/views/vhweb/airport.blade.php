@@ -256,7 +256,7 @@ if( !function_exists('mobile_user_agent_switch') ){
                                     <p>1 Events Coming Up Soon</p>
                                     <p id="ev_list_str">Next event: <br>{{$info->icao}} Flyout</p>
                                 <br>
-                                <a>New event</a>
+				<!-- <a>New event</a> -->
                             </div>
                         </div>
                     </div>
