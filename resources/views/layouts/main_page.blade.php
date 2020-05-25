@@ -115,8 +115,9 @@
         <div class="footer_left">
             <a href="https://www.instagram.com/phenolix_ltd/" target="_blank"><i class="fab fa-instagram"></i>
                 Phenolix_ltd&nbsp;&nbsp;|</a>&nbsp;
-            <a href="https://twitter.com/virtual_flight" target="_blank"><i class="fab fa-twitter"></i>
-                Virtual_Flight</a>
+            <a href="https://twitter.com/PhenolixLtd" target="_blank"><i class="fab fa-twitter"></i>
+                PhenolixLtd&nbsp;&nbsp;|</a>&nbsp</a>
+	    <a href="https://vh-net.com/terms">Terms & Conditions</a>
         </div>
         <div class="footer_right">
             <p>© {{ config('app.name', 'Phenolix') }} LTD, 2018 - {{$current_year}}</p>
